@@ -1,0 +1,410 @@
+\section{Chapter V. Surfaces}
+
+\ChapterEntry{p-372}{V, Lemma 1.2. The moving divisor in the Bertini argument}{358}
+
+
+\Printed{$C_i\cap D$ are nonsingular, i.e., points with multiplicity one, which means that}
+\Revised{$C_i\cap D'$ are nonsingular, i.e., points with multiplicity one, which means that}
+
+\ChapterEntry{p-374}{V, Proposition 1.4. Additivity of local intersection lengths}{360}
+
+
+\Printed{Replacing $C$ and $D$ by differences of nonsingular curves, all transversal to each other as in the proof of \Goto{result-V-1.1}{(1.1)}, we see that this quantity is equal to the intersection number $C\cdot D$ defined in \Goto{result-V-1.1}{(1.1)}.}
+\Revised{Write $i(C,D)$ for this sum. It is additive under sums of effective divisors $D_1,D_2$ avoiding the components of $C$. Indeed, if their equations in $R=\mathcal O_{C,P}$ are $g_1,g_2$, then $g_2$ is a nonzerodivisor, since $C$ is Cohen--Macaulay and $D_2$ avoids its components. Thus
+\[
+0\to R/(g_1)\xrightarrow{\cdot g_2} R/(g_1g_2)\to R/(g_2)\to0.
+\]
+Choose $D',F'$ as in the proof of \Goto{result-V-1.1}{(1.1)}, avoiding the components of $C$. Since $D+F'\sim D'$, invariance and additivity give $i(C,D)=i(C,D')-i(C,F')$. Similarly replace $C$ by $C'-E'$, with $C',E'$ transversal to $D',F'$. The four sums count distinct intersection points, so their alternating sum is the intersection number defined in \Goto{result-V-1.1}{(1.1)}.}
+
+\ChapterEntry{p-375}{V, Proposition 1.5 and Examples 1.5.1--1.5.2. The genus in adjunction}{361--362}
+
+\PassagePage{361}
+
+
+\Printed{nonsingular curve of genus $g$ on the surface $X$, and if $K$ is the canonical divisor}
+\Revised{nonsingular irreducible curve of genus $g$ on the surface $X$, and if $K$ is the canonical divisor}
+
+\Printed{$C$ is a curve of degree $d$ in $\Proj^2$, then}
+\Revised{$C$ is a nonsingular irreducible curve of degree $d$ in $\Proj^2$, then}
+
+\Printed{Cf. (II, Ex.~\Goto{ex-II-8.4}{8.4}).}
+\Revised{Cf. (II, Ex.~\Goto{ex-II-8.4}{8.4}). For any nonzero effective divisor of degree $d$, the same formula computes $p_a(C)$ (Ex.~\Goto{ex-V-1.3}{1.3a}).}
+
+\PassagePage{362}
+
+
+\Printed{$C$ is a curve of type $(a,b)$ on the quadric surface, then $C+K$ has type $(a-2,b-2)$}
+\Revised{$C$ is a nonsingular irreducible curve of type $(a,b)$ on the quadric surface, then $C+K$ has type $(a-2,b-2)$}
+
+\Printed{Cf. (III, Ex.~\Goto{ex-III-5.6}{5.6}).}
+\Revised{Cf. (III, Ex.~\Goto{ex-III-5.6}{5.6}). For any nonzero effective divisor of type $(a,b)$, the same formula computes $p_a(C)$ (Ex.~\Goto{ex-V-1.3}{1.3a}).}
+
+\ChapterEntry{p-377}{V, Lemma 1.7. The vanishing threshold in the proof}{363}
+
+
+\Printed{If $l(K-D)>0$, then the divisor $K-D$ is effective, so $(K-D)\cdot H>0$. In other words, $D\cdot H<K\cdot H$.}
+\Revised{If $l(K-D)>0$, then $K-D$ is linearly equivalent to an effective divisor, so $(K-D)\cdot H\geq0$. In other words, $D\cdot H\leq K\cdot H$.}
+
+\ChapterEntry{p-378}{V, Corollary 1.8 and Theorem 1.9. Effective representatives}{364}
+
+
+\Printed{$nD$ is effective for all $n\gg0$.}
+\Revised{$nD$ is linearly equivalent to an effective divisor for all $n\gg0$.}
+
+\Printed{we have $mD$ is effective for all $m\gg0$. But then $mD\cdot H>0$ (think of the projective embedding defined by a multiple of $H$), hence $D\cdot H>0$, which is a contradiction.}
+\Revised{for $m\gg0$ let $E_m$ be an effective divisor linearly equivalent to $mD$. Since $E_m^2=m^2D^2>0$, it is nonzero, so $mD\cdot H=E_m\cdot H>0$. Hence $D\cdot H>0$, which is a contradiction.}
+
+\ChapterEntry{p-378}{V, Example 1.9.2. The lattice on the quadric surface}{364--365}
+
+\PassagePage{364}
+
+
+\Printed{$D,H$ form a basis of $\operatorname{Pic}X$. In this case the only divisor numerically equivalent to $0$ is}
+\Revised{$D,H$ form a real basis of $\operatorname{Pic}X\otimes_{\mathbf Z}\mathbf R$ and generate a subgroup of index two in $\operatorname{Pic}X$. In this case the only divisor class numerically equivalent to zero is}
+
+\PassagePage{365}
+
+
+\Printed{$0$, so $\operatorname{Pic}X=\operatorname{Num}X$. The pairing on}
+\Revised{the zero class, so $\operatorname{Pic}X=\operatorname{Num}X$. The pairing on}
+
+\ChapterEntry{p-379}{V, Theorem 1.10. Effectiveness and the range of monotonicity}{365}
+
+
+\Printed{some multiple $mD$ for $m>0$ is effective. Replacing $D$ by $mD$, we may assume that $D$ is effective.}
+\Revised{we may replace $D$ by an effective divisor linearly equivalent to a positive multiple $mD$.}
+
+\Printed{each $n$}
+\Revised{each sufficiently large $n$}
+
+\ChapterEntry{p-380}{V, Example 1.10.1. Intersections with the two rulings}{366}
+
+
+\Printed{$a=D\cdot(1,0)>0$ and $b=D\cdot(0,1)>0$}
+\Revised{$b=D\cdot(1,0)>0$ and $a=D\cdot(0,1)>0$}
+
+\ChapterEntry{p-381}{V, Exercise 1.7(b). The flat pencil of effective divisors}{367}
+
+
+\Printed{[\emph{Hint:} If $(f)$ is a principal divisor on $X$, consider the principal divisor $(tf-u)$ on $X\times\Proj^1$, where $t,u$ are the homogeneous coordinates on $\Proj^1$.]}
+\Revised{[\emph{Hint:} For nonconstant $f$, let $B$ be its pole divisor. View $tf-u$ as a section of $\operatorname{pr}_X^*\mathcal O_X(B)\otimes\operatorname{pr}_{\Proj^1}^*\mathcal O_{\Proj^1}(1)$. Its zero divisor is flat over $\Proj^1$ by (III, \Goto{result-III-9.8.5}{9.8.5}) and has fibres $B+(f)$ and $B$ at $[1:0]$ and $[0:1]$, respectively.]}
+
+\ChapterEntry{p-381}{V, Exercise 1.7, note. Numerical and algebraic equivalence}{367}
+
+
+\Printed{this can be proved easily by transcendental methods (App.~B, \Goto{sec-B-5}{\S5}) or as in (Ex.~\Goto{ex-V-1.8}{1.8}) below.}
+\Revised{this can be proved by transcendental methods (App.~B, \Goto{sec-B-5}{\S5}). (Ex.~\Goto{ex-V-1.8}{1.8}) gives a separate proof of the finite generation of $\operatorname{Num}X$ in characteristic zero.}
+
+\ChapterEntry{p-382}{V, Exercise 1.10. The curve in the Frobenius twist}{368}
+
+
+\Printed{$X_q\cong X$ (IV, \Goto{result-IV-2.4.1}{2.4.1}). Let $\Gamma\subseteq C\times C$}
+\Revised{$C_q\cong C$ (IV, \Goto{result-IV-2.4.1}{2.4.1}). Let $\Gamma\subseteq C\times C$}
+
+\ChapterEntry{p-383}{V, Lemma 2.1 and Proposition 2.2. Flatness and the fibrewise isomorphism}{369--370}
+
+\PassagePage{369}
+
+
+\Printed{First note that any two fibres of $\pi$ are algebraically equivalent divisors on $X$, since they all are parametrized by the curve $C$.}
+\Revised{First, $\pi$ is flat: the local rings of the integral surface $X$ over a closed point $y$ are torsion-free over the discrete valuation ring $\mathcal O_{C,y}$. The graph of $\pi$ in $X\times C$ is an effective Cartier divisor, obtained by pulling back the diagonal of $C\times C$ along the flat map $\pi\times\mathrm{id}_C$. Its projection to the second factor is flat, so any two fibres of $\pi$ are algebraically equivalent divisors on $X$.}
+
+\PassagePage{370}
+
+
+\Printed{, and so $g$ is an isomorphism.}
+\Revised{. It is proper and has finite fibres, hence is finite (III, Ex.~\Goto{ex-III-11.2}{11.2}). The map $\mathcal O_{\mathbf P(\mathcal E)}\to g_*\mathcal O_X$ is surjective by Nakayama's lemma on the fibres. Hence $g$ is a closed immersion containing every closed point of the reduced target, and so is an isomorphism.}
+
+\ChapterEntry{p-385}{V, Proposition 2.6. The equivalence on line quotients}{371}
+
+
+\Printed{surjections $\mathcal E\to\mathcal L\to0$, where $\mathcal L$ is an invertible sheaf on $C$, given by $\mathcal L=\sigma^*\mathcal O_X(1)$.}
+\Revised{isomorphism classes of invertible quotients $\mathcal E\to\mathcal L\to0$ on $C$, given by $\mathcal L=\sigma^*\mathcal O_X(1)$. Two quotients are identified when an isomorphism of their targets commutes with the quotient maps.}
+
+\Printed{surjections $\mathcal E\to\mathcal L\to0$ is given by (II,}
+\Revised{classes of quotients $\mathcal E\to\mathcal L\to0$ is given by (II,}
+
+\ChapterEntry{p-386}{V, Remark 2.7.1. Higher-rank extensions}{372}
+
+
+\Printed{The same result holds for locally free sheaves of arbitrary rank (Ex.~\Goto{ex-V-2.3}{2.3}).}
+\Revised{In arbitrary rank, a locally free sheaf on $C$ is a successive extension of invertible sheaves (Ex.~\Goto{ex-V-2.3}{2.3}).}
+
+\ChapterEntry{p-389}{V, Example 2.11.4. Indices of the relations}{375}
+
+
+\Printed{$i=1,\ldots,n+1$. Therefore $\mathbf P(\mathcal E)$ is isomorphic to the subscheme}
+\Revised{for $i,j=1,\ldots,n+1$. Therefore $\mathbf P(\mathcal E)$ is isomorphic to the subscheme}
+
+\ChapterEntry{p-391}{V, Theorem 2.15. The point $R$ in characteristic two}{377}
+
+
+\Printed{Take a point $R\in C$ such that $2R\sim P+Q$. This is possible, because the linear system $|P+Q|$ defines a two-to-one map of $C$ to $\Proj^1$, ramified at four points (assume $\operatorname{char}k\ne2$), and we can take $R$ to be one of them (IV, \Goto{sec-IV-4}{\S4}).}
+\Revised{The map defined by $|P+Q|$ has degree two and is separable in every characteristic. Indeed, a purely inseparable map would preserve the genus (IV, \Goto{result-IV-2.5}{2.5}). Hurwitz's theorem (IV, \Goto{result-IV-2.4}{2.4}) gives a ramification divisor of degree four, so there is a ramified point $R$ with fibre divisor $2R\sim P+Q$. As $P\ne Q$, the fibre containing $P$ is the reduced divisor $P+Q$, so $R\ne P$.}
+
+\ChapterEntry{p-397}{V, \S2. Number of the second remark after Proposition 2.21}{383}
+
+
+\Printed{Remark 2.22.2}
+\Revised{Remark 2.21.2}
+
+\ChapterEntry{p-398}{V, Exercise 2.8(c). Normalized bundles in the stated classification}{384}
+
+
+\Printed{indecomposable locally free sheaves $\mathcal E$ of rank $2$ that are}
+\Revised{normalized indecomposable locally free sheaves $\mathcal E$ of rank $2$ that are}
+
+\Printed{nonzero $\xi\in H^1(\mathcal L^\vee)$, determined up to a nonzero scalar multiple.}
+\Revised{nonzero $\xi\in H^1(\mathcal L^\vee)$, determined up to a nonzero scalar multiple. Without normalization, also specify the invertible sheaf by which the normalized bundle is tensored.}
+
+\ChapterEntry{p-399}{V, Exercise 2.15(b). Pullback of the point under Frobenius}{385}
+
+
+\Printed{$f^*\xi=0$ in $H^1(\mathcal L(-3P))$.}
+\Revised{$f^*\xi=0$ in $H^1(\mathcal L(-3Q))$, where $Q$ is the unique point with $f(Q)=P$.}
+
+\ChapterEntry{p-399}{V, Exercise 2.15(c). The inseparable curve is singular}{385}
+
+
+\Printed{Show that $X$ contains a nonsingular curve $Y\equiv3C_0-3f$, such that $\pi\colon Y\to C$ is purely inseparable. Show that the divisor $D=2C_0$ satisfies the hypotheses of (\Goto{result-V-2.21b}{2.21b}), but is not ample.}
+\Revised{Show that $X$ contains an integral singular curve $Y\equiv3C_0-3f$ such that $\pi\colon Y\to C$ is purely inseparable of degree $3$. Show that the divisor $D=2C_0$ satisfies the numerical inequalities in (\Goto{result-V-2.21b}{2.21b}), but is not ample.}
+
+\ChapterEntry{p-399}{V, Exercise 2.16. Grothendieck group of the base curve}{385}
+
+
+\Printed{$K(X)$}
+\Revised{$K(C)$}
+
+\ChapterEntry{p-402}{V, Proposition 3.4. The completed stalk at the center}{388}
+
+
+\Printed{\[
+\widehat{\mathcal F}^{\,i}\cong
+\varprojlim H^i(E_n,\mathcal O_{E_n})
+\]}
+\Revised{\[
+\FullWidthHat{\mathcal F^i_P}\cong
+\varprojlim H^i(E_n,\mathcal O_{E_n})
+\]}
+
+\Printed{It follows that $\widehat{\mathcal F}^{\,i}=0$ for $i>0$. Since $\mathcal F^i$ is a coherent sheaf with support at $P$, $\mathcal F^i=\widehat{\mathcal F}^{\,i}$, so $\mathcal F^i=0$.}
+\Revised{It follows that $\FullWidthHat{\mathcal F^i_P}=0$ for $i>0$. The stalk $\mathcal F^i_P$ has finite length, so the map $\mathcal F^i_P\to\FullWidthHat{\mathcal F^i_P}$ is an isomorphism. Thus $\mathcal F^i_P=0$, and $\mathcal F^i=0$ because its support is contained in $\{P\}$.}
+
+\ChapterEntry{p-403}{V, Proposition 3.6. Presentation of the Rees algebra}{389}
+
+
+\Printed{The Koszul complex (III, \Goto{result-III-7.10A}{7.10A}) gives a resolution of $\mathfrak m$ over $U$:
+\[
+0\longrightarrow\mathcal O_U\longrightarrow\mathcal O_U^2\longrightarrow\mathfrak m\longrightarrow0,
+\]
+where we denote the two generators of $\mathcal O_U^2$ by $t,u$, and send $t$ to $x$, $u$ to $y$. Then the kernel is generated by $ty-ux$. Therefore $\mathcal S$ over $U$ is the sheaf associated to the $A$-algebra $A[t,u]/(ty-ux)$,}
+\Revised{Shrink $U$ so that $x,y$ form a regular sequence in $A$. The map $A[t,u]\to A[s]$ sending $t$ to $xs$, $u$ to $ys$ has the Rees algebra as its image and kernel $(ty-ux)$. Indeed, for any homogeneous relation $H(t,u)$ of degree $m>0$, its coefficient of $u^m$ is divisible by $x$, since reducing $H(x,y)=0$ modulo $x$ makes that coefficient times $y^m$ zero. Modulo $ty-ux$, replace its $u^m$ term by a multiple of $t$. Thus $H$ is congruent to $tH_1$ with $H_1(x,y)=0$, since $x$ is a nonzerodivisor. Induction on $m$ proves the kernel assertion,}
+
+\ChapterEntry{p-403}{V, Proposition 3.6. Ring in the affine blow-up chart}{389}
+
+
+\Printed{for some $h\in A[u]$. Indeed, $\mathfrak m^{r+1}A[u]$ is generated by $x^{r+1},\allowbreak x^{r+1}u,\allowbreak\ldots,\allowbreak x^{r+1}u^{r+1}$, so $\pi^*g$ is divisible by $x^{r+1}$.}
+\Revised{for some $h$ in the chart ring $A[u]/(y-ux)$. In this ring the pullback of $\mathfrak m^{r+1}$ is generated by $x^{r+1}$, so $\pi^*g$ is divisible by $x^{r+1}$.}
+
+\ChapterEntry{p-404}{V, Remark 3.8.1. Embedded resolution of a proper closed subvariety}{390}
+
+
+\Printed{given a variety $V$, contained in a nonsingular variety $W$,}
+\Revised{given a proper closed subvariety $V$ of a nonsingular variety $W$,}
+
+\ChapterEntry{p-405}{V, Theorem 3.9. The centre of the blow-up in the reduced inverse image}{391}
+
+
+\Printed{at a point $P$, and let $\mu_P(Y)=r$.}
+\Revised{at a point $P$ of $Y$, and let $\mu_P(Y)=r$.}
+
+\ChapterEntry{p-406}{V, Theorem 3.9. Intersection with the exceptional curve}{392}
+
+
+\Printed{$Y.E=2$}
+\Revised{$\widetilde Y.E=2$}
+
+\ChapterEntry{p-406}{V, Theorem 3.9. The two transverse intersections}{392}
+
+
+\Printed{in which case we can stop.}
+\Revised{in which case no more blowing up is needed over $P$. Continue at unresolved points elsewhere.}
+
+\ChapterEntry{p-408}{V, Example 3.9.5. Characteristic for the analytic normal form}{394}
+
+
+\Printed{In this case it happens that the classification for equivalence coincides}
+\Revised{Assume now that $\operatorname{char}k\ne2$. In this case it happens that the classification for equivalence coincides}
+
+\ChapterEntry{p-408}{V, Exercise 3.1. The centre of the blow-up}{394}
+
+
+\Printed{nonsingular subvariety, and let $\pi\colon\widetilde X\to X$ be obtained by blowing up $Y$}
+\Revised{proper nonsingular closed subvariety, and let $\pi\colon\widetilde X\to X$ be obtained by blowing up $Y$}
+
+\ChapterEntry{p-408}{V, Exercise 3.2. Intersection without common components}{394}
+
+
+\Printed{Conclude that $C.D=\sum\mu_P(C)\cdot\mu_P(D)$, where the sum is taken over}
+\Revised{If $C$ and $D$ have no common irreducible component, conclude that $C.D=\sum\mu_P(C)\cdot\mu_P(D)$, where the sum is taken over}
+
+\ChapterEntry{p-408}{V, Exercise 3.5. Characteristic and notation for the normalization}{394}
+
+
+\Printed{Let $a_1,\ldots,a_r$, $r\ge5$, be distinct elements of $k$, and let}
+\Revised{Assume $\operatorname{char}k\ne2$. Let $a_1,\ldots,a_r$, $r\ge5$, be distinct elements of $k$, and let}
+
+\Printed{$g(\widetilde Y)$, where $\widetilde Y$ is the normalization of $Y$.}
+\Revised{$g(\widetilde C)$, where $\widetilde C$ is the normalization of $C$.}
+
+\ChapterEntry{p-409}{V, Exercise 3.8. Multiplicities after the first blowing up}{395}
+
+
+\Printed{Show that the following two singularities have the same multiplicity, and the same configuration of infinitely near singular points with the same multiplicities, hence the same $\delta_P$, but are not equivalent.}
+\Revised{Show that the following two singularities have the same multiplicity at the origin. Compare their infinitely near multiplicities and compute the two distinct values of $\delta_P$. Show that the singularities are not equivalent.}
+
+\ChapterEntry{p-410}{V, \S4. Multiplicity and strict transforms at assigned points}{396}
+
+
+\Printed{every divisor containing $Q_1,\ldots,Q_s$ will automatically have at least an $s$-fold point at $P$.}
+\Revised{a divisor whose strict transform after blowing up $P$ contains these $s$ distinct points of the exceptional curve will have at least an $s$-fold point at $P$.}
+
+\ChapterEntry{p-410}{V, Remark 4.0.3. Base point test on the blown-up surface}{396}
+
+
+\Printed{(b) for every $P\in X$, including infinitely near points on $X'$, $\mathfrak d-P$ has no unassigned base points.}
+\Revised{(b) for every $P\in X'$, viewed as an ordinary or infinitely near point of $X$, $\mathfrak d-P$ has no unassigned base points.}
+
+\ChapterEntry{p-415}{V, Remark 4.7.2. Fibres of the cubic-surface parameter count}{401}
+
+
+\Printed{Subtract off the automorphisms of $\mathbf P^2$ ($8$ parameters) and add automorphisms of $\mathbf P^3$ ($15$ parameters). Thus we see that the cubic surfaces in $\mathbf P^3$ given by (\Goto{result-V-4.7}{4.7}) form a $19$-dimensional family. But the family of all cubic surfaces in $\mathbf P^3$ has dimension equal to $\dim H^0(\mathcal O_{\mathbf P^3}(3))-1$, which is also $19$. Thus we see at least that almost all nonsingular cubic surfaces arise by (\Goto{result-V-4.7}{4.7}).}
+\Revised{Choosing a projective frame adds $15$ parameters. For a fixed embedded cubic surface there are only finitely many ordered sets of six exceptional lines by (\Goto{result-V-4.9}{4.9}). For each such set, $3l=h+\sum e_i$ determines $l$ in the torsion-free Picard group, and $|l|$ determines the contraction up to the $8$ parameters for coordinates on $\mathbf P^2$. Consequently the image has dimension $12+15-8=19$. It contains a nonempty open set in the irreducible $19$-dimensional space of cubic surfaces.}
+
+\ChapterEntry{p-418}{V, Proposition 4.10. Moving the second skew line}{404}
+
+
+\Printed{we can move $E_2$ to the role of $E_2$ without touching $P_1$.}
+\Revised{we can move $E'_2$ to the role of $E_2$ without touching $P_1$.}
+
+\Printed{$P_2,\dots,P_5$, or use quadratic transformations based at three points among}
+\Revised{$P_2,\dots,P_6$, or use quadratic transformations based at three points among}
+
+\Printed{$P_2,\dots,P_5$}
+\Revised{$P_2,\dots,P_6$}
+
+\ChapterEntry{p-419}{V, Lemma 4.12. Base points of $|D_0|$ and $|D_1|$}{405}
+
+
+\Printed{lines points. $|D_2|,|D_3|,|D_4|$}
+\Revised{base points. $|D_2|,|D_3|,|D_4|$}
+
+\ChapterEntry{p-420}{V, Lemma 4.12. Coefficient of the line class}{406}
+
+
+\Printed{$a=c_1+2(c_2+c_3+c_4)+3(c_5+c_6)$}
+\Revised{$a=c_0+{}c_1+2(c_2+c_3+c_4)+3(c_5+c_6)$}
+
+\ChapterEntry{p-420}{V, Corollary 4.13(a). Distinct indices for the line classes}{406, 408}
+
+\PassagePage{406}
+
+
+\Printed{for each $i,j$, and $2a>\sum_{i\ne j}b_i$ for each $j$;}
+\Revised{for distinct $i,j$, and $2a>\sum_{i\ne j}b_i$ for each $j$;}
+
+\PassagePage{408}
+
+
+\Printed{for each $i,j$ and $2a-\sum_{i\ne j}b_i>0$ for each $j$, we must necessarily have}
+\Revised{for distinct $i,j$ and $2a-\sum_{i\ne j}b_i>0$ for each $j$, we must necessarily have}
+
+\ChapterEntry{p-421}{V, Exercise 4.2. Curves contracted by the quadratic transformation}{406--407}
+
+\PassagePage{406}
+
+
+\Printed{$d$ in $\mathbf P^2$, with points of multiplicity $r_1,r_2,r_3$ at $P_1,P_2,P_3$, then the strict transform $C'$ of $C$ by $\varphi$ has degree}
+\Revised{$d$ in $\mathbf P^2$, with points of multiplicity $r_1,r_2,r_3$ at $P_1,P_2,P_3$, and $C$ is different from the three lines joining pairs of centers, then the strict transform $C'$ of $C$ by $\varphi$ has degree}
+
+\PassagePage{407}
+
+
+\Printed{$d-r_1-r_2$ at $Q_3$. The curve $C$ may have arbitrary singularities. [\emph{Hint:} Use (Ex.~\Goto{ex-V-3.2}{3.2}).]}
+\Revised{$d-r_1-r_2$ at $Q_3$. The curve $C$ may have arbitrary singularities. The three lines joining pairs of centers are contracted. [\emph{Hint:} Use (Ex.~\Goto{ex-V-3.2}{3.2}).]}
+
+\ChapterEntry{p-421}{V, Exercise 4.4. Residual intersections and coincident points}{407}
+
+
+\Printed{meeting $C$ in points $P,Q,R$, and $L'$ is a line meeting $C$ in points $P',Q',R'$, let $P''$ be the third intersection of the line $PP'$ with $C$, and}
+\Revised{meeting $C$ in points $P,Q,R$, and $L'$ is a line meeting $C$ in points $P',Q',R'$, where the intersection divisors are supported on the regular locus and multiplicities are counted, let $P''$ be the third intersection of the line $PP'$ with $C$, and}
+
+\Printed{Then $P'',Q'',R''$ are collinear.}
+\Revised{When either pair coincides, use the tangent at that regular point to define the residual intersection, and use the same convention in (b). Then $P'',Q'',R''$ are collinear.}
+
+\ChapterEntry{p-421}{V, Exercise 4.5. Nondegenerate data for Pascal's theorem}{407}
+
+
+\Printed{any six points on a conic}
+\Revised{six distinct points on a nonsingular conic}
+
+\ChapterEntry{p-423}{V, Exercise 4.16. Fermat cubic surface}{409}
+
+
+\Printed{For the \emph{Fermat cubic surface} $x_0^3+x_1^3+x_2^3+x_3^3=0$, find}
+\Revised{Assume $\operatorname{char}k\ne3$. For the \emph{Fermat cubic surface} $x_0^3+x_1^3+x_2^3+x_3^3=0$, find}
+
+\ChapterEntry{p-426}{V, Corollary 5.4. Fundamental points of the inverse map}{412}
+
+
+\Printed{such a morphism has no fundamental points}
+\Revised{its inverse birational map has no fundamental points}
+
+\ChapterEntry{p-431}{V, Example 5.7.3. Choice of the curve in the affine neighborhood}{417}
+
+
+\Printed{curve not containing $P$. Let $C_0\subseteq X_0$ be its closure, which still does not contain}
+\Revised{curve not containing $P$ whose inverse image is not exceptional for the original blow-up of $\mathbf P^2$. Such a curve can be chosen as a component of a general affine hyperplane section of $U$ avoiding $P$ and containing none of the relevant exceptional images. Let $C_0\subseteq X_0$ be its closure, which still does not contain}
+
+\ChapterEntry{p-434}{V, Exercise 5.7. Dominance in the negativity argument}{420}
+
+
+\Printed{morphism $f\colon X\to X_0$ to a projective variety $X_0$ of dimension}
+\Revised{dominant morphism $f\colon X\to X_0$ to a projective variety $X_0$ of dimension}
+
+\ChapterEntry{p-434}{V, Exercise 5.8(a). Prime element in the localization argument}{420}
+
+
+\Printed{$z$ is irreducible in $A$}
+\Revised{$(z)$ is prime in $A$}
+
+\ChapterEntry{p-435}{V, Exercise 5.8. Orientation of the Brieskorn spheres}{421}
+
+
+\Printed{possible differentiable structures on the $7$-sphere}
+\Revised{oriented classes of smooth homotopy $7$-spheres up to diffeomorphism}
+
+\ChapterEntry{p-435}{V, \S6. Scope of the canonical-ring definition}{421}
+
+
+\Printed{projective variety $X$ over $k$, we define the \emph{Kodaira dimension}}
+\Revised{nonsingular projective variety $X$ over $k$, we define the \emph{Kodaira dimension}}
+
+\ChapterEntry{p-436}{V, Remark 6.2.1. The surface shown rational}{422}
+
+
+\Printed{the rationality of $X$ follows from (\Goto{result-V-6.2}{6.2}). See Serre \Goto{bib-482-2}{[13]}}
+\Revised{the rationality of $X'$ follows from (\Goto{result-V-6.2}{6.2}). See Serre \Goto{bib-482-2}{[13]}}
+
+\ChapterEntry{p-436}{V, Theorem 6.3. The minimal model in Kodaira dimension zero}{422}
+
+
+\Printed{$\kappa=0\Leftrightarrow12K=0$. A surface in this class must be one of the following (assume $\operatorname{char}k\ne2,3$):}
+\Revised{On a relatively minimal model, $\kappa=0\Leftrightarrow12K\sim0$. A relatively minimal surface in this class must be one of the following (assume $\operatorname{char}k\ne2,3$):}
+
+\ChapterEntry{p-436}{V, Theorem 6.3(4). The hyperelliptic case}{422}
+
+
+\Printed{a surface fibred over $\mathbf P^1$ by a pencil of elliptic curves}
+\Revised{a quotient $(E\times F)/G$ of elliptic curves by a finite diagonal action, faithful by translations on $E$, with $F/G\cong\mathbf P^1$}
+

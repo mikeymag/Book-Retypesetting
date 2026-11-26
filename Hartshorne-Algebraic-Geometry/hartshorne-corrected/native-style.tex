@@ -1,0 +1,152 @@
+\renewcommand{\thesection}{\arabic{section}}
+\setlength{\parindent}{11pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+\pretolerance=250
+\emergencystretch=1.1em
+
+% Notation and reusable statements for the typeset chapters.
+\newcommand{\AffSpace}[2][]{%
+  \mathbf{A}\if\relax\detokenize{#1}\relax\else_{#1}\fi^{\mkern-.8mu#2}}
+\newcommand{\Proj}{\mathbf{P}}
+\newcommand{\RR}{\mathbf R}
+\newcommand{\ideal}{\mathfrak a}
+\DeclareRobustCommand{\BookLink}[2]{\ifcsname BookTarget:#1\endcsname\hyperlink{\csname BookTarget:#1\endcsname}{#2}\else\hyperlink{h:#1}{#2}\fi}
+\newcommand{\Num}[2]{\leavevmode\ifcsname BookTarget:#1\endcsname\hypertarget{\csname BookTarget:#1\endcsname}{}\fi\hypertarget{h:#1}{#2}}
+\newcommand{\Stmt}[3]{\par\addvspace{9pt}\noindent\textbf{#1 \Num{#3}{#2}.}\enspace\itshape\ignorespaces}
+\newcommand{\StmtNamed}[4]{\par\addvspace{9pt}\noindent\textbf{#1 \Num{#3}{#2}} (#4).\enspace\itshape\ignorespaces}
+\newenvironment{result}[3]{\Stmt{#1}{#2}{#3}}{\par\normalfont\addvspace{5pt}}
+\newenvironment{namedresult}[4]{\StmtNamed{#1}{#2}{#3}{#4}}{\par\normalfont\addvspace{5pt}}
+\newcommand{\Dfn}{\par\addvspace{9pt}\noindent\textbf{Definition.}\enspace\ignorespaces}
+\newcommand{\Observation}[3]{\par\addvspace{9pt}\noindent\textbf{#1 \Num{#3}{#2}.}\enspace\ignorespaces}
+\newcommand{\Proof}{\par\addvspace{3pt}\noindent\textit{Proof.}\enspace\ignorespaces}
+\newcommand{\Exercises}{\par\addvspace{13pt}\noindent\textbf{Exercises}\par\nobreak\vspace{3pt}}
+\newenvironment{problems}{\begin{description}[style=multiline,labelwidth=3em,leftmargin=3.55em,itemsep=5pt,parsep=1pt,topsep=2pt]}{\end{description}}
+\newcommand{\Problem}[3][]{\item[{\normalfont\bfseries#1\Num{x#2}{#2}.}]\ignorespaces#3}
+\newenvironment{parts}{\begin{enumerate}[label=\normalfont(\alph*),leftmargin=1.65em,itemsep=1pt,topsep=2pt,parsep=0pt]}{\end{enumerate}}
+\newcommand{\Part}[2]{\item[{\Num{#1}{\normalfont(#2)}}]\ignorespaces}
+\newcommand{\Figure}[4]{\par\addvspace{7pt}\begin{center}\resizebox{#3\linewidth}{!}{\input{figures/#2.tex}}\\[4pt]\small\textbf{Figure \Num{fig#1}{#1}.}\quad #4\end{center}\addvspace{4pt}}
+\newcommand{\EditionText}[1]{#1}
+
+\expandafter\def\csname BookTarget:fig1\endcsname{fig-book-1}
+\expandafter\def\csname BookTarget:fig2\endcsname{fig-book-2}
+\expandafter\def\csname BookTarget:r1.1\endcsname{result-I-1.1}
+\expandafter\def\csname BookTarget:r1.1.1\endcsname{result-I-1.1.1}
+\expandafter\def\csname BookTarget:r1.1.2\endcsname{result-I-1.1.2}
+\expandafter\def\csname BookTarget:r1.1.3\endcsname{result-I-1.1.3}
+\expandafter\def\csname BookTarget:r1.1.4\endcsname{result-I-1.1.4}
+\expandafter\def\csname BookTarget:r1.10\endcsname{result-I-1.10}
+\expandafter\def\csname BookTarget:r1.11A\endcsname{result-I-1.11A}
+\expandafter\def\csname BookTarget:r1.12A\endcsname{result-I-1.12A}
+\expandafter\def\csname BookTarget:r1.13\endcsname{result-I-1.13}
+\expandafter\def\csname BookTarget:r1.13.1\endcsname{result-I-1.13.1}
+\expandafter\def\csname BookTarget:r1.2\endcsname{result-I-1.2}
+\expandafter\def\csname BookTarget:r1.2a\endcsname{result-I-1.2a}
+\expandafter\def\csname BookTarget:r1.2b\endcsname{result-I-1.2b}
+\expandafter\def\csname BookTarget:r1.2c\endcsname{result-I-1.2c}
+\expandafter\def\csname BookTarget:r1.2d\endcsname{result-I-1.2d}
+\expandafter\def\csname BookTarget:r1.2e\endcsname{result-I-1.2e}
+\expandafter\def\csname BookTarget:r1.3A\endcsname{result-I-1.3A}
+\expandafter\def\csname BookTarget:r1.4\endcsname{result-I-1.4}
+\expandafter\def\csname BookTarget:r1.4.1\endcsname{result-I-1.4.1}
+\expandafter\def\csname BookTarget:r1.4.2\endcsname{result-I-1.4.2}
+\expandafter\def\csname BookTarget:r1.4.3\endcsname{result-I-1.4.3}
+\expandafter\def\csname BookTarget:r1.4.4\endcsname{result-I-1.4.4}
+\expandafter\def\csname BookTarget:r1.4.5\endcsname{result-I-1.4.5}
+\expandafter\def\csname BookTarget:r1.4.6\endcsname{result-I-1.4.6}
+\expandafter\def\csname BookTarget:r1.4.7\endcsname{result-I-1.4.7}
+\expandafter\def\csname BookTarget:r1.5\endcsname{result-I-1.5}
+\expandafter\def\csname BookTarget:r1.6\endcsname{result-I-1.6}
+\expandafter\def\csname BookTarget:r1.6.1\endcsname{result-I-1.6.1}
+\expandafter\def\csname BookTarget:r1.7\endcsname{result-I-1.7}
+\expandafter\def\csname BookTarget:r1.8A\endcsname{result-I-1.8A}
+\expandafter\def\csname BookTarget:r1.9\endcsname{result-I-1.9}
+\expandafter\def\csname BookTarget:r2.1\endcsname{result-I-2.1}
+\expandafter\def\csname BookTarget:r2.2\endcsname{result-I-2.2}
+\expandafter\def\csname BookTarget:r2.3\endcsname{result-I-2.3}
+\expandafter\def\csname BookTarget:r7.1\endcsname{result-I-7.1}
+\expandafter\def\csname BookTarget:s1\endcsname{sec-I-1}
+\expandafter\def\csname BookTarget:s2\endcsname{sec-I-2}
+\expandafter\def\csname BookTarget:s3\endcsname{sec-I-3}
+\expandafter\def\csname BookTarget:x1.10\endcsname{ex-I-1.10}
+\expandafter\def\csname BookTarget:x1.10a\endcsname{ex-I-1.10a}
+\expandafter\def\csname BookTarget:x1.10b\endcsname{ex-I-1.10b}
+\expandafter\def\csname BookTarget:x1.10c\endcsname{ex-I-1.10c}
+\expandafter\def\csname BookTarget:x1.10d\endcsname{ex-I-1.10d}
+\expandafter\def\csname BookTarget:x1.10e\endcsname{ex-I-1.10e}
+\expandafter\def\csname BookTarget:x1.11\endcsname{ex-I-1.11}
+\expandafter\def\csname BookTarget:x1.12\endcsname{ex-I-1.12}
+\expandafter\def\csname BookTarget:x1.1a\endcsname{ex-I-1.1a}
+\expandafter\def\csname BookTarget:x1.1b\endcsname{ex-I-1.1b}
+\expandafter\def\csname BookTarget:x1.1c\endcsname{ex-I-1.1c}
+\expandafter\def\csname BookTarget:x1.2\endcsname{ex-I-1.2}
+\expandafter\def\csname BookTarget:x1.7a\endcsname{ex-I-1.7a}
+\expandafter\def\csname BookTarget:x1.7b\endcsname{ex-I-1.7b}
+\expandafter\def\csname BookTarget:x1.7c\endcsname{ex-I-1.7c}
+\expandafter\def\csname BookTarget:x1.7d\endcsname{ex-I-1.7d}
+\expandafter\def\csname BookTarget:x2.1\endcsname{ex-I-2.1}
+\expandafter\def\csname BookTarget:x2.10a\endcsname{ex-I-2.10a}
+\expandafter\def\csname BookTarget:x2.10b\endcsname{ex-I-2.10b}
+\expandafter\def\csname BookTarget:x2.10c\endcsname{ex-I-2.10c}
+\expandafter\def\csname BookTarget:x2.11a\endcsname{ex-I-2.11a}
+\expandafter\def\csname BookTarget:x2.11b\endcsname{ex-I-2.11b}
+\expandafter\def\csname BookTarget:x2.11c\endcsname{ex-I-2.11c}
+\expandafter\def\csname BookTarget:x2.12a\endcsname{ex-I-2.12a}
+\expandafter\def\csname BookTarget:x2.12b\endcsname{ex-I-2.12b}
+\expandafter\def\csname BookTarget:x2.12c\endcsname{ex-I-2.12c}
+\expandafter\def\csname BookTarget:x2.12d\endcsname{ex-I-2.12d}
+\expandafter\def\csname BookTarget:x2.15a\endcsname{ex-I-2.15a}
+\expandafter\def\csname BookTarget:x2.15b\endcsname{ex-I-2.15b}
+\expandafter\def\csname BookTarget:x2.15c\endcsname{ex-I-2.15c}
+\expandafter\def\csname BookTarget:x2.16a\endcsname{ex-I-2.16a}
+\expandafter\def\csname BookTarget:x2.16b\endcsname{ex-I-2.16b}
+\expandafter\def\csname BookTarget:x2.17\endcsname{ex-I-2.17}
+\expandafter\def\csname BookTarget:x2.17a\endcsname{ex-I-2.17a}
+\expandafter\def\csname BookTarget:x2.17b\endcsname{ex-I-2.17b}
+\expandafter\def\csname BookTarget:x2.17c\endcsname{ex-I-2.17c}
+\expandafter\def\csname BookTarget:x2.17d\endcsname{ex-I-2.17d}
+\expandafter\def\csname BookTarget:x2.2i\endcsname{ex-I-2.2i}
+\expandafter\def\csname BookTarget:x2.3a\endcsname{ex-I-2.3a}
+\expandafter\def\csname BookTarget:x2.3b\endcsname{ex-I-2.3b}
+\expandafter\def\csname BookTarget:x2.3c\endcsname{ex-I-2.3c}
+\expandafter\def\csname BookTarget:x2.3d\endcsname{ex-I-2.3d}
+\expandafter\def\csname BookTarget:x2.3e\endcsname{ex-I-2.3e}
+\expandafter\def\csname BookTarget:x2.4a\endcsname{ex-I-2.4a}
+\expandafter\def\csname BookTarget:x2.4b\endcsname{ex-I-2.4b}
+\expandafter\def\csname BookTarget:x2.4c\endcsname{ex-I-2.4c}
+\expandafter\def\csname BookTarget:x2.5a\endcsname{ex-I-2.5a}
+\expandafter\def\csname BookTarget:x2.5b\endcsname{ex-I-2.5b}
+\expandafter\def\csname BookTarget:x2.6\endcsname{ex-I-2.6}
+\expandafter\def\csname BookTarget:x2.7\endcsname{ex-I-2.7}
+\expandafter\def\csname BookTarget:x2.7a\endcsname{ex-I-2.7a}
+\expandafter\def\csname BookTarget:x2.7b\endcsname{ex-I-2.7b}
+\expandafter\def\csname BookTarget:x2.9\endcsname{ex-I-2.9}
+\expandafter\def\csname BookTarget:x2.9a\endcsname{ex-I-2.9a}
+\expandafter\def\csname BookTarget:x2.9b\endcsname{ex-I-2.9b}
+\expandafter\def\csname BookTarget:b-am\endcsname{legacy-b-am}
+\expandafter\def\csname BookTarget:b-bour\endcsname{legacy-b-bour}
+\expandafter\def\csname BookTarget:b-h1\endcsname{legacy-b-h1}
+\expandafter\def\csname BookTarget:b-h5\endcsname{legacy-b-h5}
+\expandafter\def\csname BookTarget:b-lang\endcsname{legacy-b-lang}
+\expandafter\def\csname BookTarget:b-mat\endcsname{legacy-b-mat}
+\expandafter\def\csname BookTarget:b-zs\endcsname{legacy-b-zs}
+\expandafter\def\csname BookTarget:x1.1\endcsname{ex-I-1.1}
+\expandafter\def\csname BookTarget:x1.3\endcsname{ex-I-1.3}
+\expandafter\def\csname BookTarget:x1.4\endcsname{ex-I-1.4}
+\expandafter\def\csname BookTarget:x1.5\endcsname{ex-I-1.5}
+\expandafter\def\csname BookTarget:x1.6\endcsname{ex-I-1.6}
+\expandafter\def\csname BookTarget:x1.7\endcsname{ex-I-1.7}
+\expandafter\def\csname BookTarget:x1.8\endcsname{ex-I-1.8}
+\expandafter\def\csname BookTarget:x1.9\endcsname{ex-I-1.9}
+\expandafter\def\csname BookTarget:x2.2\endcsname{ex-I-2.2}
+\expandafter\def\csname BookTarget:x2.3\endcsname{ex-I-2.3}
+\expandafter\def\csname BookTarget:x2.4\endcsname{ex-I-2.4}
+\expandafter\def\csname BookTarget:x2.5\endcsname{ex-I-2.5}
+\expandafter\def\csname BookTarget:x2.8\endcsname{ex-I-2.8}
+\expandafter\def\csname BookTarget:x2.10\endcsname{ex-I-2.10}
+\expandafter\def\csname BookTarget:x2.11\endcsname{ex-I-2.11}
+\expandafter\def\csname BookTarget:x2.12\endcsname{ex-I-2.12}
+\expandafter\def\csname BookTarget:x2.13\endcsname{ex-I-2.13}
+\expandafter\def\csname BookTarget:x2.14\endcsname{ex-I-2.14}
+\expandafter\def\csname BookTarget:x2.15\endcsname{ex-I-2.15}
+\expandafter\def\csname BookTarget:x2.16\endcsname{ex-I-2.16}

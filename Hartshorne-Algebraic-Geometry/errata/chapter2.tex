@@ -1,0 +1,562 @@
+\section{Chapter II. Schemes}
+
+\ChapterEntry{p-75}{II \S1. Categorical description of a presheaf}{61}
+
+
+\Printed{Now a presheaf is just a contravariant functor from the category $\mathfrak{Top}(X)$ to the category $\mathfrak{Ab}$ of abelian groups.}
+\Revised{With condition \Goto{def-II-1-condition-0}{(0)}, a presheaf is a contravariant functor from $\mathfrak{Top}(X)$ to $\mathfrak{Ab}$ which sends $\varnothing$ to the zero group.}
+
+\Printed{We define a presheaf of rings, a presheaf of sets, or a presheaf with values in any fixed category $\mathfrak C$, by replacing the words \textquotedblleft{}abelian group\textquotedblright{} in the definition by \textquotedblleft{}ring\textquotedblright{}, \textquotedblleft{}set\textquotedblright{}, or \textquotedblleft{}object of $\mathfrak C$\textquotedblright{} respectively.}
+\Revised{For the analogous normalized definition with values in a category $\mathfrak C$ with a terminal object, require the value at $\varnothing$ to be terminal in $\mathfrak C$. In particular the terminal objects are the zero ring for rings and a singleton for sets.}
+
+\ChapterEntry{p-76}{II Example 1.0.3, constant sheaf on a connected open set}{62}
+
+
+\Printed{every connected open set $U$}
+\Revised{every nonempty connected open set $U$}
+
+\ChapterEntry{p-81}{II Exercise 1.13, total space of an espace \texorpdfstring{\'etal\'e}{etale}}{67}
+
+
+\Printed{$\operatorname{Sp\acute e}(\mathcal F)=\bigcup_{P\in X}\mathcal F_P$. We define a projection map $\pi\colon\operatorname{Sp\acute e}(\mathcal F)\to X$ by sending $s\in\mathcal F_P$ to $P$.}
+\Revised{$\operatorname{Sp\acute e}(\mathcal F)=\coprod_{P\in X}\mathcal F_P$. The projection map $\pi\colon\operatorname{Sp\acute e}(\mathcal F)\to X$ sends a pair $(P,s)$ with $s\in\mathcal F_P$ to $P$.}
+
+\Printed{$P\mapsto s_P$, its germ at $P$.}
+\Revised{$P\mapsto(P,s_P)$, where $s_P$ is its germ at $P$.}
+
+\ChapterEntry{p-83}{II Exercise 1.21(c), inclusions of the two points}{69}
+
+
+\Printed{$\mathcal F=i_*\mathcal O_P\oplus i_*\mathcal O_Q$,}
+\Revised{$\mathcal F=(i_P)_*\mathcal O_P\oplus(i_Q)_*\mathcal O_Q$, with $i_P\colon\{P\}\hookrightarrow X$ and $i_Q\colon\{Q\}\hookrightarrow X$ the inclusions,}
+
+\ChapterEntry{p-87}{II Proposition 2.3(b), proof, image of an ideal}{73}
+
+
+\Printed{$f^{-1}(V(\mathfrak a))=V(\varphi(\mathfrak a))$}
+\Revised{$f^{-1}(V(\mathfrak a))=V(\varphi(\mathfrak a)B)$}
+
+\ChapterEntry{p-90}{II Lemma 2.4, proof, homogeneous prime ideals}{76}
+
+
+\Printed{homogeneous ideal $\mathfrak p$ is prime if and only if for any two \emph{homogeneous}}
+\Revised{proper homogeneous ideal $\mathfrak p$ is prime if and only if for any two \emph{homogeneous}}
+
+\ChapterEntry{p-91}{II \S2. Generic points before Proposition 2.6}{77}
+
+
+\Printed{irreducible subset of a variety so that the variety becomes a scheme.}
+\Revised{irreducible closed subset of a variety so that the variety becomes a scheme.}
+
+\ChapterEntry{p-94}{II Exercise 2.12, diagonal gluing data}{80}
+
+
+\Printed{such that (1) for each $i,j$, $\varphi_{ji}=\varphi_{ij}^{-1}$, and (2) for}
+\Revised{and put $U_{ii}=X_i$ and $\varphi_{ii}=\operatorname{id}_{X_i}$. Assume that (1) for each $i,j$, $\varphi_{ji}=\varphi_{ij}^{-1}$, and (2) for}
+
+\Printed{$\varphi_{ij}$ are all empty. Then the scheme $X$ is called the \emph{disjoint union} of the $X_i$}
+\Revised{$\varphi_{ij}$ are all empty for $i\ne j$. Then the scheme $X$ is called the \emph{disjoint union} of the $X_i$}
+
+\ChapterEntry{p-96}{II \S3. Definition of an integral scheme and Proposition 3.1}{82}
+
+
+\Printed{for every open set $U\subseteq X$}
+\Revised{it is nonempty and for every nonempty open set $U\subseteq X$}
+
+\Printed{open subset, and suppose that there are elements $f,g\in\mathcal O(U)$}
+\Revised{nonempty open subset, and suppose that there are elements $f,g\in\mathcal O(U)$}
+
+\ChapterEntry{p-99}{II Example 3.2.3, subscheme structures on a closed set}{85}
+
+
+\Printed{every closed subset $Y$ of $X$ has many closed subscheme structures, corresponding to all the ideals $\mathfrak a$ for which $V(\mathfrak a)=Y$.}
+\Revised{every closed subset $Y$ of $X$ has at least one closed subscheme structure, and may have more than one, corresponding to all the ideals $\mathfrak a$ for which $V(\mathfrak a)=Y$.}
+
+\ChapterEntry{p-100}{II Example 3.2.5, infinitesimal neighbourhoods}{86}
+
+
+\Printed{for each $n>1$, $Y_n$ is a nonreduced scheme structure on the closed set $Y$, which does not correspond to any subvariety of $V$.}
+\Revised{for each $n>1$ with $\mathfrak p\ne(0)$, $Y_n$ is a nonreduced scheme structure on the closed set $Y$, which does not correspond to any subvariety of $V$. If $\mathfrak p=(0)$, then $Y_n=Y=X$ for every $n$.}
+
+\ChapterEntry{p-105}{II Exercises 3.6 and 3.8, affine opens of an integral scheme}{91}
+
+
+\Printed{open affine subset of $X$, then $K(X)$ is isomorphic to the quotient}
+\Revised{nonempty open affine subset of $X$, then $K(X)$ is isomorphic to the quotient}
+
+\Printed{open affine subset $U=\operatorname{Spec} A$ of $X$, let $\widetilde A$}
+\Revised{nonempty open affine subset $U=\operatorname{Spec} A$ of $X$, let $\widetilde A$}
+
+\ChapterEntry{p-106}{II Exercise 3.10(b), fibres of the squaring morphism}{92}
+
+
+\Printed{field of $\eta$. (Assume $k$ algebraically closed}
+\Revised{field of $\eta$. (Assume $k$ algebraically closed and $\operatorname{char} k\ne 2$}
+
+\ChapterEntry{p-109}{II, Exercise 3.20(d). Nonempty closed subset}{95}
+
+
+\Printed{closed subset of $X$, then $\dim Y+\operatorname{codim}(Y,X)=\dim X$}
+\Revised{nonempty closed subset of $X$, then $\dim Y+\operatorname{codim}(Y,X)=\dim X$}
+
+\ChapterEntry{p-109}{II, \S4. Zariski topology in the introduction}{95}
+
+
+\Printed{is never Hausdorff, and the underlying topological space of a scheme}
+\Revised{need not be Hausdorff, and the underlying topological space of a scheme}
+
+\ChapterEntry{p-111}{II, \S4. Local rings in the curve analogy}{97}
+
+
+\Printed{we replace the curve by its local ring at $P$, which is a discrete valuation ring.}
+\Revised{if $P$ is a nonsingular closed point of an integral curve, we replace the curve by its local ring at $P$, which is a discrete valuation ring.}
+
+\ChapterEntry{p-114}{II, Example 4.6.1. Base change}{100}
+
+
+\Printed{$X\to k$. The map $X\times_k X\to X$ we obtain is the projection map of the}
+\Revised{$X\to\operatorname{Spec}k$. The map $X\times_k X\to X$ we obtain is the projection map of the}
+
+\ChapterEntry{p-116}{II, Theorem 4.7. Image under the base-changed map}{102}
+
+
+\Printed{$f(Z)$ is stable under specialization.}
+\Revised{$f'(Z)$ is stable under specialization.}
+
+\ChapterEntry{p-118}{II, Theorem 4.9. Domain of the valuation}{104}
+
+
+\Printed{$v\colon K\to G$ be the valuation associated to the valuation ring $R$.}
+\Revised{$v\colon K^\times\to G$ be the valuation associated to the valuation ring $R$.}
+
+\ChapterEntry{p-121}{II, Exercise 4.11(a). Positive-dimensional local domain}{107}
+
+
+\Printed{$\mathcal O,\mathfrak m$ is a noetherian local domain}
+\Revised{$(\mathcal O,\mathfrak m)$ is a noetherian local domain of positive dimension}
+
+\ChapterEntry{p-122}{II, Exercise 4.12(b)(2). Local normality of the birational model}{108}
+
+
+\Printed{If $f\colon X'\to X$ is a birational morphism, and if $Y'$ is an irreducible curve in $X'$ whose image in $X$ is}
+\Revised{If $f\colon X'\to X$ is a birational morphism of varieties, and if $Y'$ is an irreducible curve in $X'$ whose image in $X$ is}
+
+\Printed{the local ring $R$ of the generic point of $Y'$ on $X'$ is a discrete}
+\Revised{assuming $X'$ is normal at the generic point of $Y'$, the local ring $R$ of the generic point of $Y'$ on $X'$ is a discrete}
+
+\ChapterEntry{p-123}{II, \S5. Rank on a ringed space}{109}
+
+
+\Printed{such an open set is set to the number of copies of the structure sheaf needed (finite or infinite). If $X$ is connected, the rank of a locally free sheaf is the same everywhere.}
+\Revised{such a nonempty open set is the number of copies of the structure sheaf needed (finite or infinite), provided every stalk of $\mathcal O_X$ is nonzero. Under this hypothesis, if $X$ is connected, the rank of a locally free sheaf is the same everywhere.}
+
+\ChapterEntry{p-125}{II, Example 5.2.3. Extension by zero}{111}
+
+
+\Printed{and $V=\operatorname{Spec}A$ is any open affine subset of $X$, not}
+\Revised{$U$ is nonempty, and $V=\operatorname{Spec}A$ is any open affine subset of $X$, not}
+
+\ChapterEntry{p-132}{II, definition of $\Gamma_*(\mathcal F)$. Multiplication for arbitrary gradings}{118}
+
+
+\Printed{$\mathcal F(n)\otimes\mathcal O_X(d)\cong\mathcal F(n+d)$}
+\Revised{$\mathcal F(n)\otimes\mathcal O_X(d)\to\mathcal F(n+d)$}
+
+\ChapterEntry{p-134}{II, Corollary 5.16(a). Nonnegative section degrees}{120, 125--126}
+
+\PassagePage{120}
+
+
+\Printed{hence $\Gamma_*(\mathcal I_Y)$ is a submodule of $\Gamma_*(\mathcal O_X)$. But by \Goto{result-II-5.13}{(5.13)}, $\Gamma_*(\mathcal O_X)=S$. Hence $\Gamma_*(\mathcal I_Y)$ is a homogeneous ideal of $S$, which we will call $I$.}
+\Revised{write $\Gamma_{\geq0}(\mathcal G)=\bigoplus_{n\geq0}\Gamma(X,\mathcal G(n))$. Then $\Gamma_{\geq0}(\mathcal I_Y)$ is a submodule of $\Gamma_{\geq0}(\mathcal O_X)$. The latter is $S$, by \Goto{result-II-5.13}{(5.13)} for $r\geq1$ and by the trivialization by $x_0$ for $r=0$. Hence $\Gamma_{\geq0}(\mathcal I_Y)$ is a homogeneous ideal of $S$, which we will call $I$.}
+
+\Printed{we have $\mathcal I_Y\cong\widetilde I$ by \Goto{result-II-5.15}{(5.15)}, and hence $Y$ is the subscheme determined by $I$.}
+\Revised{we have $\mathcal I_Y\cong\widetilde I$ by \Goto{result-II-5.15}{(5.15)} (discarding the negative degrees does not change the associated sheaf: on $D_+(x_i)$ multiply the numerator and denominator of a homogeneous fraction by a suitable power of $x_i$), and hence $Y$ is the subscheme determined by $I$.}
+
+\Printed{$\Gamma_*(\mathcal I_Y)$ is the largest ideal in $S$ defining $Y$ (Ex.~\Goto{ex-II-5.10}{5.10}}
+\Revised{$\Gamma_{\geq0}(\mathcal I_Y)$ is the largest ideal in $S$ defining $Y$ (Ex.~\Goto{ex-II-5.10}{5.10}}
+
+\PassagePage{125}
+
+
+\Printed{$\Gamma_*(\mathcal I_Y)$}
+\Revised{$\Gamma_{\geq0}(\mathcal I_Y)$}
+
+\PassagePage{126}
+
+
+\Printed{$\Gamma_*(\mathcal I_X)$}
+\Revised{$\Gamma_{\geq0}(\mathcal I_X)$}
+
+\ChapterEntry{p-135}{II, Theorem 5.17. Affine-chart ring}{121}
+
+
+\Printed{$B_i=A[x_0/x_i,\ldots,x_n/x_i]$}
+\Revised{$B_i=A[x_0/x_i,\ldots,x_r/x_i]$}
+
+\ChapterEntry{p-136}{II, Theorem 5.19. Domain case with empty Proj}{122}
+
+
+\Printed{Let $x_0,\ldots,x_r\in S_1$ be a set of generators of $S_1$ as an $A$-module.}
+\Revised{If $S_1=0$, then $X=\varnothing$ and the required module is zero. Otherwise, let $x_0,\ldots,x_r\in S_1$ be a set of nonzero generators of $S_1$ as an $A$-module.}
+
+\ChapterEntry{p-137}{II, Theorem 5.19. Degree-zero elements in the integrality argument}{123}
+
+
+\Printed{positive degree, we can say that for any $y\in S_{\ge n}=\bigoplus_{e\ge n}S_e$}
+\Revised{nonnegative degree, we can say that for any $y\in S_{\ge n}=\bigoplus_{e\ge n}S_e$}
+
+\ChapterEntry{p-139}{II, Exercise 5.9(c). Morphisms of the category of tails}{125}
+
+
+\Printed{Now show that the functors $\sim$ and $\Gamma_*$ induce an equivalence}
+\Revised{Use morphisms $\varinjlim_d\operatorname{Hom}_{\operatorname{GrMod} S}(M_{\ge d},N_{\ge d})$, with degree-zero maps and transition maps given by restriction. Now show that the functors $\sim$ and $\Gamma_*$ induce an equivalence}
+
+\ChapterEntry{p-140}{II, Exercise 5.14(d). Projective normality requires integrality}{126}
+
+
+\Printed{connected, normal closed subscheme of $\mathbf P_k^r$.}
+\Revised{nonempty, connected, normal closed subscheme of $\mathbf P_k^r$.}
+
+\Printed{normal, and for every $n\ge0$ the natural map}
+\Revised{integral and normal, and for every $n\ge0$ the natural map}
+
+\ChapterEntry{p-141}{II, Exercise 5.16(b). Range of exterior powers}{127}
+
+
+\Printed{any $r$, i.e., it induces an isomorphism of $\bigwedge^r\mathcal F$ with}
+\Revised{$0\le r\le n$, i.e., it induces an isomorphism of $\bigwedge^r\mathcal F$ with}
+
+\ChapterEntry{p-142}{II, Exercise 5.18. Base compatibility of the trivializations}{128}
+
+
+\Printed{isomorphisms $\psi_i\colon f^{-1}(U_i)\to\AffSpace[U_i]{n}$, such that for any}
+\Revised{isomorphisms over $U_i$ $\psi_i\colon f^{-1}(U_i)\to\AffSpace[U_i]{n}$, such that for any}
+
+\ChapterEntry{p-143}{II, \S6. Plane curve used in the line-section example}{129}
+
+
+\Printed{in $\mathbf P_k^2$, the projective plane over an algebraically closed}
+\Revised{of degree at least two in $\mathbf P_k^2$, the projective plane over an algebraically closed}
+
+\ChapterEntry{p-144}{II, \S6. Orders at common points of line sections}{130}
+
+
+\Printed{$g$ has zeros at the points of $D$, and poles at the points of $D'$, counted with multiplicities, in a sense which will be made precise below.}
+\Revised{the order of $g$ at each point $P$ of $C$ is the multiplicity of $P$ in $D$ minus its multiplicity in $D'$, in a sense which will be made precise below.}
+
+\ChapterEntry{p-145}{II, \S6. Uniqueness of the center of a divisorial valuation}{131}
+
+
+\Printed{(Ex.~\Goto{ex-II-4.5}{4.5})}
+\Revised{(\Goto{result-II-4.3}{4.3}; cf.\ Ex.~\Goto{ex-II-4.5}{4.5(a)})}
+
+\ChapterEntry{p-146}{II, Proposition 6.4. Positive projective dimension}{132}
+
+
+\Printed{over a field $k$. For any divisor $D=\sum n_iY_i$, define the degree of $D$ by}
+\Revised{over a field $k$, with $n\ge1$. For any divisor $D=\sum n_iY_i$, define the degree of $D$ by}
+
+\ChapterEntry{p-147}{II, Proposition 6.5(c). Representatives of kernel classes}{133}
+
+
+\Printed{divisors whose support is contained in $Z$}
+\Revised{divisor classes with a representative supported in $Z$}
+
+\ChapterEntry{p-148}{II, Example 6.5.2. Normality of the quadric cone}{134}
+
+
+\Printed{Since $A$ is integrally closed (Ex.~\Goto{ex-II-6.4}{6.4}), it is equivalent}
+\Revised{Identify $A$ with $k[u^2,uv,v^2]$, the even-degree subring of $k[u,v]$. If an element of $\operatorname{Frac}A$ is integral over $A$, it lies in $k[u,v]$ by normality of that polynomial ring. Writing the element as $g/h$ with $g,h\in A$ and $h\ne0$ shows that its odd-degree part vanishes, since multiplication by the nonzero even-degree polynomial $h$ preserves parity. Thus $A$ is integrally closed, and it is equivalent}
+
+\ChapterEntry{p-151}{II, \S6. Local parameter in divisor pullback}{137}
+
+
+\Printed{follows. For any point $Q\in Y$, let $t\in\mathcal O_Q$ be a \emph{local parameter} at $Q$}
+\Revised{follows. For any closed point $Q\in Y$, let $t\in\mathcal O_Q$ be a \emph{local parameter} at $Q$}
+
+\ChapterEntry{p-159}{II, Corollary 6.17. The Picard group in dimension zero}{145}
+
+
+\Printed{By (\Goto{result-II-6.4}{6.4}), $\operatorname{Cl}X\cong\mathbf Z$, so by (\Goto{result-II-6.16}{6.16}), $\operatorname{Pic}X\cong\mathbf Z$.}
+\Revised{For $n=0$, $X=\operatorname{Spec}k$ and every invertible sheaf on $X$ is trivial. For $n\geqslant1$, by (\Goto{result-II-6.4}{6.4}), $\operatorname{Cl}X\cong\mathbf Z$. 
+By (\Goto{result-II-6.16}{6.16}), $\operatorname{Pic}X\cong\mathbf Z$.}
+
+\ChapterEntry{p-159}{II, \S6 and Remark 6.17.1. Ideal of an effective Cartier divisor}{145}
+
+
+\Printed{We conclude this section with some remarks about closed subschemes of codimension one of a scheme $X$.}
+\Revised{We conclude this section with some remarks about closed subschemes of a scheme $X$.}
+
+\Printed{associated subscheme of codimension $1$}
+\Revised{associated subscheme}
+
+\Printed{generated by $f_i$.}
+\Revised{generated by $f_i$. If $X$ is noetherian, all irreducible components of $Y$ have codimension one in $X$.}
+
+\Printed{subschemes whose sheaf of ideals is locally generated by a single element. Note also that if $X$ is an integral separated noetherian locally}
+\Revised{subschemes whose sheaf of ideals is locally generated by a single element which is a non-zero-divisor. Note also that if $X$ is an integral separated noetherian locally}
+
+\ChapterEntry{p-160}{II, Exercise 6.1. Projective-space factor}{146}
+
+
+\Printed{also satisfies (\Goto{cond-II-6-star}{*}), and}
+\Revised{for $n\geqslant1$ also satisfies (\Goto{cond-II-6-star}{*}), and}
+
+\ChapterEntry{p-160}{II, Exercise 6.2. Positive dimension of $X$}{146}
+
+
+\Printed{closed subvariety of $\mathbf P_k^n$ which is nonsingular in codimension}
+\Revised{positive-dimensional closed subvariety of $\mathbf P_k^n$ which is nonsingular in codimension}
+
+\ChapterEntry{p-161}{II, Exercise 6.4. Minimal polynomial in the quadratic extension}{147}
+
+
+\Printed{$X^2-2gX+(g^2-h^2f)$. Now show that $\alpha$ is integral over $k[x_1,\ldots,x_n]$ if and}
+\Revised{$X^2-2gX+(g^2-h^2f)$ when $h\ne0$, and $X-g$ when $h=0$. Now show that $\alpha$ is integral over $k[x_1,\ldots,x_n]$ if and}
+
+\ChapterEntry{p-161}{II, Exercise 6.5. Field for the split quadric}{147}
+
+
+\Printed{$\operatorname{char}k\ne2$}
+\Revised{$k$ be algebraically closed of characteristic $\ne2$}
+
+\ChapterEntry{p-162}{II, Exercise 6.6(b)--(c). Orders in the cubic group law}{148}
+
+
+\Printed{A point $P\in X$ has order $2$ in the group law on $X$ if and only if the tangent line at $P$ passes through $P_0$.}
+\Revised{A point $P\in X$ satisfies $2P=0$ in the group law on $X$ if and only if the tangent line at $P$ passes through $P_0$.}
+
+\Printed{A point $P\in X$ has order $3$ in the group law on $X$ if and only if $P$ is an inflection point.}
+\Revised{A point $P\in X$ satisfies $3P=0$ in the group law on $X$ if and only if $P$ is an inflection point.}
+
+\ChapterEntry{p-162}{II, Exercise 6.7. Characteristic and classes of the nodal cubic}{148}
+
+
+\Printed{Let $X$ be the nodal cubic curve $y^2z=x^3+x^2z$ in $\mathbf P^2$. Imitate (\Goto{result-II-6.11.4}{6.11.4}) and show that the group}
+\Revised{Let $X$ be the nodal cubic curve $y^2z=x^3+x^2z$ in $\mathbf P^2$ over $k$ of characteristic $\ne2$. Imitate (\Goto{result-II-6.11.4}{6.11.4}) and show that the group}
+
+\Printed{divisors of degree $0$, $\operatorname{CaCl}^{\circ}X$, is naturally isomorphic}
+\Revised{divisor classes of degree $0$, $\operatorname{CaCl}^{\circ}X$, is naturally isomorphic}
+
+\ChapterEntry{p-165}{II, Example 7.1.1. The automorphism proof in dimension zero}{151}
+
+
+\Printed{So let $\varphi$ be a $k$-automorphism of $\mathbf P_k^n$.}
+\Revised{When $n=0$, both groups are trivial. Assume below that $n\geqslant1$. So let $\varphi$ be a $k$-automorphism of $\mathbf P_k^n$.}
+
+\ChapterEntry{p-166}{II, Proposition 7.3. From closed points to all points}{152}
+
+
+\Printed{Since the elements of $V$ are pull-backs of sections of $\mathcal O(1)$ on $\mathbf P^n$, it is clear from (\Goto{result-II-7.3-1}{1}) that the map $\varphi$ is injective as a map of sets. Since $X$ is projective over $k$, it is proper over $k$ (\Goto{result-II-4.9}{4.9}), so the image $\varphi(X)$ in $\mathbf P^n$ is closed (Ex.\ \Goto{ex-II-4.4}{4.4}), and $\varphi$ is a proper morphism (\Goto{result-II-4.8e}{4.8e}). In particular, $\varphi$ is a closed map. But, being a morphism, it is also continuous, so we see that $\varphi$ is a homeomorphism of $X$ onto its image $\varphi(X)$ which is a closed subset of $\mathbf P^n$.}
+\Revised{Condition (\Goto{result-II-7.3-1}{1}) gives injectivity on closed points. Since $X$ is projective over $k$, $\varphi$ is proper (\Goto{result-II-4.9}{4.9}, \Goto{result-II-4.8e}{4.8e}) and hence closed. If two points have the same image, their closures both map onto the closure of that image. Every closed point of either closure maps to a closed point, and the other closure contains a closed point over that image. By (\Goto{result-II-7.3-1}{1}) these closed points coincide. Both closures thus have the same closed points. These points are dense in each closure, since $X$ is of finite type over $k$. The closures, and hence their generic points, coincide. Thus $\varphi$ is a homeomorphism onto its closed image.}
+
+\Printed{This can be checked on the stalks. So it is sufficient to show, for each closed point $P$, that $\mathcal O_{\mathbf P^n,P}\to\mathcal O_{X,P}$ is surjective.}
+\Revised{The morphism $\varphi$ is projective by its closed graph in $X\times_k\mathbf P^n$, so $\varphi_*\mathcal O_X$ is coherent by (\Goto{result-II-5.20}{5.20}). Its cokernel vanishes if it vanishes at closed points. Outside the image the cokernel is zero, so it suffices to show $\mathcal O_{\mathbf P^n,P}\to\mathcal O_{X,P}$ surjective for each closed point $P$ of $X$.}
+
+\Printed{We also need to use (\Goto{result-II-5.20}{5.20}), which implies that $\varphi_*\mathcal O_X$ is a coherent sheaf on $\mathbf P^n$, and hence that $\mathcal O_{X,P}$ is a finitely generated $\mathcal O_{\mathbf P^n,P}$-module.}
+\Revised{Coherence of $\varphi_*\mathcal O_X$ gives that $\mathcal O_{X,P}$ is a finitely generated $\mathcal O_{\mathbf P^n,P}$-module.}
+
+\ChapterEntry{p-169}{II, Example 7.6.1. Ample twists on projective space}{155}
+
+
+\Printed{On the other hand, since the sheaf $\mathcal O(l)$ has no global sections for $l<0$, one sees easily that the sheaves $\mathcal O(l)$ for $l\leq0$ cannot be ample. So on $\Proj_k^n$, we have $\mathcal O(l)$ is ample $\Leftrightarrow$ very ample $\Leftrightarrow l>0$.}
+\Revised{For $n\geq1$ and $l\leq0$, $\mathcal O(-1)\otimes\mathcal O(l)^{\otimes m}=\mathcal O(ml-1)$ has no nonzero global sections for $m>0$, so $\mathcal O(l)$ cannot be ample. Thus on $\Proj_k^n$ for $n\geq1$, $\mathcal O(l)$ is ample $\Leftrightarrow$ very ample $\Leftrightarrow l>0$. On $\Proj_k^0$, every twist is trivial, ample, and very ample.}
+
+\ChapterEntry{p-170}{II, Example 7.6.2. Zero bidegrees on a quadric}{156}
+
+
+\Printed{On the other hand, if $\mathcal L$ is of type $(a,b)$ with either $a<0$ or $b<0$, then by restricting to a fibre of the product $\Proj^1\times\Proj^1$, one sees that $\mathcal L$ is not generated by global sections. Hence if $a\leq0$ or $b\leq0$, $\mathcal L$ cannot be ample.}
+\Revised{On the other hand, if either $a\leq0$ or $b\leq0$, take a fibre $i\colon F\hookrightarrow Q$, $F\cong\Proj^1$, on which $\mathcal L$ has degree $d\leq0$. Twisting the coherent sheaf $i_*\mathcal O_F(-1)$ by $\mathcal L^{\otimes m}$ gives $i_*\mathcal O_F(md-1)$, which has no nonzero global sections for $m>0$. Thus $\mathcal L$ cannot be ample.}
+
+\ChapterEntry{p-171}{II, Proposition 7.7. Zero divisor and nonzero sections}{157}
+
+
+\Printed{sections $s,s'\in\Gamma(X,\mathcal L)$ have the same divisor of zeros if and}
+\Revised{nonzero sections $s,s'\in\Gamma(X,\mathcal L)$ have the same divisor of zeros if and}
+
+\Printed{If $D>0$ and $D=D_0+(f)$, then $(f)\geq-D_0$.}
+\Revised{If $D\geq0$ and $D=D_0+(f)$, then $(f)\geq-D_0$.}
+
+\ChapterEntry{p-172}{II, Lemma 7.8 and Remark 7.8.2. Nonzero sections and tangent vectors}{158}
+
+
+\Printed{$s\in\Gamma(X,\mathcal L)$}
+\Revised{nonzero $s\in\Gamma(X,\mathcal L)$}
+
+\Printed{open set $X_s$.}
+\Revised{open set $X_s$. The zero section already satisfies $s_P\in\mathfrak m_P\mathcal L_P$ for every $P$.}
+
+\Printed{tangent vector $t\in T_P(X)=(\mathfrak m_P/\mathfrak m_P^2)'$, there is a}
+\Revised{nonzero tangent vector $t\in T_P(X)=(\mathfrak m_P/\mathfrak m_P^2)'$, there is a}
+
+\ChapterEntry{p-173}{II, Example 7.8.3. Linear systems of positive-degree divisors}{159}
+
+
+\Printed{If $X=\Proj^n$, then the set of all effective divisors of degree $d>0$ is a complete}
+\Revised{If $X=\Proj^n$ with $n\geq1$, then the set of all effective divisors of degree $d>0$ is a complete}
+
+\ChapterEntry{p-174}{II, Example 7.8.6. Characteristic for the two rational quartics}{160}
+
+
+\Printed{curves in $\Proj^3$ which are not equivalent by an automorphism of $\Proj^3$}
+\Revised{curves in $\Proj^3$ which are not equivalent by an automorphism of $\Proj^3$ when $\operatorname{char}k\ne2$}
+
+\ChapterEntry{p-178}{II, Proposition 7.13(a). Grading shift in the Rees algebra}{164}
+
+
+\Printed{$\mathcal S(U)(1)=\bigoplus_{d\geq0}\mathcal I^{d+1}(U)$. But this is clearly equal to the ideal $\mathcal I\cdot\mathcal S(U)$ generated by $\mathcal I$ in $\mathcal S(U)$,}
+\Revised{$\mathcal S(U)(1)$. Its nonnegative part is $\bigoplus_{d\geq0}\mathcal I^{d+1}(U)$, the ideal $\mathcal I(U)\cdot\mathcal S(U)$ generated by $\mathcal I(U)$ in $\mathcal S(U)$. The quotient by the nonnegative part is killed by all positive-degree elements, so both modules give the same sheaf on $\operatorname{Proj}\mathcal S(U)$,}
+
+\ChapterEntry{p-179}{II, Proposition 7.14. Pullback of the homogeneous sections}{165}
+
+
+\Printed{$s_i=g^{-1}x_i$ under this isomorphism. Now I claim that $g$ factors through the closed}
+\Revised{$s_i=g^*x_i$ under this isomorphism. Now I claim that $g$ factors through the closed}
+
+\ChapterEntry{p-179}{II, Example 7.15.1. Strict transform of the center point}{165}
+
+
+\Printed{through the origin $P$, then the strict transform $\widetilde Y$ of $Y$ in $\widetilde X$}
+\Revised{through the origin $P$ with $Y\ne\{P\}$, then the strict transform $\widetilde Y$ of $Y$ in $\widetilde X$}
+
+\Printed{closed subvariety. Hence, provided $Y$ is not just $P$ itself, we can recover $\widetilde Y$ as the closure of $\pi^{-1}(Y-P)$,}
+\Revised{closed subvariety. Hence we can recover $\widetilde Y$ as the closure of $\pi^{-1}(Y-P)$,}
+
+\ChapterEntry{p-184}{II, Exercise 7.7(b). Characteristic of the projected Veronese surface}{170}
+
+
+\Printed{Show that the subsystem defined by $x^2,y^2,z^2,y(x-z),(x-y)z$ gives a}
+\Revised{Assume $\operatorname{char}k\ne 2$. Show that the subsystem defined by $x^2,y^2,z^2,y(x-z),(x-y)z$ gives a}
+
+\ChapterEntry{p-184}{II, Exercise 7.9(a). Connectedness in the Picard group formula}{170}
+
+
+\Printed{Show that $\operatorname{Pic}\Proj(\mathcal E)\cong\operatorname{Pic}X\times\mathbb Z$.}
+\Revised{If $X$ is connected, show that $\operatorname{Pic}\Proj(\mathcal E)\cong\operatorname{Pic}X\times\mathbb Z$. For arbitrary $X$, replace $\mathbb Z$ by the group of locally constant integer-valued functions on $X$.}
+
+\ChapterEntry{p-193}{II, Theorem 8.17. Proof for a nonsingular closed subvariety}{179}
+
+
+\Printed{of rank $r$ of $\Omega_{X/k}\otimes\mathcal O_{Y'}$ in a neighborhood of $y$. It follows that in the exact sequence of (\Goto{result-II-8.12}{8.12}) for $Y'$,
+\[
+\mathcal I'/\mathcal I'^2\xrightarrow{\delta}
+\Omega_{X/k}\otimes\mathcal O_{Y'}\longrightarrow\Omega_{Y'/k}\longrightarrow0,
+\]
+we have $\delta$ injective (since its image is free of rank $r$), and $\Omega_{Y'/k}$ is locally free of rank $n-r$. The previous part of the proof now shows that $Y'$ is irreducible and nonsingular of dimension $n-r$ (in a neighborhood of $y$). But $Y\subseteq Y'$, both are integral schemes of the same dimension, so we must have $Y=Y'$, $\mathcal I=\mathcal I'$, and this shows that $\mathcal I/\mathcal I^2\xrightarrow{\delta}\Omega_{X/k}\otimes\mathcal O_Y$ is injective, as required.}
+\Revised{of rank $r$ of $\Omega_{X/k}\otimes\mathcal O_{Y'}$ in a neighborhood of $y$. At $y$, the differentials $dx_1,\ldots,dx_r$ are independent in the ambient cotangent space. By (\Goto{result-II-8.7}{8.7}), the classes of the $x_i$ are part of a regular system of parameters in $\mathcal O_{X,y}$. Hence $\mathcal O_{Y',y}$ is a regular local domain of dimension $n-r$. Its surjection onto $\mathcal O_{Y,y}$, which has the same dimension, is an isomorphism. Thus $\mathcal I=\mathcal I'$ near $y$. The resulting generators of $\mathcal I/\mathcal I^2$ map to a basis of $\ker\varphi$ in the exact sequence of (\Goto{result-II-8.12}{8.12}), so $\delta$ is injective, as required.}
+
+\ChapterEntry{p-194}{II, Theorem 8.18. Vanishing of a hyperplane jet}{180}
+
+
+\Printed{Now the scheme $H\cap X$ is defined at $x$ by the ideal generated by $f/f_0$ in $\mathcal O_x$. So $x\in H\cap X$ if and only if $\varphi_x(f)\in\mathfrak m_x$, and $x$ is nonregular on $H\cap X$ if and only if $\varphi_x(f)\in\mathfrak m_x^2$, because in that case, the local ring $\mathcal O_x/(\varphi(f))$ will not be regular. Thus we see that the hyperplanes $H\in B_x$ correspond exactly to those $f\in\ker\varphi_x$ (note also that $\varphi_x(f)=0\Leftrightarrow H\supseteq X$.)}
+\Revised{Write $g=(f/f_0)|_X$ near $x$. If $H$ contains $X$, then $g=0$. Otherwise, the local equation $g$ is nonzero, and the scheme $H\cap X$ is defined by $(g)$ at $x$. Then $x\in H\cap X$ if and only if $g\in\mathfrak m_x$, and $x$ lies in a nonregular hyperplane section precisely when $g\in\mathfrak m_x^2$. Thus $\varphi_x(f)=0$ is equivalent to $H\in B_x$.}
+
+\ChapterEntry{p-194}{II, Theorem 8.18. The incidence argument for $X=\mathbf P^n$}{180}
+
+
+\Printed{This shows that $B_x$ is a linear system of hyperplanes (in the sense of \Goto{sec-II-7}{\S7}) of dimension $n-r-1$.}
+\Revised{If $r=n$, then $B_x$ is empty for every $x$, and the result follows directly. If $r<n$, then $B_x$ is a linear system of hyperplanes (in the sense of \Goto{sec-II-7}{\S7}) of dimension $n-r-1$.}
+
+\Printed{We have just seen that the first projection $p_1\colon B\to X$ is surjective, with fibre a projective space of dimension $n-r-1$. Hence $B$ is irreducible, and has dimension $(n-r-1)+r=n-1$.}
+\Revised{The fibers of the first projection $p_1\colon B\to X$ have dimension $n-r-1$, so $\dim B\le r+(n-r-1)=n-1$.}
+
+\ChapterEntry{p-197}{II, Example 8.20.1. Genus of rational varieties}{183}
+
+
+\Printed{any nonsingular projective rational variety}
+\Revised{a nonsingular projective rational variety of positive dimension}
+
+\Printed{in all dimensions}
+\Revised{in every positive dimension}
+
+\ChapterEntry{p-198}{II, Example 8.20.3. Degrees and dimensions in the hypersurface construction}{184}
+
+
+\Printed{$n$ \emph{arbitrary}, $d\ge n+1$.}
+\Revised{$n\ge2$, $d\ge n+1$.}
+
+\Printed{in all dimensions}
+\Revised{in every positive dimension}
+
+\ChapterEntry{p-198}{II, \S8. Scope of the finite depth definition}{184}
+
+
+\Printed{If $A$ is a local ring with the maximal ideal $\mathfrak m$,}
+\Revised{If $A$ is a noetherian local ring with the maximal ideal $\mathfrak m$ and $M$ is a nonzero finitely generated $A$-module,}
+
+\ChapterEntry{p-200}{II, Theorem 8.24. The blow-up center is proper}{186}
+
+
+\Printed{$Y\subseteq X$ be a nonsingular closed subvariety, with ideal sheaf $\mathcal I$.}
+\Revised{$Y\subsetneq X$ be a nonsingular closed subvariety, with ideal sheaf $\mathcal I$.}
+
+\Printed{: if a quotient of a noetherian local ring by an element which is not a zero divisor is regular, then the local ring itself is regular.}
+\Revised{. Away from $Y'$ the blow-up is isomorphic to $X-Y$, while at points of $Y'$ a quotient of a noetherian local ring by a non-zero-divisor is regular only if the local ring itself is regular.}
+
+\ChapterEntry{p-202}{II, Exercise 8.4(f). Positive dimension of the hypersurface}{188}
+
+
+\Printed{If $Y$ is a nonsingular hypersurface of degree $d$ in $\mathbf P^n$, use \Goto{ex-II-8.4-c}{(c)} and \Goto{ex-II-8.4-e}{(e)} above to}
+\Revised{If $Y$ is a nonsingular hypersurface of degree $d$ in $\mathbf P^n$ with $n\ge2$, use \Goto{ex-II-8.4-c}{(c)} and \Goto{ex-II-8.4-e}{(e)} above to}
+
+\ChapterEntry{p-202}{II, Exercise 8.5(b). The blow-up morphism in the pullbacks}{188}
+
+
+\Printed{$\omega_{\widetilde X}\cong f^*\omega_X\otimes\mathcal L((r-1)Y')$}
+\Revised{$\omega_{\widetilde X}\cong\pi^*\omega_X\otimes\mathcal L((r-1)Y')$}
+
+\Printed{$\omega_{\widetilde X}\cong f^*\mathcal M\otimes\mathcal L(qY')$}
+\Revised{$\omega_{\widetilde X}\cong\pi^*\mathcal M\otimes\mathcal L(qY')$}
+
+\Printed{$\omega_{Y'}\cong f^*\omega_X\otimes\mathcal O_{Y'}(-q-1)$}
+\Revised{$\omega_{Y'}\cong(\pi|_{Y'})^*\omega_X\otimes\mathcal O_{Y'}(-q-1)$}
+
+\ChapterEntry{p-204}{II, \S9. When the infinitesimal neighborhoods have nilpotents}{190}
+
+
+\Printed{For $n\ge2$, this is a scheme with nilpotent elements.}
+\Revised{If $Y\subsetneq X$ and $n\ge2$, then $Y_n$ has nonzero nilpotent local sections of its structure sheaf.}
+
+\ChapterEntry{p-205}{II, \S9. Identity maps in an inverse system}{191}
+
+
+\Printed{each $n''\ge n'\ge n$ we have $\varphi_{n''n}=\varphi_{n'n}\circ\varphi_{n''n'}$. We will denote the inverse system by $(A_n,\varphi_{n'n})$, or simply}
+\Revised{each $n''\ge n'\ge n$ we have $\varphi_{n''n}=\varphi_{n'n}\circ\varphi_{n''n'}$, and $\varphi_{nn}=\operatorname{id}_{A_n}$. We will denote the inverse system by $(A_n,\varphi_{n'n})$, or simply}
+
+\ChapterEntry{p-208}{II, \S9. Dimensions of local rings of a completion}{194}
+
+
+\Printed{their dimension ($=\dim X$) is \emph{not} equal to the dimension of the underlying topological space $Y$.}
+\Revised{the dimension of a local ring of $\widehat X$ need not agree with the dimension of the underlying topological space $Y$.}
+
+\ChapterEntry{p-211}{II, Proposition 9.6. Choice of ideal of definition in the proof}{197--198}
+
+\PassagePage{197}
+
+
+\Printed{(a)}
+\Revised{Locally write $\mathfrak X$ as the completion of $\operatorname{Spec} A$ along $V(I)$ and take $A$ to be $I$-adically complete. By (\Goto{result-II-9.5}{9.5}), $(I^\triangle)^s\subseteq\mathfrak J$ for some $s$. The ideal $\mathfrak J/(I^\triangle)^s$ on $\operatorname{Spec}(A/I^s)$ comes from an ideal $J/I^s$. By (\Goto{result-II-9.4-c}{9.4c}), $J^\triangle=\mathfrak J$. The two adic filtrations are cofinal by (\Goto{result-II-9.5}{9.5}) and (\Goto{result-II-9.4-a}{9.4a}), so the same affine presentation uses $J$, with $Y_n=\operatorname{Spec}(A/J^n)$.\par
+(a)}
+
+\Printed{The question is local, so we may assume that $\mathfrak X$ is affine, equal to the completion of $X=\operatorname{Spec} A$ along $Y=V(I)$, and that $\mathfrak F=M^\triangle$, for some finitely generated $A$-module $M$. Then as in the proof of (\Goto{result-II-9.4-a}{9.4a}) we see that $\mathfrak F/\mathfrak J^n\mathfrak F\cong(M/I^nM)^\sim$ for each $n$. Thus $\mathcal F_n$ is coherent on $Y_n=\operatorname{Spec}(A/I^n)$, and $\mathfrak F\cong\varprojlim\mathcal F_n$.}
+\Revised{Write $\mathfrak F=M^\triangle$ for a finitely generated $A$-module $M$. As in the proof of (\Goto{result-II-9.4-a}{9.4a}), $\mathfrak F/\mathfrak J^n\mathfrak F\cong(M/J^nM)^\sim$. Thus $\mathcal F_n$ is coherent on $Y_n$, and $\mathfrak F\cong\varprojlim\mathcal F_n$.}
+
+\Printed{Again the question is local, so we may assume that $\mathfrak X$ is affine as above. Furthermore, we may assume that $A$ is $I$-adically complete, because replacing $A$ by $\widehat A$ does not change $\widehat X$. For each $n$, let $M_n=\Gamma(Y_n,\mathcal F_n)$.}
+\Revised{For each $n$, let $M_n=\Gamma(Y_n,\mathcal F_n)$.}
+
+\PassagePage{198}
+
+
+\Printed{$M_n\cong M/I^nM$}
+\Revised{$M_n\cong M/J^nM$}
+
+\Printed{$\mathfrak F/\mathfrak J^n\mathfrak F\cong(M/I^nM)^\sim$}
+\Revised{$\mathfrak F/\mathfrak J^n\mathfrak F\cong(M/J^nM)^\sim$}
+
+\ChapterEntry{p-214}{II, Exercise 9.6(a). Units and the Mittag--Leffler condition}{200}
+
+
+\Printed{Use the fact that $\ker(\Gamma(Y_{n+1},\mathcal O_{Y_{n+1}})\to\Gamma(Y_n,\mathcal O_{Y_n}))$ is a nilpotent ideal}
+\Revised{Use that the thickenings have the same underlying space and that the restriction map on structure sheaves has nilpotent kernel. Invertibility of a section is then detected by restriction. Use this}
+

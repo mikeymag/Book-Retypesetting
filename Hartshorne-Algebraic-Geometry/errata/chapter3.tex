@@ -1,0 +1,569 @@
+\section{Chapter III. Cohomology}
+
+\ChapterEntry{p-217}{III, \S1. The abelian-category embedding theorem}{203}
+
+
+\Printed{accept the \textquotedblleft full embedding theorem\textquotedblright\ (Freyd \Goto{bib-freyd-1}{[1, Ch.~7]}), which states roughly that any abelian category is equivalent to a subcategory of $\mathfrak{Ab}$. This implies that any category-theoretic statement (e.g., the 5-lemma) which can be proved in $\mathfrak{Ab}$ (e.g., by diagram-chasing) also holds in any abelian category.}
+\Revised{use Freyd's embedding theorems (\Goto{bib-freyd-1}{[1, Chs.~4 and~7]}). A small abelian category admits a faithful exact functor to $\mathfrak{Ab}$ and a fully faithful exact functor to modules over a suitable ring. For a finite diagram chase one can work in a small full exact abelian subcategory containing the diagram. A faithful exact functor preserves and reflects exactness, commutativity, and isomorphisms, so, for example, the 5-lemma transfers.}
+
+\ChapterEntry{p-224}{III, Theorem 2.7. Numbering and indexing in the proof}{210}
+
+
+\Printed{Step \phantom{2}.}
+\Revised{Step 2.}
+
+\Printed{$B=\bigcup_{U\subseteq X}\mathcal F(U)$}
+\Revised{$B=\coprod_{U\subseteq X\text{ open}}\mathcal F(U)$}
+
+\ChapterEntry{p-225}{III, \S2. Historical note on singular and \texorpdfstring{\v{C}ech}{Cech} cohomology}{211}
+
+
+\Printed{He shows that on a paracompact Hausdorff space, \v{C}ech cohomology and Alexander cohomology and singular cohomology all agree (see Spanier \Goto{bib-spanier-1}{[1, pp.~314, 327, 334]}).}
+\Revised{On a paracompact Hausdorff space, \v{C}ech and Alexander--Spanier cohomology with constant coefficients agree. They also agree with singular cohomology if the space is homologically locally connected, in particular if it is locally contractible (see Spanier \Goto{bib-spanier-1}{[1, \S6.8 and Corollary~6.9.5]}).}
+
+\ChapterEntry{p-227}{III, Exercise 2.6. Factoring a map through a stage}{213}
+
+
+\Printed{show that any such sheaf $\mathcal R$ is finitely generated, so any map $\mathcal R\to\varinjlim\mathcal I_\alpha$ factors through one of the $\mathcal I_\alpha$.}
+\Revised{show that $\mathbf Z_U$ is noetherian. Present $\mathcal R$ using finitely many generators and relations from finite direct sums of sheaves $\mathbf Z_V$ with $V$ open in $X$. Then any map $\mathcal R\to\varinjlim\mathcal I_\alpha$ factors through one of the $\mathcal I_\alpha$.}
+
+\ChapterEntry{p-230}{III, Theorem 3.7. The covering by affine opens in the proof}{216}
+
+
+\Printed{the form $X_f$.
+
+By quasi-compactness, we can cover $X$ with a finite number of these,}
+\Revised{the form $X_f$.
+The union of these neighborhoods contains every closed point. Its closed complement is empty because every nonempty closed subset of a noetherian scheme contains a closed point of the scheme (II, Ex.~\Goto{ex-II-3.17}{3.17b}). 
+By quasi-compactness, we can cover $X$ with a finite number of these,}
+
+\ChapterEntry{p-231}{III, Exercise 3.4. Depth when regular sequence lengths are unbounded}{217}
+
+
+\Printed{maximum length of an $M$-regular sequence $x_1,\ldots,x_r$, with all $x_i\in\mathfrak a$.}
+\Revised{supremum of the lengths of the $M$-regular sequences $x_1,\ldots,x_r$ with all $x_i\in\mathfrak a$, using the successive nonzerodivisor convention. The depth is $+\infty$ when these lengths are unbounded, in particular when $M=0$.}
+
+\ChapterEntry{p-233}{III, Example 4.0.3. The differential on the two affine charts}{219}
+
+
+\Printed{\[
+\begin{aligned}
+x&\mapsto x\\
+y&\mapsto\frac1x\\
+dy&\mapsto-\frac1{x^2}\,dx.
+\end{aligned}
+\]}
+\Revised{\[
+d(f(x)\,dx,g(y)\,dy)=\left(-f(x)-x^{-2}g(1/x)\right)\,dx
+\]
+with $U$ ordered before $V$.}
+
+\ChapterEntry{p-234}{III, Example 4.0.4. The circle cover and the acyclicity condition}{220}
+
+
+\Printed{semi-circles $U$, $V$, which overlap at each end, so that $U\cap V$ consists of two small intervals.}
+\Revised{arcs $U$, $V$, each larger than a semicircle, whose intersection $U\cap V$ consists of two open intervals.}
+
+\Printed{provided the open covering is taken fine enough so that there is no cohomology on any of the open sets}
+\Revised{when every nonempty finite intersection of the open sets in the covering is acyclic for the sheaf}
+
+\ChapterEntry{p-235}{III, Lemma 4.2. The contracting formula at a stalk}{221}
+
+
+\Printed{Thus $k$ is a homotopy operator for the complex $\mathcal C_x^\bullet$, showing that the identity map is homotopic to the zero map. It follows (\Goto{sec-III-1}{\S1}) that the cohomology groups $h^p(\mathcal C_x^\bullet)$ of this complex are $0$ for $p\geq1$.}
+\Revised{Thus for $p\geq1$ every cocycle $\alpha\in\mathcal C_x^p$ satisfies $\alpha=d(k\alpha)$, so the complex is exact in positive degrees. The sheaf axioms give exactness of the augmentation and at degree zero as above.}
+
+\ChapterEntry{p-237}{III, Exercise 4.4(a). Refinements and the directed limit}{223}
+
+
+\Printed{The coverings of $X$ form a partially ordered set under refinement, so we can consider the \v{C}ech cohomology in the limit}
+\Revised{Show that the induced map on \v{C}ech cohomology is independent of the choice of refinement function $\lambda$. The coverings of $X$ form a directed preorder under refinement, so these maps define the directed limit}
+
+\ChapterEntry{p-238}{III, Exercise 4.7. Degree of the plane equation}{224}
+
+
+\Printed{degree $d$. (Do not assume $f$ is irreducible.) Assume that $(1,0,0)$ is not}
+\Revised{positive degree $d$. (Do not assume $f$ is irreducible.) Assume that $(1,0,0)$ is not}
+
+\ChapterEntry{p-238}{III, Exercise 4.8. Cohomological dimension of the empty scheme}{224}
+
+
+\Printed{We define the \emph{cohomological dimension} of $X$, denoted $\operatorname{cd}(X)$, to be the least integer $n$ such that $H^i(X,\mathcal F)=0$ for all quasi-coherent sheaves $\mathcal F$ and all $i>n$. Thus for example, Serre's theorem \Goto{result-III-3.7}{(3.7)} says that $\operatorname{cd}(X)=0$ if and only if $X$ is affine.}
+\Revised{For nonempty $X$ we define the \emph{cohomological dimension} of $X$, denoted $\operatorname{cd}(X)$, to be the least integer $n$ such that $H^i(X,\mathcal F)=0$ for all quasi-coherent sheaves $\mathcal F$ and all $i>n$. Set $\operatorname{cd}(\varnothing)=-1$. For nonempty $X$, Serre's theorem \Goto{result-III-3.7}{(3.7)} says that $\operatorname{cd}(X)=0$ if and only if $X$ is affine.}
+
+\ChapterEntry{p-241}{III, Theorem 5.1(b). Sign of the connecting homomorphism}{227}
+
+
+\Printed{$\delta$ is division by $x_r$}
+\Revised{$\delta$ is multiplication by $(-1)^r/x_r$ with the order $0<\cdots<r$}
+
+\ChapterEntry{p-244}{III, Proposition 5.3. The finite subcover at the end of the proof}{230}
+
+
+\Printed{Now cover $X$ by a finite number of the open sets $U_P$, for various}
+\Revised{Since the union of the $U_P$ contains every closed point of $X$, its closed complement is empty, as in the proof of \Goto{result-III-3.7}{(3.7)}. 
+Now cover $X$ by a finite number of the open sets $U_P$, for various}
+
+\ChapterEntry{p-244}{III, Exercise 5.2(b). Hilbert polynomial of the section module}{230}
+
+
+\Printed{the Hilbert polynomial of $M$ defined in (I, \Goto{sec-I-7}{\S7}).}
+\Revised{the Hilbert polynomial of the finitely generated truncation $M_{\geq d}$ for any sufficiently large $d$, in the sense of (I, \Goto{sec-I-7}{\S7}).}
+
+\ChapterEntry{p-245}{III, Exercise 5.6(a). The disjoint lines used over an arbitrary field}{231}
+
+
+\Printed{Use the special cases $(q,0)$ and $(0,q)$, with $q>0$, when $Y$ is a disjoint union of $q$ lines $\Proj^1$ in $Q$,}
+\Revised{After extending scalars to an algebraic closure of $k$, use the special cases $(q,0)$ and $(0,q)$, with $q>0$, when $Y$ is a disjoint union of $q$ distinct lines in one ruling of $Q$,}
+
+\ChapterEntry{p-246}{III, Exercise 5.6(c). Arithmetic genus of a curve on the quadric}{232}
+
+
+\Printed{locally principal subscheme}
+\Revised{nonempty effective Cartier divisor}
+
+\Printed{use the special case $(q,0)$ which is a disjoint union of $q$ copies of $\Proj^1$. See (V, \Goto{result-V-1.5.2}{1.5.2}) for another method.]}
+\Revised{use the special case $(q,0)$ which is a disjoint union of $q$ copies of $\Proj^1$ after extending scalars to an algebraic closure of $k$. See (V, \Goto{result-V-1.5.2}{1.5.2}) for another method.]}
+
+\ChapterEntry{p-249}{III, Example 6.5.1. Resolution on a quasi-projective scheme}{235}
+
+
+\Printed{If $X$ is a scheme, which is quasi-projective over $\operatorname{Spec}A$, where $A$ is a noetherian ring, then by (II, \Goto{result-II-5.18}{5.18}), any coherent sheaf $\mathcal F$ on $X$ is a quotient of a locally free sheaf. Thus any coherent sheaf on $X$ has a locally free resolution $\mathcal L_\bullet\to\mathcal F\to0$.}
+\Revised{Let $X$ be a scheme quasi-projective over $\operatorname{Spec}A$, where $A$ is a noetherian ring. Embed $X$ as an open subscheme of a projective scheme over $A$. Given a coherent sheaf $\mathcal F$ on $X$, extend it to that scheme by (II, Ex.~\Goto{ex-II-5.15}{5.15}), apply (II, \Goto{result-II-5.18}{5.18}), and restrict back to $X$. Thus $\mathcal F$ is a quotient of a locally free sheaf of finite rank. Repeating with the coherent kernel gives a locally free resolution $\mathcal L_\bullet\to\mathcal F\to0$.}
+
+\ChapterEntry{p-249}{III, Caution 6.5.2. Projective objects in the module category}{235}
+
+
+\Printed{In fact, we cannot even define the right derived functors of Hom or $\IIISH$ in the first variable because the category $\IIIMod(X)$ does not have enough projectives (Ex.~\Goto{ex-III-6.2}{6.2}). However, see (Ex.~\Goto{ex-III-6.4}{6.4}) for a universal property.}
+\Revised{The category $\IIIMod(X)$ need not have enough projectives, as (Ex.~\Goto{ex-III-6.2}{6.2}) shows. In general one cannot use projective resolutions in the first variable. See (Ex.~\Goto{ex-III-6.4}{6.4}) for a universal property.}
+
+\ChapterEntry{p-251}{III, \S6. Projective dimension of the zero module}{237}
+
+
+\Printed{resolution of $M$ (or $+\infty$ if there is no finite projective resolution).}
+\Revised{resolution of $M$ (or $+\infty$ if there is no finite projective resolution) when $M\ne0$. For the zero module we set $\operatorname{pd}_A(0)=-\infty$.}
+
+\ChapterEntry{p-251}{III, Proposition 6.12A. Nonzero module in the depth formula}{237}
+
+
+\Printed{finitely generated $A$-module. Then we have}
+\Revised{nonzero finitely generated $A$-module. Then we have}
+
+\ChapterEntry{p-252}{III, Exercise 6.4. Finite-rank locally free covers}{238}
+
+
+\Printed{locally free sheaf. In this case we say $\mathfrak{Coh}(X)$ has \emph{enough locally frees}}
+\Revised{locally free sheaf of finite rank. In this case we say $\mathfrak{Coh}(X)$ has \emph{enough locally frees}}
+
+\Printed{coherent sheaf $\mathcal F$}
+\Revised{nonzero coherent sheaf $\mathcal F$}
+
+\Printed{Show:}
+\Revised{We set $\operatorname{hd}(0)=-\infty$. Show:}
+
+\ChapterEntry{p-254}{III, Theorem 7.1. Projective space of dimension zero}{240}
+
+
+\Printed{(\Goto{result-III-7.1a}{a}) It follows from (II,}
+\Revised{If $n=0$, the result is ordinary finite-dimensional vector-space duality on $X=\operatorname{Spec}k$. Assume $n\ge1$ below.\par
+(\Goto{result-III-7.1a}{a}) It follows from (II,}
+
+\ChapterEntry{p-257}{III, Theorem 7.6(b)(ii). Finite rank in negative-twist vanishing}{243}
+
+
+\Printed{on $X$, we have $H^i(X,\mathcal F(-q))=0$ for $i<n$ and $q\gg0$;}
+\Revised{of finite rank on $X$, we have $H^i(X,\mathcal F(-q))=0$ for $i<n$ and $q\gg0$;}
+
+\Printed{on $X$, and any closed point $x\in X$}
+\Revised{of finite rank on $X$, and any closed point $x\in X$}
+
+\ChapterEntry{p-257}{III, Theorem 7.6(b). Passing from closed stalks to Ext sheaves}{243}
+
+
+\Printed{on $X$, and any closed point $x\in X$, we have $\operatorname{depth}\mathcal F_x=n$, since $X$ is}
+\Revised{on $X$, and any closed point $x\in X$ with $\mathcal F_x\ne0$, we have $\operatorname{depth}\mathcal F_x=n$, since $X$ is}
+
+\Printed{Therefore by (\Goto{result-III-6.8}{6.8}) and (\Goto{result-III-6.10A}{6.10A}) we have
+\[
+\IIISE_P^i(\mathcal F,\cdot)=0
+\]
+for $i>N-n$.}
+\Revised{Where $\mathcal F_x=0$ the Ext stalks are zero. Therefore, by (\Goto{result-III-6.8}{6.8}) and (\Goto{result-III-6.10A}{6.10A}), for every $q$ and $i>N-n$, all closed stalks of $\IIISE_P^i(\mathcal F,\omega_P(q))$ vanish. These sheaves are coherent by (Ex.~\Goto{ex-III-6.3}{6.3}), so they are zero.}
+
+\ChapterEntry{p-258}{III, Corollary 7.7. Finite rank in the duality formula}{244}
+
+
+\Printed{$\mathcal F$ locally free, we have}
+\Revised{$\mathcal F$ locally free of finite rank, we have}
+
+\Printed{on $X$ there are natural isomorphisms}
+\Revised{of finite rank on $X$ there are natural isomorphisms}
+
+\ChapterEntry{p-258}{III, Corollary 7.8. Dimension of each component and rank of the sheaf}{244}
+
+
+\Printed{of dimension $\ge2$. Then for any locally free sheaf $\mathcal F$}
+\Revised{every irreducible component of which has dimension at least two. Then for any locally free sheaf $\mathcal F$}
+
+\Printed{on $X$,}
+\Revised{of finite rank on $X$,}
+
+\Printed{Since $X$ is normal of dimension $\ge2$, we have $\operatorname{depth}\mathcal F_x\ge2$ for every closed point $x\in X$ by (II, \Goto{result-II-8.22A}{8.22A}).}
+\Revised{Since $X$ is normal and every irreducible component has dimension at least two, we have $\operatorname{depth}\mathcal F_x\ge2$ for every closed point $x\in X$ with $\mathcal F_x\ne0$ by (II, \Goto{result-II-8.22A}{8.22A}).}
+
+\ChapterEntry{p-260}{III, Theorem 7.11. Conormal basis and its dual}{246}
+
+
+\Printed{However, this isomorphism depends on the choice of basis $f_1,\ldots,f_r$ for $\mathcal I$. If $g_i=\sum c_{ij}f_j$, $i=1,\ldots,r$, is another basis, then the exterior powers of the matrix $\lVert c_{ij}\rVert$ give an isomorphism of Koszul complexes.}
+\Revised{However, this isomorphism depends on the chosen regular generators $f_1,\ldots,f_r$ of $\mathcal I$. If $g_i=\sum c_{ij}f_j$, $i=1,\ldots,r$, is another such system, then the matrix $(c_{ij})$ is invertible after shrinking near $x$, because it gives a change of basis in $\mathcal I/\mathcal I^2$. Its exterior powers give an isomorphism of Koszul complexes.}
+
+\Printed{To remedy this situation, we consider the sheaf $\mathcal I/\mathcal I^2$ on $X$, which is locally free of rank $r$ (II, \Goto{result-II-8.21A}{8.21A}). In particular, it is free over $U$, with basis $f_1,\ldots,f_r$. Therefore $\bigwedge^r(\mathcal I/\mathcal I^2)$ is free of rank $1$, with basis $f_1\wedge\cdots\wedge f_r$. If we change to the basis $g_1,\ldots,g_r$, this element changes by $\det|c_{ij}|$. Therefore, we can obtain an intrinsic isomorphism above by tensoring with this free sheaf of rank $1$ (check variance!)}
+\Revised{To remedy this situation, consider the conormal sheaf $\mathcal I/\mathcal I^2$ on $X$. The regular sequence $f_1,\ldots,f_r$ gives a basis modulo $\mathcal I^2$ on $U$ (II, \Goto{result-II-8.21Ae}{8.21Ae}). The resulting generator of $\bigwedge^r(\mathcal I/\mathcal I^2)$ changes by $\det|c_{ij}|$, so its dual generator changes by the inverse factor. Tensoring the local Ext identification with that dual generator gives the intrinsic isomorphism}
+
+\ChapterEntry{p-267}{III, Exercise 8.4(d). Hypotheses for the genera}{253}
+
+
+\Printed{Show that $p_a(X)=(-1)^np_a(Y)$ (use (Ex.~\Goto{ex-III-8.1}{8.1}))}
+\Revised{Assume that $Y$ is a nonsingular projective variety over an algebraically closed field. Show that $p_a(X)=(-1)^np_a(Y)$ (use (Ex.~\Goto{ex-III-8.1}{8.1}))}
+
+\ChapterEntry{p-268}{III, Example 9.1.3. The zero ideal in the flatness test}{254}
+
+
+\Printed{But $\mathfrak a$ is principal, say generated by $t$, so this just says that $t$ is not a zero divisor in $M$, i.e., $M$ is torsion-free.}
+\Revised{The zero ideal imposes no condition. A nonzero ideal $\mathfrak a=(t)$ is isomorphic to $A$ by multiplication by $t$, so its test is injectivity of multiplication by $t$ on $M$. Thus $M$ is torsion-free.}
+
+\ChapterEntry{p-270}{III, \S9. Conditions on the introductory algebraic families}{256}
+
+
+\Printed{It turns out that if we are dealing with nonsingular (or even normal) varieties over a field, then the naive definition is already a good one. Evidence for this is the theorem (\Goto{result-III-9.13}{9.13}) that in such a family, the arithmetic genus is constant.}
+\Revised{For the projective algebraic families of normal varieties defined below, (\Goto{result-III-9.13}{9.13}) shows that the arithmetic genus is constant.}
+
+\Printed{On the other hand, if we deal with nonnormal varieties, or more general schemes, the naive definition will not do. So we consider a \emph{flat family} of schemes, which means the fibres of a flat morphism, and this is a very good notion.}
+\Revised{For general families of schemes, we impose flatness. A \emph{flat family} of schemes consists of the fibres of a flat morphism.}
+
+\ChapterEntry{err-4}{III, \S9. Associated points and Proposition 9.7}{257}
+
+
+\Printed{scheme $X$ is an \emph{associated point} of $X$ if the maximal ideal}
+\Revised{locally noetherian scheme $X$ is an \emph{associated point} of $X$ if the maximal ideal}
+
+\Printed{$Y$ integral and regular of dimension $1$.}
+\Revised{$X$ locally noetherian and $Y$ integral and regular of dimension $1$.}
+
+\ChapterEntry{p-272}{III, Proposition 9.8. Flat closure over a regular curve}{258}
+
+
+\Printed{Take $\overline X$ to be the scheme-theoretic closure of $X$ in $\mathbf P^n_Y$ (II, Ex.~\Goto{ex-II-3.11}{3.11d}). Then the associated points of $\overline X$ are just those of $X$, so by (\Goto{result-III-9.7}{9.7}), $\overline X$ is flat over $Y$. Furthermore, $\overline X$ is unique, because any other extension of $X$ to $\mathbf P^n_Y$ would have some associated points mapping to $P$.}
+\Revised{For each affine $\operatorname{Spec} A\subseteq Y$, write $K=\operatorname{Frac} A$. On each standard affine chart $\operatorname{Spec} B$ of $\mathbf P^n_A$, let $J_K\subseteq B\otimes_A K$ be the generic-fibre ideal and take $J$ to be its inverse image in $B$. Contraction commutes with localization, so these ideals glue. The quotient $B/J$ embeds in $(B\otimes_A K)/J_K$ and is torsion-free over $A$. Its localizations are flat over the corresponding base local rings, which are fields or discrete valuation rings. Conversely, every flat quotient over such a chart is torsion-free over $A$, so its ideal is the contraction of its generic-fibre ideal. This identifies the restriction over $Y-P$ with $X$ and proves uniqueness. The construction gives the scheme-theoretic closure.}
+
+\ChapterEntry{p-272}{III, Remark 9.8.1. Properness for a fixed Hilbert polynomial}{258--259}
+
+\PassagePage{258}
+
+
+\Printed{it implies that \textquotedblleft{}the Hilbert scheme is proper.\textquotedblright{}}
+\Revised{it implies that the Hilbert scheme for a fixed Hilbert polynomial is proper.}
+
+\PassagePage{259}
+
+
+\Printed{its properness can be decided using the valuative criterion of properness (II,}
+\Revised{the properness of each fixed-polynomial part can be decided using the valuative criterion of properness (II,}
+
+\ChapterEntry{p-273}{III, Example 9.8.2. Constancy of fibre dimension}{259}
+
+
+\Printed{flat family, we cannot expect properties such as}
+\Revised{flat family of closed subschemes of projective space over a connected noetherian base (\Goto{result-III-9.10}{9.10}), we cannot expect properties such as}
+
+\ChapterEntry{p-273}{III, Example 9.8.3. Product over the punctured base}{259}
+
+
+\Printed{It is flat, because the $X_a$ are all isomorphic as abstract schemes, and in fact, the whole family is isomorphic to $X_1\times(\AffSpace{1}-\{0\})$ if we forget the embedding in $\mathbf P^{n+1}$.}
+\Revised{The map $(x,a)\mapsto(\sigma_a(x),a)$ is an isomorphism over the punctured line from $X_1\times(\AffSpace{1}-\{0\})$ to the family, with inverse induced by $\sigma_{a^{-1}}$. Thus the family is flat.}
+
+\Printed{, and clearly the fibre $X_0$ over $0$ agrees, at least set-theoretically, with the projection $\varphi(X_1)$ of $X_1$.}
+\Revised{. Since $X_1$ avoids $P$, the same homogeneous coordinate formula extends at $a=0$ with value $\varphi(x)$. This gives a proper morphism over $\AffSpace{1}$ from $X_1\times\AffSpace{1}$ into the ambient projective family. Its image is closed and is the closure of its image over the punctured line. Hence the support of $X_0$ is $\varphi(X_1)$.}
+
+\ChapterEntry{p-273}{III, Example 9.8.4. Characteristic of the nodal degeneration}{259}
+
+
+\Printed{We will now calculate the flat family just described in the special}
+\Revised{Assume that $\operatorname{char}k\ne2$. We will now calculate the flat family just described in the special}
+
+\ChapterEntry{p-275}{III, Example 9.8.5. Uniformizer only over closed base points}{261}
+
+
+\Printed{$t\in T$}
+\Revised{closed point $t\in T$}
+
+\Printed{Indeed, let $x\in D$ be any point, let $A=\mathcal O_{x,X\times T}$ be the local ring of $x$ on $X\times T$, let $f\in A$ be a local equation for $D$, let $p_2(x)=t$, and let $u\in\mathcal O_{t,T}$ be a uniformizing parameter.}
+\Revised{At points of $D$ over the generic point of $T$, flatness is automatic. For $x\in D$ over a closed point $t=p_2(x)$, take $A=\mathcal O_{x,X\times T}$, a local equation $f\in A$ of $D$, and a uniformizing parameter $u\in\mathcal O_{t,T}$.}
+
+\ChapterEntry{p-277}{III, Corollary 9.10. Dimension used in the degree and genus formulas}{263}
+
+
+\Printed{$r=\dim X$}
+\Revised{$r=\dim X_t$}
+
+\ChapterEntry{result-III-9.10.1}{III, Example 9.10.1. Characteristic of the nodal family}{263}
+
+
+\Printed{, if we take the fibres with their reduced induced structures, we get}
+\Revised{, with $\operatorname{char}k\ne2$, if we take the fibres with their reduced induced structures, we get}
+
+\ChapterEntry{p-278}{III, Lemma 9.12. Depth at the maximal ideals of the normalization}{264}
+
+
+\Printed{Let $\widetilde A$ be the normalization of $A$.}
+\Revised{If $t=0$, then $\mathfrak p=0$ and (3) gives the result, so assume $t\ne0$. Let $\widetilde A$ be the normalization of $A$.}
+
+\Printed{Now $\widetilde A$ is normal of dimension $\ge2$, so it has depth $\ge2$ (II, \Goto{result-II-8.22A}{8.22A}), so $\widetilde A/t\widetilde A$ has depth $\ge1$. Therefore it does not have $\mathfrak m$ as an associated prime. On the other hand, $\widetilde A/t\widetilde A$ agrees with $A/\mathfrak p$ outside of $\mathfrak m$, so we conclude that $\widetilde A/t\widetilde A$ is an integral domain.}
+\Revised{Write $B=\widetilde A$. Each maximal ideal $\mathfrak n$ of $B$ above $\mathfrak m$ has height $\dim A$ by the dimension formula, since the fraction fields agree and the residue extension is finite. By normality (II, \Goto{result-II-8.22A}{8.22A}), $\operatorname{depth}B_{\mathfrak n}\ge2$ and $\operatorname{depth}(B_{\mathfrak n}/tB_{\mathfrak n})\ge1$. Thus no associated prime of $B/tB$ lies over $\mathfrak m$. Off $\mathfrak m$ the quotient agrees with $A/\mathfrak p$, so it has a single minimal prime, is generically reduced, and has no embedded associated primes. It is therefore a domain.}
+
+\Printed{But $(A/tA)_{\mathrm{red}}\cong A/\mathfrak p$ since $\psi$ is an isomorphism outside $\mathfrak m$.}
+\Revised{By the unique minimal prime in (1), $(A/tA)_{\mathrm{red}}\cong A/\mathfrak p$.}
+
+\ChapterEntry{p-279}{III, Corollary 9.13. Reduction to a nonsingular curve}{265}
+
+
+\Printed{so by base extension, we reduce to the case where $T$ is a nonsingular curve. Then the result follows from (\Goto{result-III-9.10}{9.10}) and (\Goto{result-III-9.11}{9.11}).}
+\Revised{so it suffices to compare the fibres along one such curve. Let $d$ be their common dimension. In the projective pullback to $T'$, choose a dominating irreducible component of dimension $d+1$, with its reduced structure. Such a component exists: off the images of the finitely many vertical components, the fibres have dimension $d$, and the closed fibres of a dominating component have dimension one less than the component. At every closed point the selected component's fibre has dimension $d$, so it has the same support as the irreducible pullback fibre. It is generically reduced, being a closed subscheme with the same support as a generically reduced fibre. Hence the selected component defines the same reduced fibres, and (\Goto{result-III-9.10}{9.10}) and (\Goto{result-III-9.11}{9.11}) give the conclusion.}
+
+\ChapterEntry{p-279}{III, Examples 9.13.1--9.13.2. Marked infinitesimal deformations}{265}
+
+
+\Printed{and such that $X'\otimes_D k\cong X_0$.}
+\Revised{together with a chosen identification $X'\otimes_D k\cong X_0$. Isomorphisms of deformations must preserve the identification.}
+
+\Printed{family, having a point $t\in T$ with $X_t\cong X_0$, we say that $X$ is a}
+\Revised{family, having a $k$-rational point $t\in T$ with $X_t\cong X_0$, we say that $X$ is a}
+
+\Printed{infinitesimal deformations of $X$, up to isomorphism,}
+\Revised{marked infinitesimal deformations of $X$, up to isomorphism preserving the marking,}
+
+\ChapterEntry{p-281}{III, Exercise 9.8. Marking the deformed algebra}{267}
+
+
+\Printed{with $A'\otimes_D k\cong A$.}
+\Revised{together with a chosen $k$-algebra isomorphism $A'\otimes_D k\cong A$, up to isomorphisms preserving that choice.}
+
+\ChapterEntry{p-282}{III, Example 10.0.3. Relative dimension over a field}{268}
+
+
+\Printed{smooth over $k$ if and only if $X$ is regular}
+\Revised{smooth over $k$ of relative dimension $n$ if and only if $X$ is regular}
+
+\Printed{of dimension $n$. In particular, if $X$ is irreducible and separated over $k$, then}
+\Revised{with every irreducible component of dimension $n$. In particular, if $X$ is irreducible and separated over $k$, then}
+
+\ChapterEntry{p-283}{III, Proposition 10.1 and Theorem 10.2. Reducible bases in the dimension condition}{269--270}
+
+\PassagePage{269}
+
+
+\Printed{According to (\Goto{result-III-9.6}{9.6}),}
+\Revised{Apply (\Goto{result-III-9.6}{9.6}) on each reduced irreducible component of the base. Indeed, by going down, a source component has its generic point over the generic point of a base component; and the source components of the pullback to a reduced base component have exactly the generic points above that base component's generic point. Hence}
+
+\Printed{, so $\Omega_{X'/k(z)}$ is a coherent sheaf of rank $\ge n+m$ by (II,}
+\Revised{applied componentwise as in \Goto{result-III-10.1-b}{(b)}, so $\Omega_{X'/k(z)}$ is a coherent sheaf of rank $\ge n+m$ by (II,}
+
+\PassagePage{270}
+
+
+\Printed{. Finally, since $\overline{k(y)}$ is algebraically closed, regularity}
+\Revised{applied componentwise as in \Goto{result-III-10.1-b}{(10.1b)}. Finally, since $\overline{k(y)}$ is algebraically closed, regularity}
+
+\ChapterEntry{result-III-10.2-2}{III, Theorem 10.2. Empty fibres}{269--270}
+
+
+\Printed{$X_{\bar y}$ is equidimensional of dimension $n$ and regular.}
+\Revised{$X_{\bar y}$ has every irreducible component of dimension $n$ and is regular.}
+
+\ChapterEntry{p-286}{III, Proposition 10.6. Application of the tangent-space criterion}{272}
+
+
+\Printed{Now let $x\in U'\cap X_r$, and consider the commutative diagram of}
+\Revised{Shrink $U'$ to lie in the nonsingular open of $X'$ and over the nonsingular open of $Y'$, as in the proof of (\Goto{result-III-10.5}{10.5}). Now let $x\in U'\cap X_r$, and consider the commutative diagram of}
+
+\ChapterEntry{p-288}{III, Theorem 10.8. Dimensions of nonempty intersection fibers}{274}
+
+
+\Printed{we see that 
+\[
+\dim W=
+ \dim G+\dim Y-\dim X+\dim Z.
+\]}
+\Revised{we see that if $W$ is nonempty, all its components have dimension
+\[
+\dim G+\dim Y-\dim X+\dim Z.
+\]}
+
+\Printed{If $W$ is nonempty, then $q$ on $q^{-1}(V)$ has relative dimension equal to $\dim W-\dim G$, so for each $\sigma$,}
+\Revised{For each nonempty fibre $W_\sigma$ over $V$, smoothness gives dimension $\dim W-\dim G$, so}
+
+\ChapterEntry{p-288}{III, Corollary 10.9. A linear system of dimension zero}{274}
+
+
+\Printed{We consider $\mathbf P^n$ as a homogeneous space under the action of}
+\Revised{If $n=0$, the single member of the base-point-free system is the empty divisor. Suppose $n\geqslant1$. We consider $\mathbf P^n$ as a homogeneous space under the action of}
+
+\ChapterEntry{p-289}{III, Exercise 10.4. Order of the residue-field and coefficient-field conditions}{275}
+
+
+\Printed{Choose fields of representatives (II, \Goto{result-II-8.25A}{8.25A}) $k(x)\subseteq\widehat{\mathcal O}_x$ and $k(y)\subseteq\widehat{\mathcal O}_y$ so that $k(y)\subseteq k(x)$ via the natural map $\widehat{\mathcal O}_y\to\widehat{\mathcal O}_x$. Then our condition is that for every $x\in X$, $k(x)$ is a separable algebraic extension of $k(y)$, and the natural map}
+\Revised{First require $k(x)/k(y)$ to be finite and separable. Choose a field of representatives $k(y)\subseteq\widehat{\mathcal O}_y$ (II, \Goto{result-II-8.25A}{8.25A}), and lift $k(x)$ to a field of representatives in $\widehat{\mathcal O}_x$ compatible with the map $\widehat{\mathcal O}_y\to\widehat{\mathcal O}_x$. Then require that the natural map}
+
+\ChapterEntry{p-290}{III, Exercise 10.6. Characteristic of the nodal cubic}{276}
+
+
+\Printed{Let $Y$ be the plane nodal cubic curve $y^2=x^2(x+1)$.}
+\Revised{Assume $\operatorname{char}k\ne2$. Let $Y$ be the plane nodal cubic curve $y^2=x^2(x+1)$.}
+
+\ChapterEntry{p-290}{III, Exercise 10.7. The ambient projective plane}{276}
+
+
+\Printed{$\mathbf F_2\subseteq k$. Let $\mathfrak d$ be the linear system of all cubic curves in $X$}
+\Revised{$\mathbf F_2\subseteq k$. Put $X=\mathbf P^2_k$. Let $\mathfrak d$ be the linear system of all cubic curves in $X$}
+
+\ChapterEntry{p-290}{III, Exercise 10.8. A pencil with moving singularities in every characteristic}{276}
+
+
+\Printed{In affine $3$-space with coordinates $x,y,z$, let $C$ be the conic $(x-1)^2+y^2=1$ in the $xy$-plane, and let $P$ be the point $(0,0,t)$ on the $z$-axis. Let $Y_t$ be the closure in $\mathbf P^3$ of the cone over $C$ with vertex $P$. Show that as $t$ varies, the surfaces $\{Y_t\}$ form a linear system of dimension $1$, with a moving singularity at $P$. The base locus of this linear system is the conic $C$ plus the $z$-axis.}
+\Revised{Use projective coordinates $(X:Y:Z:W)$ on $\mathbf P^3$. In the plane $Z=0$ let $C$ be the conic $X^2-YW=0$. For $t\ne0$, take the cone $Y_t$ over $C$ with vertex $P=(0:0:t:1)$, and complete these cones to the pencil spanned by $X^2-YW$ and $YZ$. Show that this is a linear system of dimension $1$, with a moving singularity at $P$ for $t\ne0$. Show that the underlying set of the base locus is the conic $C$ together with the $z$-axis.}
+
+\ChapterEntry{p-291}{III, \S11. Nilpotents in higher fibers}{277}
+
+
+\Printed{scheme with nilpotent elements having the same underlying space as $X_y$.}
+\Revised{possibly nonreduced scheme with the same underlying space as $X_y$.}
+
+\ChapterEntry{p-293}{III, Remark 11.1.2. Formal completion at a nonclosed point}{279}
+
+
+\Printed{where $\widehat X$ is the formal completion of $X$ along $X_y$, and $\widehat{\mathcal F}=\mathcal F\otimes\mathcal O_{\widehat X}$}
+\Revised{where $\widehat X$ is the formal completion of $X_{\mathrm{loc}}=X\times_Y\operatorname{Spec}\mathcal O_{Y,y}$ along its closed fibre $X_y$, and $\widehat{\mathcal F}$ is the completion of the pullback of $\mathcal F$ to $X_{\mathrm{loc}}$}
+
+\Printed{on $X$ along $X_y$. Hence the name of the theorem.}
+\Revised{on $X_{\mathrm{loc}}$ along $X_y$. Hence the name of the theorem.}
+
+\ChapterEntry{p-294}{III, Exercise 11.1. Dimension in the nonprojective example}{280}
+
+
+\Printed{the projective hypothesis. For example, let $X=\mathbf A_k^n$, let $P=(0,\ldots,0)$, let $U=X-P$, and let $f\colon U\to X$ be the}
+\Revised{the projective hypothesis. For example, let $X=\mathbf A_k^n$ with $n\geqslant2$, let $P=(0,\ldots,0)$, let $U=X-P$, and let $f\colon U\to X$ be the}
+
+\Printed{fibres of $f$ all have dimension $0$, but $R^{n-1}f_*\mathcal O_U\ne0$.}
+\Revised{nonempty fibres of $f$ have dimension $0$, but $R^{n-1}f_*\mathcal O_U\ne0$.}
+
+\ChapterEntry{p-295}{III, Exercise 11.7(a). The kernel of restriction on formal Picard groups}{281}
+
+
+\Printed{Use the method of (Ex.~\Goto{ex-III-11.5}{11.5}) to show that $\operatorname{Pic}\widehat X\to\operatorname{Pic}Y$ is surjective, and its kernel is an infinite-dimensional vector space over $k$.}
+\Revised{Use the method of (Ex.~\Goto{ex-III-11.5}{11.5}) to show that $\operatorname{Pic}\widehat X\to\operatorname{Pic}Y$ is surjective. Its kernel has a complete filtration with successive quotients $H^1(Y,\mathcal I^m/\mathcal I^{m+1})$ for $m\geqslant1$, with $\mathcal I$ the ideal of $Y$. In characteristic zero, show that the kernel is an infinite-dimensional $k$-vector space.}
+
+\ChapterEntry{p-296}{III, Proposition 12.2. Cover used for the tensor identity}{282}
+
+
+\Printed{an open cover of $X$. Let $C^\bullet=C^\bullet(\mathfrak U,\mathcal F)$ be the}
+\Revised{a finite affine open cover of $X$. Let $C^\bullet=C^\bullet(\mathfrak U,\mathcal F)$ be the}
+
+\ChapterEntry{p-297}{III, Lemma 12.3. Choosing cycles for the next differential}{283--284}
+
+\PassagePage{283}
+
+
+\Printed{$g^{-1}(B^{n+1}(C^\bullet))$}
+\Revised{$Z^{n+1}(L^\bullet)\cap g^{-1}(B^{n+1}(C^\bullet))$}
+
+\PassagePage{284}
+
+
+\Printed{the result for any $M$ follows from the subtle 5-lemma.}
+\Revised{the diagram gives surjectivity for every finitely generated $M$. In particular, surjectivity holds for $R$, which is finitely generated because $A$ is noetherian. The same diagram then gives injectivity for $M$.}
+
+\ChapterEntry{p-299}{III, Proposition 12.4. Natural representability and uniqueness}{284--285}
+
+\PassagePage{284}
+
+
+\Printed{\[
+T^i(M)=\operatorname{Hom}_A(Q,M)
+\]}
+\Revised{\[
+T^i(M)\cong\operatorname{Hom}_A(Q,M)
+\]}
+
+\Printed{for all $M$}
+\Revised{for all $M$, naturally in $M$}
+
+\Printed{is unique}
+\Revised{is unique up to a unique isomorphism compatible with the representing isomorphisms}
+
+\PassagePage{285}
+
+
+\Printed{$\operatorname{Hom}(Q,M)=T^i(M)$.}
+\Revised{$\operatorname{Hom}_A(Q,M)\cong T^i(M)$ naturally in $M$.}
+
+\Printed{To see the uniqueness of $Q$, let $Q'$ be another module such that $T^i(M)=\operatorname{Hom}(Q',M)$ for all $M$. Then
+\[
+\operatorname{Hom}(Q,M)=\operatorname{Hom}(Q',M)
+\]
+for all $M$. In particular, the elements
+\[
+1\in\operatorname{Hom}(Q,Q)=\operatorname{Hom}(Q',Q)
+\]
+and
+\[
+1'\in\operatorname{Hom}(Q',Q')=\operatorname{Hom}(Q,Q')
+\]
+give isomorphisms of $Q$ and $Q'$, inverse to each other, and canonically defined.}
+\Revised{For uniqueness, let $Q'$ also represent $T^i$. The two representing isomorphisms give
+\[
+\operatorname{Hom}_A(Q,M)\cong\operatorname{Hom}_A(Q',M)
+\]
+naturally in $M$. The image of $1_Q$ and the inverse image of $1_{Q'}$ give maps $Q'\to Q$ and $Q\to Q'$. Naturality shows that the compositions are the respective identities and that the maps are determined by the representing isomorphisms.}
+
+\ChapterEntry{err-5}{III, Remark 12.4.1. Representability}{286}
+
+
+\Printed{left-exact functor $T$ on $A$-modules, which commutes with direct sums, is of the form $\operatorname{Hom}(Q,\cdot)$}
+\Revised{left-exact $A$-linear functor $T$ on $A$-modules, which commutes with arbitrary products, is of the form $\operatorname{Hom}_A(Q,\cdot)$}
+
+\ChapterEntry{p-305}{III, Theorem 12.11(b). Base change in degree zero}{291}
+
+
+\Printed{$\varphi^{i-1}(y)$ is also surjective}
+\Revised{if $i>0$, $\varphi^{i-1}(y)$ is also surjective}
+
+\Printed{are both right exact.}
+\Revised{are both right exact for $i>0$. For $i=0$, $T^0$ is already left exact.}
+
+\ChapterEntry{p-305}{III, Exercise 12.3. Twist of the family ideal sheaf}{291}
+
+
+\Printed{\[
+h^0(t,\mathcal I)=
+ \begin{cases}0&\text{for }t\ne0\\1&\text{for }t=0\end{cases}
+\]}
+\Revised{\[
+h^0(t,\mathcal I(1))=
+ \begin{cases}0&\text{for }t\ne0\\1&\text{for }t=0\end{cases}
+\]}
+
+\Printed{\[
+h^1(t,\mathcal I)=
+ \begin{cases}0&\text{for }t\ne0\\1&\text{for }t=0.\end{cases}
+\]}
+\Revised{\[
+h^1(t,\mathcal I(1))=
+ \begin{cases}0&\text{for }t\ne0\\1&\text{for }t=0.\end{cases}
+\]}
+
+\ChapterEntry{p-305}{III, Exercise 12.5. Rank of the projective bundle}{291}
+
+
+\Printed{locally free sheaf on $Y$, and let $X=\mathbf P(\mathcal E)$---see (II,}
+\Revised{locally free sheaf of finite rank at least $2$ on $Y$, and let $X=\mathbf P(\mathcal E)$---see (II,}
+

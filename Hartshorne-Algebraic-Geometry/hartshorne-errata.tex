@@ -1,0 +1,58 @@
+% !TeX program = xelatex
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,geometry,needspace,enumitem,tikz}
+% A hat spanning a complete expression in the default math font.
+\newsavebox{\FullWidthHatBody}
+\newcommand{\FullWidthHat}[1]{%
+  \begingroup
+  \sbox{\FullWidthHatBody}{\ensuremath{#1}}%
+  \mathord{\vbox{\offinterlineskip
+    \hbox{\tikz[baseline=0pt]{%
+      \path[use as bounding box] (0pt,-.18pt) rectangle (\wd\FullWidthHatBody,1.78pt);
+      \draw[overlay,line width=.36pt] (.15pt,0pt)
+        -- (.5\wd\FullWidthHatBody,1.6pt)
+        -- (\dimexpr\wd\FullWidthHatBody-.15pt\relax,0pt);
+    }}%
+    \kern.55pt\copy\FullWidthHatBody}}%
+  \endgroup}
+
+\usepackage[hidelinks]{hyperref}
+\geometry{paperwidth=439.37bp,paperheight=666.14bp,margin=53bp}
+\hypersetup{pdftitle={Algebraic Geometry - Errata and items under review}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\emergencystretch=2em
+\newcommand{\Goto}[2]{\href{hartshorne-corrected.pdf\##1}{#2}}
+\newcommand{\BookLink}[2]{\Goto{h:#1}{#2}}
+\newcommand{\AffSpace}[2][]{\mathbf A\if\relax\detokenize{#1}\relax\else_{#1}\fi^{#2}}
+\newcommand{\Proj}{\mathbf P}
+\newcommand{\RR}{\mathbf R}
+\newcommand{\ideal}{\mathfrak a}
+\newcommand{\IIIMod}{\operatorname{\mathfrak{Mod}}}
+\newcommand{\IIISE}{\operatorname{\mathcal E xt}}
+\newcommand{\IIISH}{\operatorname{\mathcal H om}}
+\newcommand{\Printed}[1]{\smallskip\noindent\textbf{Original}\enspace #1\par}
+\newcommand{\Revised}[1]{\noindent\textbf{Revised}\enspace #1\par}
+\newcommand{\PassagePage}[1]{\smallskip\textit{\Goto{p-\number\numexpr#1+14\relax}{p.~#1}}\par}
+\newcommand{\ChapterEntry}[3]{%
+  \Needspace{5\baselineskip}\medskip\textbf{#2}\par
+  \textit{\Goto{#1}{Printed page #3}}\par}
+\begin{document}
+\vspace*{23pt}
+\hrule\vspace{8pt}
+{\Large\bfseries Algebraic Geometry}\par
+{\large Errata and items under review}\par
+{\small Unofficial retypeset edition}
+\vspace{12pt}
+
+Page references use the book's printed page numbers.
+
+\input{errata/chapter1}
+\input{errata/chapter2}
+\input{errata/chapter3}
+\input{errata/chapter4}
+\input{errata/chapter5}
+\input{errata/appendices}
+\input{errata/items-under-review}
+\end{document}

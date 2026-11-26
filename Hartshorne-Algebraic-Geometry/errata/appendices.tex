@@ -1,0 +1,441 @@
+\section{Appendix A. Intersection Theory}
+
+\ChapterEntry{p-440}{Appendix A, \S1. Graph pullback for a quasi-projective target}{426}
+
+
+\Printed{\[
+f^*(Y')=p_{1*}(\Gamma_f\cdot p_2^{-1}(Y')),
+\]
+where $p_1$ and $p_2$ are the projections of $X\times X'$ to $X$ and $X'$, and $\Gamma_f$ is the graph of $f$, considered as a cycle on $X\times X'$.}
+\Revised{\[
+f^*([Y'])=\gamma_f^!\bigl(p_2^*[Y']\bigr),
+\]
+where $p_1,p_2$ are the projections of $X\times X'$, and $\gamma_f\colon X\hookrightarrow X\times X'$ is the graph embedding. For nonsingular $X,X'$, $\gamma_f^!$ is the Gysin pullback for the regular embedding $\gamma_f$. This is the refined intersection of the graph and $p_2^{-1}(Y')$ on their intersection, carried to $X$ by the restriction of $p_1$.}
+
+\ChapterEntry{p-440}{Appendix A, Axiom A3. Composition of proper pushforwards}{426}
+
+
+\Printed{morphism, then $g_*\circ f_*=(g\circ f)_*$.}
+\Revised{proper morphism, then $g_*\circ f_*=(g\circ f)_*$.}
+
+\ChapterEntry{p-442}{Appendix A, Example 1.1.2. Degree in the quadric cone example}{428}
+
+
+\Printed{\[
+1=L\cdot C=L\cdot(2M).
+\]
+By linearity we would have to have $L\cdot M=\frac12$, which is not an integer.}
+\Revised{\[
+1=\deg(L\cdot C)=\deg(L\cdot(2M))=2\deg(L\cdot M).
+\]
+This contradicts the integrality of $\deg(L\cdot M)$.}
+
+\ChapterEntry{p-447}{Appendix A, Example 4.1.3. Embedding a projective surface}{433}
+
+
+\Printed{projective surface can be embedded in $\Proj^5$ (IV, Ex.~}
+\Revised{nonsingular projective surface can be embedded in $\Proj^5$ (IV, Ex.~}
+
+\ChapterEntry{p-449}{Appendix A, \S5. Total Chern classes of virtual bundles}{435}
+
+
+\Printed{Then, because of the additivity property \Goto{axiom-A-C3}{(C3)} of Chern classes, it is clear that the Chern polynomial $c_t$ extends to give a map
+\[
+c_t\colon K(X)\to A(X)[t].
+\]}
+\Revised{Then, by the multiplicativity property \Goto{axiom-A-C3}{(C3)}, the Chern polynomial extends from the additive group $K(X)$ to the multiplicative group of units:
+\[
+c_t\colon K(X)\to A(X)[t]^\times,\qquad c_t(x-y)=c_t(x)c_t(y)^{-1}.
+\]
+The inverse is a polynomial since the ideal of positive-codimension classes in $A(X)$ is nilpotent.}
+
+\ChapterEntry{p-450}{Appendix A, \S5. Grothendieck--Riemann--Roch for a closed immersion}{436}
+
+\Printed{In the case of a closed immersion, the formula of \Goto{result-A-5.3}{(5.3)}\ldots{}}
+\Revised{Apply the locally complete intersection form of Grothendieck--Riemann--Roch. The relative tangent class is $-[\mathcal N]$, where $\mathcal N$ is the normal sheaf, so in $A(Y)\otimes\mathbb Q$,
+\[
+\operatorname{ch}(f_!x)=f_*\bigl(\operatorname{ch}(x)\cdot\operatorname{td}(\mathcal N)^{-1}\bigr).
+\]}
+
+\ChapterEntry{p-450}{Appendix A, \S5. Order of operations in the integral formula}{436}
+
+\Printed{In the case of a closed immersion, the formula of \Goto{result-A-5.3}{(5.3)} gives a way of computing the Chern classes $c_i(f_*\mathcal F)$, for any coherent sheaf $\mathcal F$ on $X$, in terms of $f_*(c_i(\mathcal F))$ and $f_*(c_i(\mathcal N))$, where $\mathcal N$ is the normal sheaf. It turns out this can be done using polynomials with \emph{integer} coefficients, but the proof of \Goto{result-A-5.3}{(5.3)} gives the result only in $A(Y)\otimes\mathbb Q$, i.e., mod torsion. Jouanolou's result is that the result actually holds in $A(Y)$ itself.}
+\Revised{Jouanolou's integral formula for the Chern classes of $f_*\mathcal F$ first forms a universal polynomial in the Chern classes of $\mathcal F$ and $\mathcal N$ and the rank of $\mathcal F$ on $X$, then pushes it forward. This formula holds in $A(Y)$ itself.}
+
+\ChapterEntry{p-450}{Appendix A, Exercise 6.2. Dominance of the generically finite map}{436}
+
+
+\Printed{generically finite map of normal varieties, and let $D_1$ and $D_2$}
+\Revised{dominant, generically finite map of normal varieties, and let $D_1$ and $D_2$}
+
+\ChapterEntry{p-451}{Appendix A, Exercise 6.5. Location of the exceptional class}{437}
+
+
+\Printed{$E\in A^1(X)$}
+\Revised{$E\in A^1(\widetilde X)$}
+
+\Printed{$E^2=-\pi^*(P)$.}
+\Revised{$E^2=-\pi^*[P]$ and $E\cdot\pi^*\alpha=0$ for every class $\alpha$ of positive codimension on $X$.}
+
+\ChapterEntry{p-451}{Appendix A, Exercise 6.6. Self-intersection of the diagonal}{437}
+
+
+\Printed{Show that $c_n(\mathcal T_X)=\Delta^2$ in $A^n(X)$, under the natural isomorphism of $X$ with $\Delta$.}
+\Revised{For the diagonal embedding $\delta\colon X\hookrightarrow X\times X$, show that
+\[
+c_n(\mathcal T_X)=\delta^*[\Delta]\ \text{in } A^n(X)
+\quad\text{and}\quad
+[\Delta]^2=\delta_*c_n(\mathcal T_X)\ \text{in } A^{2n}(X\times X).
+\]}
+
+\section{Appendix B. Transcendental Methods}
+
+\ChapterEntry{p-453}{Appendix B, \S1. Separation in the analytic comparison}{439}
+
+
+\Printed{$X$ is smooth over $\mathbb C$ if and only if $X_h$ is a complex manifold. A morphism $f\colon X\to Y$ is proper if and only if $f_h\colon X_h\to Y_h$ is proper in the usual sense, i.e., the inverse image of a compact set is compact. In particular, $X$ is proper over $\mathbb C$ if and only if $X_h$ is compact.}
+\Revised{$X$ is smooth over $\mathbb C$ if and only if $X_h$ is locally a complex manifold. For a Hausdorff complex manifold one also requires $X$ to be separated. A morphism $f\colon X\to Y$ is proper if and only if $f_h\colon X_h\to Y_h$ has closed relative diagonal and the inverse image of each compact subset is quasi-compact. In particular, $X$ is proper over $\mathbb C$ if and only if $X_h$ is compact Hausdorff.}
+
+\ChapterEntry{p-454}{Appendix B, Example 2.0.1. The elliptic ruled surface}{440}
+
+
+\Printed{nontrivial ruled surface over $C$ with invariant $e=0$ (V, \Goto{result-V-2.15}{2.15})}
+\Revised{ruled surface over $C$ corresponding to an indecomposable normalized rank-two bundle with invariant $e=0$ (V, \Goto{result-V-2.15}{2.15})}
+
+\ChapterEntry{p-454}{Appendix B, \S2. The projective form of Q1}{440}
+
+
+\Printed{In contrast, if one restricts one's attention to \emph{projective} schemes, then the answer to all five questions is YES.}
+\Revised{The answer to \Goto{question-B-Q1}{Q1} is YES for closed analytic subspaces of complex projective space. The answers to \Goto{question-B-Q2}{Q2}--\Goto{question-B-Q5}{Q5} are YES when the schemes under consideration are \emph{projective} over $\mathbb C$.}
+
+\ChapterEntry{p-455}{Appendix B, Theorem 2.1. Analytic global generation in GAGA}{441}
+
+
+\Printed{Then the result follows from the standard technique of embedding $X$ in $\Proj^n$, and resolving $\mathcal F$ by sheaves of the form $\sum\mathcal O(q_i)$, as in (III, \Goto{sec-III-5}{\S5}).}
+\Revised{For algebraic coherent sheaves, embed $X$ in $\Proj^n$ and use resolutions by sums of $\mathcal O(q_i)$ as in (III, \Goto{sec-III-5}{\S5}) to compare cohomology. Essential surjectivity also uses that sufficiently positive twists of coherent analytic sheaves are generated by global sections. Applying this to a sheaf and the kernel of a surjection from a sum of twists gives an analytic presentation. The comparison of global sections of twists algebraizes its matrix, and taking the algebraic cokernel gives the desired sheaf.}
+
+\ChapterEntry{p-456}{Appendix B, Theorem 3.2. Algebraization of finite analytic covers}{442}
+
+
+\Printed{Then there is a unique normal scheme $X'$ and a finite morphism $g\colon X'\to X$ such that $X_h'\cong\mathfrak X'$ and $g_h=\mathfrak f$.}
+\Revised{Assume every irreducible component of $\mathfrak X'$ dominates a component of $X_h$, and $\mathfrak f$ is \'etale over $U_h$ for a Zariski dense open $U\subseteq X$. Then there is a finite normal cover $g\colon X'\to X$ inducing $\mathfrak f$, unique up to unique isomorphism compatible with the given analytic identification.}
+
+\ChapterEntry{p-456}{Appendix B, corollary to Theorem 3.2. Based fundamental groups}{442}
+
+
+\Printed{One corollary of this theorem is that the algebraic fundamental group of $X$, $\pi_1^{\mathrm{alg}}(X)$, defined as the inverse limit of the Galois groups of finite \'etale covers of $X$ (IV, Ex.~\Goto{ex-IV-4.8}{4.8}), is isomorphic to the completion $\pi_1^{\mathrm{top}}(X_h)^\wedge$ of the usual fundamental group of $X_h$ with respect to subgroups of finite index.}
+\Revised{One corollary for connected $X$ with $x\in X(\mathbb C)$ is that the algebraic fundamental group $\pi_1^{\mathrm{alg}}(X,x)$, the inverse limit of the Galois groups of pointed connected finite \'etale Galois covers (IV, Ex.~\Goto{ex-IV-4.8}{4.8}), is isomorphic to the profinite completion $\FullWidthHat{\pi_1^{\mathrm{top}}(X_h,x)}$. For disconnected $X$, apply this to the component containing $x$.}
+
+\ChapterEntry{p-456}{Appendix B, Proposition 3.3 and Theorem 3.4. Connectedness and meromorphic functions}{442--443}
+
+\PassagePage{442}
+
+
+\Printed{complex manifold of dimension $n$.}
+\Revised{connected complex manifold of dimension $n$.}
+
+\Printed{complex manifolds $\mathfrak X$ with}
+\Revised{connected complex manifolds $\mathfrak X$ with}
+
+\Needspace{3\baselineskip}
+\PassagePage{443}
+
+
+\Printed{complex manifold of dimension $2$, with two algebraically independent}
+\Revised{connected complex manifold of dimension $2$, with two algebraically independent}
+
+\ChapterEntry{p-457}{Appendix B, Example 3.4.1. Tangent directions of the blow-up centres}{443}
+
+
+\Printed{meet transversally at two points $P,Q$, and nowhere else}
+\Revised{meet only at two points $P,Q$, with distinct tangent lines at each point}
+
+\ChapterEntry{p-458}{Appendix B, Example 3.4.2. Fibres over the smooth locus of the nodal curve}{444--445}
+
+\PassagePage{444}
+
+
+\Printed{a curve in $X$ which is nonsingular except for one double point $P$, having}
+\Revised{an integral curve in $X$ which is nonsingular except for one double point $P$, having}
+
+\Printed{the two branches meet}
+\Revised{the two general fibre lines lie in the same $\Proj^1$-bundle}
+
+\PassagePage{445}
+
+
+\Printed{away from $P$. So we find that $l_0\sim0$.}
+\Revised{over the connected smooth locus $c-\{P\}$. So we find that $l_0\sim0$.}
+
+\ChapterEntry{p-458}{Appendix B, Example 3.4.1. The fibre line over $Q$}{444}
+
+
+\Printed{$l\sim l_0$}
+\Revised{$l\sim l'_0$}
+
+\ChapterEntry{p-459}{Appendix B, \S4. The choice of K\"ahler metric}{445--446}
+
+\PassagePage{445}
+
+
+\Printed{A compact K\"ahler manifold $\mathfrak X$ is called a \emph{Hodge manifold} if the cohomology class in $H^2(\mathfrak X,\mathbb C)$ of the $2$-form mentioned above is in the image of the integral cohomology $H^2(\mathfrak X,\mathbb Z)$.}
+\Revised{A compact complex manifold $\mathfrak X$ is called a \emph{Hodge manifold} if it admits a K\"ahler metric whose associated $2$-form has cohomology class in the image of $H^2(\mathfrak X,\mathbb Z)\to H^2(\mathfrak X,\mathbb C)$.}
+
+\Needspace{3\baselineskip}
+\PassagePage{446}
+
+
+\Printed{every compact complex manifold of dimension one is trivially seen to be a Hodge manifold.}
+\Revised{a Hermitian $2$-form on a compact connected complex manifold of dimension one is closed and can be scaled to have total area one, hence integral cohomology class.}
+
+\ChapterEntry{p-461}{Appendix B, \S5. The kernel of the first Chern class}{447}
+
+\Printed{Therefore the N\'eron--Severi group of $X$ is a subgroup of $H^2(X_h,\mathbb Z)$, and hence is finitely generated (V, Ex.~\Goto{ex-V-1.7}{1.7}).}
+\Revised{The kernel of $c_1\colon\operatorname{Pic}X\to H^2(X_h,\mathbb Z)$ is the image of $H^1(X,\mathcal O_X)$ by exactness, and this image equals $\operatorname{Pic}^{\circ}X$, the group of divisors algebraically equivalent to zero modulo linear equivalence. Thus the N\'eron--Severi group of $X$ is a subgroup of $H^2(X_h,\mathbb Z)$, and hence is finitely generated (V, Ex.~\Goto{ex-V-1.7}{1.7}).}
+
+\ChapterEntry{p-461}{Appendix B, \S5. The Picard variety and singular projective varieties}{447}
+
+\Printed{On the other hand, the group $\operatorname{Pic}^{\circ}X$ of divisors algebraically equivalent to zero modulo linear equivalence is isomorphic to $H^1(X,\mathcal O_X)/\allowbreak H^1(X_h,\mathbb Z)$. One shows that this is a complex torus, and in fact it is an abelian variety, the \emph{Picard variety} of $X$.}
+\Revised{When $X$ is nonsingular, the quotient $\operatorname{Pic}^{\circ}X\cong H^1(X,\mathcal O_X)/\allowbreak H^1(X_h,\mathbb Z)$ is a complex torus and in fact an abelian variety, the \emph{Picard variety} of $X$.}
+
+\ChapterEntry{p-461}{Appendix B, Exercise 6.4. Separatedness in the converse}{447}
+
+
+\Printed{Conversely, show that if $X$ is not proper over $\mathbb C$, then there is a coherent sheaf $\mathcal F$ on $X$ with $H^0(X,\mathcal F)\ne H^0(X_h,\mathcal F_h)$.}
+\Revised{Conversely, show that if $X$ is separated and of finite type over $\mathbb C$ but is not proper, there is a coherent sheaf $\mathcal F$ for which $H^0(X,\mathcal F)\to H^0(X_h,\mathcal F_h)$ is not surjective.}
+
+\section{Appendix C. The Weil Conjectures}
+
+\ChapterEntry{p-463}{Appendix C, \S1. Rational points and the finite-field model}{449, 477}
+
+\PassagePage{449}
+
+
+\Printed{For each integer $r\geq 1$, let $N_r$ be the number of points of $\overline X$ which are rational over the field $k_r=\mathbf F_{q^r}$ of $q^r$ elements. In other words, $N_r$ is the number of points of $\overline X$ whose coordinates lie in $k_r$.}
+\Revised{For each integer $r\geq 1$, let $N_r=\#X(k_r)$, where $k_r=\mathbf F_{q^r}\subseteq\overline k$ and $X(k_r)=\operatorname{Hom}_k(\operatorname{Spec}k_r,X)$. Under the identification $X(\overline k)=\overline X(\overline k)$, these are precisely the points fixed by the $r$th power of the $q$-power Frobenius associated with $X$.}
+
+\PassagePage{477}
+
+
+\Printed{number of points of $\overline X$ rational over $\mathbf F_{q^r}$}
+\Revised{number of $\mathbf F_{q^r}$-rational points of $X$}
+
+\ChapterEntry{p-464}{Appendix C, 1.3. Geometric connectedness and the outer factors}{450}
+
+
+\Printed{projective variety of dimension $n$ defined over $k=\mathbf F_q$.}
+\Revised{geometrically connected projective variety of dimension $n$ defined over $k=\mathbf F_q$.}
+
+\ChapterEntry{p-464}{Appendix C, 1.2. The top Chern number in the functional equation}{450}
+
+
+\Printed{top Chern class of the tangent bundle of $X$ (App.~A, Ex.~\Goto{ex-A-6.6}{6.6})).}
+\Revised{degree of the top Chern class of the tangent bundle of $X$ (App.~A, Ex.~\Goto{ex-A-6.6}{6.6})).}
+
+\ChapterEntry{p-465}{Appendix C, 1.4. Betti numbers at good reduction}{451}
+
+
+\Printed{$\mathfrak p$ of $R$. Then $B_i(X)$ is equal to the $i$th Betti number of the topological}
+\Revised{$\mathfrak p$ of $R$, and that $Y$ gives a smooth proper model over $R_{\mathfrak p}$. Then $B_i(X)$ is equal to the $i$th Betti number of the topological}
+
+\ChapterEntry{p-465}{Appendix C, \S2. The first proofs of rationality and the functional equation}{451--452}
+
+\PassagePage{451}
+
+
+\Printed{For higher-dimensional varieties, the rationality of the zeta function and the functional equation were first proved by Dwork \Goto{bib-dwork-1}{[1]}, using methods of $p$-adic analysis. See also Serre \Goto{bib-serre-8}{[8]} for an account of this proof.}
+\Revised{For higher-dimensional varieties, the rationality of the zeta function was first proved by Dwork \Goto{bib-dwork-1}{[1]}, using methods of $p$-adic analysis. See also Serre \Goto{bib-serre-8}{[8]} for an account of this proof. Dwork's methods also yield the functional equation for smooth projective hypersurfaces.}
+
+\PassagePage{452}
+
+
+\Printed{another proof of the rationality and functional equation of the zeta function.}
+\Revised{another proof of rationality by the trace formula and a proof of the functional equation in the smooth proper case by Poincar\'e duality.}
+
+\ChapterEntry{p-466}{Appendix C, \S2. The Lefschetz standard conjecture}{452}
+
+
+\Printed{This suggests that one should try to establish in abstract algebraic geometry some results known for varieties over $\mathbf C$ via Hodge theory, in particular the \textquotedblleft strong Lefschetz theorem\textquotedblright\ and the \textquotedblleft generalized Hodge index theorem.\textquotedblright\ Grothendieck \Goto{bib-476-8}{[9]} optimistically calls these the \textquotedblleft standard conjectures,\textquotedblright\ and notes that they immediately imply the analogue of the Riemann hypothesis.}
+\Revised{This suggests algebraic analogues of results from Hodge theory over $\mathbf C$. Grothendieck's \Goto{bib-476-8}{[9]} Lefschetz standard conjecture asks that the lowering operator in Lefschetz theory be induced by an algebraic correspondence. The Hodge standard conjecture asks for positivity of the signed intersection form on primitive algebraic cycle classes. Grothendieck shows that the Lefschetz conjecture for $X$ and the Hodge standard conjecture for $X\times X$ imply the analogue of the Riemann hypothesis.}
+
+\ChapterEntry{p-467}{Appendix C, 3.4. Connectedness in Poincar\'e duality}{453}
+
+
+\Printed{and proper over $k$, of dimension $n$, then $H^{2n}(X,\mathbf Q_\ell)$ is $1$}
+\Revised{, proper, and geometrically connected over $k$, of dimension $n$, then $H^{2n}(X,\mathbf Q_\ell)$ is $1$}
+
+\Printed{$0\leq i\leq 2n$.}
+\Revised{$0\leq i\leq 2n$. In general apply this statement to each connected component.}
+
+\ChapterEntry{p-467}{Appendix C, 3.5. Differential on the cotangent fibre}{453}
+
+
+\Printed{the action of $1-df$ on $\Omega_X^1$ is injective}
+\Revised{the tangent-space endomorphism $1-df_x$ of $T_xX$ is invertible}
+
+\ChapterEntry{p-468}{Appendix C, 3.6. Geometric fibres in smooth proper base change}{454}
+
+
+\Printed{If $f\colon X\to Y$ is a smooth proper morphism, with $Y$ connected, then}
+\Revised{If $f\colon X\to Y$ is a smooth proper morphism, with $Y$ connected and $\ell$ invertible on $Y$, then}
+
+\Printed{$\dim H^i(X_{y},\mathbf Q_\ell)$}
+\Revised{$\dim H^i(X_{\bar y},\mathbf Q_\ell)$}
+
+\Printed{$y\in Y$. In particular, $\dim H^i(X,\mathbf Q_\ell)$ is constant under}
+\Revised{geometric points $\bar y$ of $Y$. In particular, $\dim H^i(X,\mathbf Q_\ell)$ is constant under}
+
+\Printed{base field extension}
+\Revised{extension of the algebraically closed base field}
+
+\ChapterEntry{p-468}{Appendix C, 3.7. Coefficients in the comparison theorem}{454}
+
+
+\Printed{\[
+H^i(X,\mathbf Q_\ell)\otimes_{\mathbf Q_\ell}\mathbf C
+ \cong H^i(X_h,\mathbf C)
+\]}
+\Revised{\[
+H^i(X,\mathbf Q_\ell)\cong
+ H^i(X_h,\mathbf Q)\otimes_{\mathbf Q}\mathbf Q_\ell
+\]}
+
+\ChapterEntry{p-468}{Appendix C, 3.8. Coefficient twists for cycle classes}{454}
+
+
+\Printed{$\eta(Z)\in H^{2q}(X,\mathbf Q_\ell)$}
+\Revised{$\eta(Z)\in H^{2q}(X,\mathbf Q_\ell(q))$}
+
+\Printed{$H^*(X,\mathbf Q_\ell)$. Finally, it is non-trivial: if $P\in X$ is a closed point, then}
+\Revised{$\bigoplus_q H^{2q}(X,\mathbf Q_\ell(q))$. Finally, it is non-trivial: if $P\in X$ is a closed point, then}
+
+\Printed{$\eta(P)\in H^{2n}(X,\mathbf Q_\ell)$ is nonzero}
+\Revised{$\eta(P)$ has a nonzero class in degree twice the dimension of its component}
+
+\ChapterEntry{p-468}{Appendix C, \S4. Frobenius fixed points and their multiplicities}{454}
+
+
+\Printed{if its coordinates lie in $k$. More generally, $P$ is a fixed point of the iterate $f^r$}
+\Revised{if its coordinates can be chosen in $k$. More generally, $P$ is a fixed point of the iterate $f^r$}
+
+\Printed{it has coordinates in the field $k_r=\mathbf F_{q^r}$.}
+\Revised{it has coordinates that can be chosen in the field $k_r=\mathbf F_{q^r}$.}
+
+\Printed{We find}
+\Revised{Indeed, $d(f^r)=0$ in characteristic $p$, so each fixed point has multiplicity one. We find}
+
+\ChapterEntry{p-469}{Appendix C, Lemma 4.1. Characteristic of the coefficient field}{455}
+
+
+\Printed{over a field $K$. Then we have an identity of formal power series in $t$, with}
+\Revised{over a field $K$ of characteristic zero. Then we have an identity of formal power series in $t$, with}
+
+\ChapterEntry{p-469}{Appendix C, \S4. Descent of rational power series}{455}
+
+
+\Printed{$\mathbf Q[[t]]\cap\mathbf Q_\ell(t)=\mathbf Q(t)$}
+\Revised{$\mathbf Q[[t]]\cap\mathbf Q_\ell(t)=\{R(t)\in\mathbf Q(t): R(t)\text{ is regular at }0\}$}
+
+\ChapterEntry{p-469}{Appendix C, Theorem 4.2. Odd and even determinant factors}{455}
+
+
+\Printed{\[
+Z(X,t)=\frac{P_1(t)\cdots P_{2n-1}(t)}{P_0(t)\cdots P_{2n}(t)},
+\]}
+\Revised{\[
+Z(X,t)=\frac{\prod_{\substack{0\leq i\leq 2n\\i\text{ odd}}}P_i(t)}{\prod_{\substack{0\leq i\leq 2n\\i\text{ even}}}P_i(t)},
+\]}
+
+\ChapterEntry{p-470}{C, extreme cohomology and Theorem 4.4. Geometric connectedness}{456}
+
+
+\Printed{Since $f^*$ acts on $H^0(\overline X,\mathbf Q_\ell)$ as the identity,}
+\Revised{Suppose now that $\overline X$ is connected. Since $f^*$ acts on $H^0(\overline X,\mathbf Q_\ell)$ as the identity,}
+
+\Printed{, the zeta function $Z(X,t)$ satisfies the functional equation}
+\Revised{and with $\overline X$ connected, the zeta function $Z(X,t)$ satisfies the functional equation}
+
+\ChapterEntry{p-470}{C, Lemma 4.3. Nonzero pairing multiplier}{456}
+
+
+\Printed{$\lambda\in K$}
+\Revised{$\lambda\in K^\times$}
+
+\ChapterEntry{p-471}{C, \S4. The two comparisons of Betti numbers}{456--457}
+
+\PassagePage{456}
+
+
+\Printed{However, once we do know this, the statement \Goto{ex-C-1.4}{(1.4)} will follow from the general properties \Goto{ex-C-3.6}{(3.6)} and \Goto{ex-C-3.7}{(3.7)} of the $\ell$-adic cohomology.}
+\Revised{The identification with the degrees of the weight factors in \Goto{ex-C-1.3}{(1.3)} uses Theorem \Goto{result-C-4.5}{4.5}. The equality of the cohomological dimensions with complex Betti numbers at good reduction follows from \Goto{ex-C-3.6}{(3.6)} and \Goto{ex-C-3.7}{(3.7)}.}
+
+\PassagePage{457}
+
+
+\Printed{So we see that the conjectures \Goto{ex-C-1.1}{(1.1)}, \Goto{ex-C-1.2}{(1.2)}, and \Goto{ex-C-1.4}{(1.4)} follow from the formal properties of $\ell$-adic cohomology once we have interpreted the zeta function as in \Goto{result-C-4.2}{(4.2)}.}
+\Revised{So we see that \Goto{ex-C-1.1}{(1.1)} and \Goto{ex-C-1.2}{(1.2)} follow from the formal properties of $\ell$-adic cohomology once we have interpreted the zeta function as in \Goto{result-C-4.2}{(4.2)}. The complex comparison in \Goto{ex-C-1.4}{(1.4)} also follows for the cohomological dimensions; their identification with the degrees in \Goto{ex-C-1.3}{(1.3)} uses the following theorem.}
+
+\ChapterEntry{p-470}{C, Theorem 4.4 and Exercise 5.7. Geometric cohomology}{456, 458}
+
+\PassagePage{456}
+
+
+\Printed{$H^{2n}(X,\mathbf Q_\ell)$}
+\Revised{$H^{2n}(\overline X,\mathbf Q_\ell)$}
+
+\Printed{$H^i(X,\mathbf Q_\ell)\times H^{2n-i}(X,\mathbf Q_\ell)\longrightarrow H^{2n}(X,\mathbf Q_\ell)$}
+\Revised{$H^i(\overline X,\mathbf Q_\ell)\times H^{2n-i}(\overline X,\mathbf Q_\ell)\longrightarrow H^{2n}(\overline X,\mathbf Q_\ell)$}
+
+\Printed{$H^{2n}(X,\mathbf Q_\ell)$}
+\Revised{$H^{2n}(\overline X,\mathbf Q_\ell)$}
+
+\PassagePage{458}
+
+
+\Printed{$2g=\dim H^1(C,\mathbf Q_\ell)$}
+\Revised{$2g=\dim H^1(\overline C,\mathbf Q_\ell)$}
+
+\ChapterEntry{p-471}{C, Exercise 5.4. Domain of Euler products}{457}
+
+
+\Printed{$s\in\mathbf C$, the product being taken over all prime integers $p$.}
+\Revised{$\operatorname{Re}(s)>1$, the product being taken over all prime integers $p$.}
+
+\Printed{residue field $k(x)$. Show that if $X$ is of finite type over $\mathbf F_q$, then this function}
+\Revised{residue field $k(x)$. Take the product initially where it converges absolutely. Show that if $X$ is of finite type over $\mathbf F_q$, then this function}
+
+\ChapterEntry{p-471}{Appendix C, \S4 and Exercise 5.7. Using the two outer factors}{457--458}
+
+\PassagePage{457}
+
+
+\Printed{it implies that the polynomials $P_i(t)$ of \Goto{result-C-4.2}{(4.2)} are the same}
+\Revised{for geometrically connected $X$ it implies that the polynomials $P_i(t)$ of \Goto{result-C-4.2}{(4.2)} are the same}
+
+\PassagePage{458}
+
+
+\Printed{for any curve $C$ of genus $g$ defined over $\mathbf F_q$.}
+\Revised{for any smooth projective geometrically connected curve $C$ of genus $g$ defined over $\mathbf F_q$.}
+
+\ChapterEntry{p-472}{C, Exercise 5.5. The functional-equation sign for curves}{458}
+
+
+\Printed{for all $r\geq1$.}
+\Revised{for all $r\geq1$. Use the positive-sign reciprocal identity $P_1(t)=q^gt^{2g}P_1(1/(qt))$ for curves.}
+
+\ChapterEntry{p-472}{C, Exercise 5.6. Scalar trace of Frobenius}{458}
+
+
+\Printed{\[
+N_r=q^r-(f^r+\widehat f^{\,r})+1,
+\]
+where $f=F'$.}
+\Revised{with $f=F'$ and $[a_r]=f^r+\widehat f^{\,r}$, one has
+\[
+N_r=q^r-a_r+1.
+\]}
+
+\Printed{$f+\widehat f=a_X$}
+\Revised{$f+\widehat f=[a]$}
+
