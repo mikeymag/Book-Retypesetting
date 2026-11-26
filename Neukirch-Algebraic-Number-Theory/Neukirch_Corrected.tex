@@ -1,0 +1,139 @@
+% !TeX program = xelatex
+% Compile this main file with XeLaTeX from its directory.
+% Paragraph text uses Latin Modern. Mathematics uses default TeX math faces
+% and standard AMS symbol faces. Page layouts position text at measured baselines.
+% \Character uses a slot in a traditional TeX font. \Glyph uses a native font glyph.
+% \EditionChange holds paired readings listed in the separate errata.
+\newcommand\ActivateEdition{\CorrectedEditiontrue}
+\newcommand\EditionTitle{Algebraic Number Theory — Corrected English Edition}
+\documentclass{article}
+\usepackage[paperwidth=612bp,paperheight=846bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage[unicode,hidelinks,pageanchor=false,pdfpagelabels=false]{hyperref}
+\usepackage{bookmark}
+\pagestyle{empty}
+\parindent=0pt
+\newcommand\Face[1]{\csname face:#1\endcsname}
+\newcommand\Font[3]{\expandafter\font\csname face:#1\endcsname=#2 at #3bp\relax}
+\newcommand\Character[1]{\char#1\relax}
+\newcommand\Glyph[1]{\XeTeXglyph#1\relax}
+\newcommand\TextAt[4]{\put(#2,#3){\Face{#1}#4}}
+\newcommand\Vector[1]{\put(0,0){\special{pdf:literal direct #1}}}
+\newcommand\Destination[3]{\put(#1,#2){\special{pdf:dest (#3) [@thispage /XYZ @xpos @ypos null]}}}
+\newcommand\Hotlink[5]{\put(#1,#2){\special{pdf:ann width #3bp height #4bp depth 0bp << /Subtype /Link /Border [0 0 0] /A << /S /GoTo /D (#5) >> >>}}}
+\newcommand\Page[1]{\AddToShipoutPictureFG*{\AtPageLowerLeft{\setlength\unitlength{1bp}\begin{picture}(0,0)%
+#1\end{picture}}}\null\newpage}
+\providecommand\EditionTitle{Algebraic Number Theory}
+\hypersetup{pdftitle={\EditionTitle},pdfauthor={Jürgen Neukirch}}
+
+
+\usepackage{amsmath,amssymb,tikz}
+\usetikzlibrary{patterns}
+% Standard math constructions replace formerly positioned glyph composites.
+\newcommand\NativeMathAt[4]{%
+  \put(#1,#2){\begingroup\fontsize{#3bp}{#3bp}\selectfont\mathsurround=0pt\ensuremath{#4}\endgroup}}
+\newcommand\NativeArrowAt[5]{%
+  \put(#1,#2){\begingroup\fontsize{#3bp}{#3bp}\selectfont\mathsurround=0pt
+  \resizebox{#4bp}{\height}{\ensuremath{#5}}\endgroup}}
+\newcommand\NativeDiagram[1]{%
+  \put(72,774){\begin{tikzpicture}[x=1bp,y=1bp,baseline=0pt]%
+    \path[use as bounding box] (0,0) rectangle (1,1);%
+    \begin{pgfinterruptboundingbox}#1\end{pgfinterruptboundingbox}%
+  \end{tikzpicture}}}
+
+\newif\ifCorrectedEdition
+\providecommand\ActivateEdition{}
+\ActivateEdition
+\newcommand\EditionChange[2]{\ifCorrectedEdition#2\else#1\fi}
+\newcommand\BodyAt[3]{\put(#1,#2){\fontsize{11.955bp}{16bp}\selectfont #3}}
+\newcommand\SmallAt[3]{\put(#1,#2){\small #3}}
+\newcommand\SeriesAt[3]{\put(#1,#2){\fontsize{9.3bp}{12bp}\selectfont #3}}
+\newcommand\BoldAt[3]{\put(#1,#2){\Large\bfseries #3}}
+\newcommand\CoverLine[3]{\put(306,#1){\makebox[0pt]{\fontsize{#2bp}{35bp}\selectfont #3}}}
+\newcommand\NativeCover{%
+  \CoverLine{681}{16}{Jürgen Neukirch}%
+  \CoverLine{587}{37}{\bfseries Algebraic}%
+  \CoverLine{543}{37}{\bfseries Number Theory}%
+  \CoverLine{465}{13}{Translated from the German by Norbert Schappacher}%
+  \CoverLine{425}{11}{With 16 Figures}%
+  \CoverLine{100}{14}{Springer}%
+  \CoverLine{76}{10}{\EditionChange{English edition}{Corrected English edition}}%
+}
+
+\Font{1}{"[lmroman12-bold.otf]:-kern"}{24.787}
+\Font{2}{"[lmroman10-regular.otf]:-kern"}{10.909}
+\Font{3}{cmsy8}{7.97}
+\Font{4}{"[lmroman10-italic.otf]:-kern"}{10.909}
+\Font{5}{"[lmmono10-regular.otf]:-kern"}{10.909}
+\Font{6}{"[lmroman10-bold.otf]:-kern"}{10.909}
+\Font{7}{"[lmroman8-regular.otf]:-kern"}{7.97}
+\Font{8}{"[lmroman12-regular.otf]:-kern"}{11.955}
+\Font{9}{cmr12}{11.955}
+\Font{10}{"[lmroman10-regular.otf]:-kern"}{9.963}
+\Font{11}{"[lmroman7-regular.otf]:-kern"}{6.974}
+\Font{12}{"[lmroman12-bold.otf]:-kern"}{11.955}
+\Font{13}{cmmi12}{11.955}
+\Font{14}{eufm10}{11.955}
+\Font{15}{"[lmroman12-bold.otf]:-kern"}{17.215}
+\Font{16}{cmsy10}{11.955}
+\Font{17}{cmr8}{7.97}
+\Font{18}{msbm10}{11.955}
+\Font{19}{"[lmroman12-italic.otf]:-kern"}{11.955}
+\Font{20}{cmex10}{11.955}
+\Font{21}{cmmi8}{7.97}
+\Font{22}{cmmi6}{5.978}
+\Font{23}{cmsy6}{5.978}
+\Font{24}{cmr6}{5.978}
+\Font{25}{msbm10}{7.97}
+\Font{26}{"[lmromancaps10-regular.otf]:-kern"}{11.955}
+\Font{27}{eufm10}{7.97}
+\Font{28}{eufm7}{5.978}
+\Font{29}{msbm7}{5.978}
+\Font{30}{cmex8}{7.97}
+\Font{31}{cmmi12}{17.215}
+\Font{32}{eufm10}{17.215}
+\Font{33}{cmmi10}{9.963}
+\Font{34}{msbm10}{9.963}
+\Font{35}{cmsy10}{9.963}
+\Font{36}{cmmi7}{6.974}
+\Font{37}{cmr10}{9.963}
+\Font{38}{cmsy7}{6.974}
+\Font{39}{cmr7}{6.974}
+\Font{40}{"[lmroman6-regular.otf]:-kern"}{5.978}
+\Font{41}{msam10}{11.955}
+\Font{42}{cmex10}{9.963}
+\Font{43}{cmsy5}{4.981}
+\Font{44}{cmr5}{4.981}
+\Font{45}{"[lmroman10-bold.otf]:-kern"}{9.963}
+\Font{46}{msbm10}{17.215}
+\Font{47}{cmmi10}{10.909}
+\Font{48}{cmr10}{10.909}
+\Font{49}{cmsy10}{10.909}
+\Font{50}{cmmi12}{24.787}
+\Font{51}{"[lmroman8-bold.otf]:-kern"}{7.97}
+\Font{52}{eufm10}{9.963}
+\Font{53}{eufm7}{6.974}
+\Font{54}{cmmi5}{4.981}
+
+% Place each verified correction at the original text baseline.
+\newsavebox{\ErratumBox}
+\newcommand\ErrataAt[4]{%
+  \put(#1,#2){\begingroup\fontsize{11.955bp}{16bp}\selectfont
+    \sbox{\ErratumBox}{#4}%
+    \ifdim\wd\ErratumBox>#3bp
+      \resizebox{#3bp}{\height}{\usebox{\ErratumBox}}%
+    \else\usebox{\ErratumBox}\fi
+  \endgroup}}
+
+\begin{document}
+\input{Corrected/frontmatter}
+\input{Corrected/chapter1}
+\input{Corrected/chapter2}
+\input{Corrected/chapter3}
+\input{Corrected/chapter4}
+\input{Corrected/chapter5}
+\input{Corrected/chapter6}
+\input{Corrected/chapter7}
+\input{Corrected/backmatter}
+\end{document}

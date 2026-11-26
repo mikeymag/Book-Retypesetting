@@ -1,0 +1,1774 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdftitle={Neukirch: Errata for the English Edition}}
+\newcommand{\original}{\par\smallskip\noindent\textbf{Original.}\enspace}
+\newcommand{\replacement}{\par\smallskip\noindent\textbf{Replacement.}\enspace}
+\newcommand{\reason}{\par\smallskip\noindent\textbf{Reason.}\enspace}
+\newcommand{\editionlink}[3]{\href{#1\#errata.#2}{#3}}
+\newcommand{\ErrataRef}[1]{\hyperref[errata:item:#1]{#1}}
+\newcommand{\location}[2]{%
+  \par\smallskip\noindent Original scan PDF page~#2.\enspace
+  \editionlink{Neukirch_Faithful.pdf}{#1}{Faithful edition}
+  \quad\editionlink{Neukirch_Corrected.pdf}{#1}{Corrected edition}.}
+\raggedbottom
+\setcounter{tocdepth}{1}
+\setlength{\emergencystretch}{2em}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\l@section}{\setlength\@tempdima{1.5em}}{\setlength\@tempdima{2.2em}}{}{}
+\makeatother
+\title{Errata for Neukirch's \textit{Algebraic Number Theory}}
+\author{Notes on the 1999 English edition, translated by Norbert Schappacher}
+\date{26 November 2026}
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\noindent This audit uses the supplied 1999 English print scan. References give the printed page and the PDF page of that scan. The two edition links open the passage in the corresponding retypesetting. The discriminant exercise on p.~38 retains the printed list and asks which entries are realizable.
+\par\smallskip
+\noindent The previous five entries were rechecked alongside the new entries. The Frobenius, positive-genus, and Artin $L$-function changes are within the hypotheses stated in their entries. Entries marked as source restorations return both retypeset editions to formulas or wording verified in the original scan.
+\part{Previously issued entries}
+\setcounter{section}{0}
+\section{I, \S3, Exercise 5, p.~23}\label{errata:item:1}
+\original ``principal ideal domain.''
+\replacement ``principal ideal ring.''
+\reason A quotient need not be a domain. For instance, the images of $2$ in $\mathbb Z/(4)$ multiply to zero. If the nonzero ideal is proper, factor it as $\prod_i\mathfrak p_i^{e_i}$. The Chinese remainder theorem reduces the assertion to the quotients by the individual prime powers. Each such quotient is a quotient of a discrete valuation ring, so its ideals are principal. A finite product of principal ideal rings has the same property. The unit ideal gives the zero ring.
+\location{1}{36}
+
+\setcounter{section}{1}
+\section{I, \S6, Exercise 2, p.~38}\label{errata:item:2}
+\original The discriminants are $5,8,11,-3,-4,-7,-8,-11$.
+\replacement Retain the printed list. First decide which entries occur as quadratic discriminants, and prove the class-number assertion for the resulting fields.
+\reason A quadratic discriminant is $0$ or $1$ modulo $4$, so $11$ cannot occur. Preserve all the printed integers and introduce no conjectural substitute. The real bound $\sqrt d/2$ and the imaginary bound $2\sqrt{|d|}/\pi$ are below $2$ for the remaining entries except $-11$. For $d=-11$, the bound is less than $3$ and $2$ is inert, as the polynomial of $(1+\sqrt{-11})/2$ reduces to $X^2+X+1$ modulo $2$.
+\location{2}{51}
+
+\setcounter{section}{2}
+\section{I, \S9, Exercise 2, p.~58}\label{errata:item:3}
+\original $q=[\kappa(\mathfrak P):\kappa(\mathfrak p)]$.
+\replacement $q=|\kappa(\mathfrak p)|$.
+\reason The arithmetic Frobenius of the residue field extension is the $q$-power map, where $q$ is the number of elements of the base residue field. The residue degree is the order of this Frobenius in the residue-field Galois group.
+\location{3}{71}
+
+\setcounter{section}{3}
+\section{III, \S2, paragraph before Exercise 1, p.~207}\label{errata:item:4}
+\original ``there are no smooth proper curves with good reduction mod $p$ for all prime numbers $p$''
+\replacement ``there are no smooth proper curves of positive genus with good reduction mod $p$ for all prime numbers $p$''
+\reason The smooth proper model $\mathbb P^1_{\mathbb Z}$ shows that genus zero must be excluded. A smooth proper geometrically connected curve of positive genus with good reduction everywhere would have a nonzero Jacobian abelian variety with good reduction everywhere, by good reduction of the Jacobian at each prime. This contradicts Fontaine's theorem, cited in the book as~[39].
+\location{4}{218}
+
+\setcounter{section}{4}
+\section{VII, \S10, paragraph before \S11, p.~527}\label{errata:item:5}
+\original ``This also settles the Artin conjecture for every solvable extension $L\mid K$.''
+\replacement ``This also settles the Artin conjecture for extensions $L\mid K$ whose Galois groups are monomial.''
+\reason By definition, every irreducible character of a monomial group is induced from a linear character of a subgroup. If the irreducible character is nontrivial, the inducing character is nontrivial by Frobenius reciprocity. Artin formalism identifies its $L$-function with that of the inducing linear character over the corresponding intermediate field. The abelian case then supplies holomorphy. Solvability alone does not give the required induction description.
+\location{5}{535}
+
+\part{Additional verified entries}
+\setcounter{section}{5}
+\section{I, \S2, proof of (2.7), p.~10}\label{errata:item:6}
+\original The inseparable-case formulas apply $\operatorname{Tr}_{M^s\mid K}$ and $N_{M_s\mid K}$ to arbitrary $x\in M$.
+\replacement In the trace and norm formulas of (2.6), group the $K$-embeddings by their restrictions to $L$ and use multiplicativity of the inseparable degree. In particular, if $q=[M:M^s]$, then $N_{M\mid K}(x)=N_{M^s\mid K}(x^q)$ and $\operatorname{Tr}_{M\mid K}(x)=0$ if $q>1$.
+\reason The characteristic polynomial over $M^s$ is $T^q-x^q$. Its norm is $x^q\in M_s$, and its trace is zero for $q>1$. The tower identities used here also follow directly by restricting scalars. For a matrix over an intermediate field, the trace over the base field is the sum of the base-field traces of the diagonal entries. For determinants, elementary and diagonal matrices give the determinant-of-restriction identity, and multiplicativity gives the general case.
+\location{6}{23}
+
+\setcounter{section}{6}
+\section{I, \S8, Exercise 2, p.~52}\label{errata:item:7}
+\original A primitive integral element with conductor prime to an arbitrary $\mathfrak A$ is asserted to exist.
+\replacement Suppose that $\mathcal O/\mathfrak p\mathcal O$ is generated by one element over $\mathfrak o/\mathfrak p$ at every base prime below the nonzero ideal $\mathfrak A$.
+\reason In Dedekind\textquoteright{}s cubic field defined by $T^3-T^2-2T-8$, the prime $2$ splits completely. The algebra $\mathbb F_2^3$ cannot be generated by one element, so take $\mathfrak A=2\mathcal O$. Under the new hypothesis lift the prescribed generators by the Chinese remainder theorem. Nakayama gives $\mathfrak o_{\mathfrak p}[\theta]=\mathcal O_{\mathfrak p}$ at those primes, giving the conductor claim and, after tensoring with $K$, $L=K(\theta)$. For the unit ideal take an integral primitive element. See \href{https://kconrad.math.uconn.edu/blurbs/gradnumthy/dedekind-index-thm.pdf}{Conrad, Dedekind\textquoteright{}s Index Theorem}.
+\location{7}{65}
+
+\setcounter{section}{7}
+\section{I, \S11, primes of $A(X)$, p.~66}\label{errata:item:8}
+\original The assertion that only the primes in $X$ survive is made for arbitrary $A$ and finite or cofinite $X$.
+\replacement For a Dedekind domain and finite $X$ of nonzero primes, precisely those nonzero primes survive.
+\reason In $k[x,y]$ with $X=\{(x,y)\}$, the prime $(x)$ survives. In the revised Dedekind statement apply finite prime avoidance and maximality.
+\location{8}{79}
+
+\setcounter{section}{8}
+\section{I, \S11, proof of (11.2), p.~67}\label{errata:item:9}
+\original The proof asserts a correspondence for all ideals.
+\replacement Use prime ideals in both places.
+\reason The prime-ideal correspondence gives the unique maximal ideal. The correspondence for all ideals fails: $(2)$ and $(6)$ have the same extension in $\mathbb Z_{(2)}$.
+\location{9}{80}
+
+\setcounter{section}{9}
+\section{I, \S11, paragraph before (11.6), p.~70}\label{errata:item:10}
+\original The class group sequence assumes that precisely the primes in a cofinite set $X$ survive.
+\replacement Require every nonzero prime outside $X$ to meet $S=\mathfrak o\setminus\bigcup_{\mathfrak p\in X}\mathfrak p$.
+\reason The primes disjoint from $S$ correspond to the primes of the localization. The class group sequence uses the free group on primes meeting $S$. If the class group is torsion, a positive power of each omitted prime is principal, and a generator belongs to no other prime. This verifies the added hypothesis and preserves the number-field application.
+\location{10}{83}
+
+\setcounter{section}{10}
+\section{I, \S12, length and the divisor map, p.~83}\label{errata:item:11}
+\original Length is called multiplicative on short exact sequences.
+\replacement Length is additive on short exact sequences.
+\reason Apply length additivity to $0\to R/(a)\xrightarrow{\cdot b}R/(ab)\to R/(b)\to0$ for $R=\mathfrak o_{\mathfrak p}$ and nonzero $a,b$. This gives additivity of the order function on products.
+\location{11}{96}
+
+\setcounter{section}{11}
+\section{I, \S13, (13.1), item (2), p.~87}\label{errata:item:12}
+\original $U\subseteq V$ in the restriction axiom.
+\replacement $V\subseteq U$ in the restriction axiom.
+\reason Restriction goes from the larger open set to the smaller one.
+\location{12}{100}
+
+\setcounter{section}{12}
+\section{II, \S3, Exercise 3, p.~123}\label{errata:item:13}
+\original The list is asserted to exhaust valuations of $k(t)$.
+\replacement The list exhausts nontrivial valuations on $k(t)$ trivial on $k$, up to equivalence.
+\reason The $p$-adic Gauss valuation on $\mathbb Q(t)$ is a counterexample to the unrestricted assertion. If the valuation is trivial on $k$, the case $v(t)<0$ gives the degree valuation. Otherwise the positive-value ideal in $k[t]$ is a nonzero prime, giving the corresponding prime-adic valuation.
+\location{13}{135}
+
+\setcounter{section}{13}
+\section{II, \S4, Exercise 1, p.~134}\label{errata:item:14}
+\original The incompleteness assertion includes purely inseparable extensions.
+\replacement Require a separable extension and a nontrivial ground valuation.
+\reason For $k=\mathbb F_p(u_1,u_2,\ldots)$ the complete fields $K=k((t))$ and $L=k^{1/p}((t^{1/p}))$ satisfy $L^p=K$ and $[L:K]=\infty$. In the Archimedean case no infinite algebraic extension occurs. In the nonarchimedean separable case Krasner\textquoteright{}s lemma makes $X_d=\{x:[K(x):K]\le d\}$ closed. Choose $z$ of degree greater than $d[K(x):K]$ and take $y=x+az$ for nonzero $a\in K$ arbitrarily small. Then $K(x,y)=K(x,z)$ forces $[K(y):K]>d$. Elements of arbitrarily large degree exist by the primitive element theorem. Each $X_d$ has empty interior, and Baire\textquoteright{}s theorem rules out completeness.
+\location{14}{146}
+
+\setcounter{section}{14}
+\section{II, \S4, Exercise 4, Witt ghost components, p.~134}\label{errata:item:15}
+\original The second ghost component is $(Fa)^{(n)}$.
+\replacement Use $(Fa)^{(n-1)}$ for $n\ge1$.
+\reason In $a^{(n)}=\sum_{j=0}^n p^j a_j^{p^{n-j}}$ the last term is $p^n a_n$. The others give the $(n-1)$-st ghost component of the coordinatewise $p$-power operation in the exercise.
+\location{15}{146}
+
+\setcounter{section}{15}
+\section{II, \S5, Exercise 1, logarithm and exponential, p.~142}\label{errata:item:16}
+\original The logarithm has codomain $\mathbb Q$ and the exponential threshold is $1/(1-p)$.
+\replacement The logarithm takes values in $\overline{\mathbb Q}_p$. For $v_p(p)=1$ the exponential domain is $v_p(x)>1/(p-1)$.
+\reason The logarithms on all finite $p$-adic extensions are compatible. The bound $v_p(n!)\le n/(p-1)$ gives exponential convergence in the corrected range. The original range admits $x=1$, where the terms fail to tend to zero.
+\location{16}{154}
+
+\setcounter{section}{16}
+\section{II, \S5, Exercise 5, p.~142}\label{errata:item:17}
+\original The groups $K^{*n}$ are asserted to form a neighborhood basis.
+\replacement Use $U^n=K^{*n}\cap U$, where $U=\mathfrak o^*$.
+\reason Each $K^{*n}$ contains a nonunit, the $n$-th power of a uniformizer. Each $U^n$ is open by Hensel\textquoteright{}s lemma. The subgroups $U^{(q-1)p^k}$ shrink uniformly to $1$ by reduction and the binomial expansion.
+\location{17}{154}
+
+\setcounter{section}{17}
+\section{II, \S5, Exercise 6, p.~142}\label{errata:item:18}
+\original $v_{\mathfrak p}(a)=\int_{a\mathfrak o}dx$.
+\replacement $\int_{a\mathfrak o}dx=|a|_{\mathfrak p}=q^{-v_{\mathfrak p}(a)}$ for $a\ne0$.
+\reason The $q$ cosets of the maximal ideal have equal measure $1/q$. Iteration gives the formula. The printed equality fails already at $a=1$.
+\location{18}{154}
+
+\setcounter{section}{18}
+\section{II, \S9, compactness proof, p.~167}\label{errata:item:19}
+\original $X_M=\bigcap_{i=1}^r X_{M_i}$.
+\replacement $X_M\subseteq\bigcap_{i=1}^r X_{M_i}$.
+\reason Restriction gives the inclusion and $X_M$ is nonempty, which suffices. At $5$, two valuations on $\mathbb Q(\sqrt2,\sqrt3)$ have the same restrictions to both quadratic fields.
+\location{19}{179}
+
+\setcounter{section}{19}
+\section{II, \S9, Exercise 3, p.~176}\label{errata:item:20}
+\original $T=\overline{\mathbb F}_p((t))$.
+\replacement $T=\bigcup_{f\ge1}\mathbb F_{p^f}((t))$.
+\reason Finite unramified extensions correspond to finite extensions of the residue field. A series in the printed field whose coefficients lie in no single finite field has infinitely many coefficientwise Frobenius conjugates, so it is not algebraic over $K$.
+\location{20}{188}
+
+\setcounter{section}{20}
+\section{II, \S10, identification of $G_1$ and (10.2), p.~177}\label{errata:item:21}
+\original These assertions precede the separability assumption on the residue extension.
+\replacement Assume $\lambda\mid\kappa$ separable for $G_1=R$ and for (10.2).
+\reason Over the maximal unramified subextension the integral ring is generated by a uniformizer, as in (10.4). For an inseparable-residue counterexample take $K=\mathbb F_p(u)((t))$ and $\alpha^p-t^{p-1}\alpha=u$. The group acts by $\alpha\mapsto\alpha+ct$, fixes the uniformizer $t$, and $G_0=G$, $G_1=1$. Thus the map in (10.2) is not injective for $s=0$.
+\location{21}{189}
+
+\setcounter{section}{21}
+\section{III, \S2, finiteness theorem, discriminant bound, p.~203}\label{errata:item:22}
+\original The exponent is $n(1+n)$.
+\replacement Use $n(1+v_{\mathfrak p}(n!))$.
+\reason By (2.6), the local different exponent is at most $e-1+e v_{\mathfrak p}(e)$. Since $e\le n$, it divides $n!$. Multiply by the residue degree and sum using $\sum ef=n$. For $K=\mathbb Q(\zeta_8)$ and $L=K(\sqrt{1-\zeta_8})$, the exponent at the prime over $2$ is $2v_{\mathfrak p}(2)+1=9>6$, by the derivative of the Eisenstein polynomial.
+\location{22}{214}
+
+\setcounter{section}{22}
+\section{III, \S6, proof of (6.4), p.~244}\label{errata:item:23}
+\original The proof calls $c_1$ multiplicative.
+\replacement $c_1(xy)=\mathrm{rk}(x)c_1(y)+\mathrm{rk}(y)c_1(x)$.
+\reason Write $x=r+u$ and $y=s+v$ in $\mathbb Z\oplus I$. Since $I^2=0$, the degree-one part of $xy$ is $rv+su$. The Chern character is multiplicative with the graded ring law.
+\location{23}{255}
+
+\setcounter{section}{23}
+\section{III, \S7, trace-pairing computation, p.~252}\label{errata:item:24}
+\original $AA^{\prime}=BB^{\prime}$.
+\replacement $\det A\det A^{\prime}=\det B\det B^{\prime}$.
+\reason If $D$ is the trace pairing matrix, write $A=XDY^t$, $A^{\prime}=X^{\prime}DY^{\prime t}$, $B=XDX^{\prime t}$ and $B^{\prime}=YDY^{\prime t}$ in row coordinates. The determinants give the scalar identity needed below.
+\location{24}{263}
+
+\setcounter{section}{24}
+\section{IV, \S2, Example 4, p.~272}\label{errata:item:25}
+\original The projection from $\mathbb Z/n\mathbb Z$ to $\mathbb Z/m\mathbb Z$ is labeled $n\mid m$.
+\replacement The condition on this projection is $m\mid n$.
+\reason Reduction modulo $m$ is well-defined exactly when $n\mathbb Z\subseteq m\mathbb Z$. The order on the indexing set remains divisibility.
+\location{25}{283}
+
+\setcounter{section}{25}
+\section{V, \S3, Exercise 4, p.~340}\label{errata:item:26}
+\original The extension is taken of exponent $n$.
+\replacement Use exponent $p^n$.
+\reason The additive group $W_n(\mathbb F_p)$ is $\mathbb Z/p^n\mathbb Z$. At $n=1$ the exercise is ordinary Artin--Schreier theory, with characters of exponent $p$.
+\location{26}{350}
+
+\setcounter{section}{26}
+\section{VI, \S1, Exercise 1(ii)--(iii), p.~367}\label{errata:item:27}
+\original $A_{\mathbb Q}/\mathbb Z$ in (ii) and (iii).
+\replacement $A_{\mathbb Q}/\mathbb Q$ in (ii) and (iii).
+\reason The class of $1/n$ has torsion in the printed quotient, which also surjects onto the infinite discrete group of finite adeles modulo $\widehat{\mathbb Z}$. For the corrected quotient, the image of $\widehat{\mathbb Z}\times[0,1]$ gives compactness. The real axis maps densely by density of $\mathbb Q$ in the finite adeles, so the quotient is connected. It is a $\mathbb Q$-vector space.
+\location{27}{376}
+
+\setcounter{section}{27}
+\section{VI, \S3, Exercise 3, p.~379}\label{errata:item:28}
+\original $D\subseteq N_{L\mid K}L^*$.
+\replacement $D\subseteq N_{L\mid K}I_L$.
+\reason The original condition forces $K^*D=K^*$, which is closed discrete. Local norm images are open and contain all units at unramified places, so $K^*N_{L\mid K}I_L$ is open and closed. Density forces it to be all of $I_K$. A nontrivial cyclic prime-degree subextension would have norm index one, contradicting the norm index theorem.
+\location{28}{388}
+
+\setcounter{section}{28}
+\section{VI, \S3, Exercise 4, p.~379}\label{errata:item:29}
+\original The only independence condition is $L_i\cap L_j=K$ for $i\ne j$.
+\replacement Require $L_1\not\subseteq L_2\cdots L_r$.
+\reason The fields generated by $\sqrt6,\sqrt2,\sqrt3$ have pairwise intersection $\mathbb Q$, but splitting in the last two implies splitting in the first. For the revised statement, a nonidentity automorphism over $L_2\cdots L_r$ restricts nontrivially to $L_1$, and Chebotarev gives infinitely many primes with that Frobenius.
+\location{29}{388}
+
+\setcounter{section}{29}
+\section{VI, \S5, Proposition (5.1), p.~385}\label{errata:item:30}
+\original $G(\Omega\mid K)$.
+\replacement $G(\Omega\mid\mathbb Q)$.
+\reason The ground field in the statement and proof is $\mathbb Q$.
+\location{30}{394}
+
+\setcounter{section}{30}
+\section{VI, \S6, deduction of Kronecker--Weber, p.~399}\label{errata:item:31}
+\original The norm group is said to lie in a congruence subgroup.
+\replacement The norm group contains a congruence subgroup.
+\reason The class-field correspondence reverses subgroup inclusions, so the revised direction gives the asserted field inclusion.
+\location{31}{408}
+
+\setcounter{section}{31}
+\section{VI, \S6, Exercise 2, p.~404}\label{errata:item:32}
+\original The exercise permits $d=1$ and calls the fundamental unit totally positive.
+\replacement Take squarefree $d>1$ and an ordinary fundamental unit.
+\reason A totally positive unit cannot have norm $-1$. The signs of $-1$ and an ordinary fundamental unit generate the full sign group in the norm-$-1$ case and the diagonal sign group in the norm-$+1$ case.
+\location{32}{413}
+
+\setcounter{section}{32}
+\section{VI, \S6, Exercise 4, hint for (iii), p.~404}\label{errata:item:33}
+\noindent\emph{Source restoration in both editions.}\par
+\original The reference retypesetting has kernel. The original print has cokernel.
+\replacement Restore cokernel in both retypeset editions.
+\reason The cokernel of the localization map on the power quotients is $I_K/(K^*I_K^n)=C_K/(C_K)^n$. This restores the original reading.
+\location{33}{413}
+
+\setcounter{section}{33}
+\section{VI, \S7, cyclotomic example after (7.3), p.~409}\label{errata:item:34}
+\original The module $(m)$ is always called the conductor.
+\replacement Call $(m)$ a module of definition.
+\reason If $m\equiv2\pmod4$, the field is the same as that for $m/2$. For example the conductor at $m=2$ is $1$. The splitting argument needs only a module of definition.
+\location{34}{418}
+
+\setcounter{section}{34}
+\section{VI, \S8, proof of the second supplementary law, p.~416}\label{errata:item:35}
+\original The last exponent of $(-1)$ is $(b^2-1)/2$.
+\replacement It is $(b^2-1)/8$.
+\reason This agrees with (8.4). For instance $(2/3)=-1$, but the final printed exponent would give $+1$.
+\location{35}{425}
+
+\setcounter{section}{35}
+\section{VII, \S2, imprimitive Dirichlet series, p.~440}\label{errata:item:36}
+\original The factors removed from $L(\chi^{\prime},s)$ are written with $\chi(p)$.
+\replacement Use $\chi^{\prime}(p)$ at $p\mid m$, $p\nmid\mathfrak f$.
+\reason The imprimitive character vanishes at primes dividing $m$. It is the primitive Euler factor that must be removed.
+\location{36}{448}
+
+\setcounter{section}{36}
+\section{VII, \S12, proof of the Artin functional equation, p.~541}\label{errata:item:37}
+\original The final products omit the Brauer exponents $n_i$.
+\replacement Restore $n_i$ in the product of the completed Hecke functions and in the product of root numbers.
+\reason Induction and conjugation identify the product with the completed Artin function of the conjugate character. Integral powers, including negative powers, preserve modulus one.
+\location{37}{549}
+
+\setcounter{section}{37}
+\section{VII, \S13, comparison near $s=1$, p.~543}\label{errata:item:38}
+\original $\zeta_K(s)\sim1/(s-1)$ under the convention that the difference is analytic at $1$.
+\replacement $\zeta_K(s)\sim c_K/(s-1)$, where $c_K$ is the residue.
+\reason The residue need not be one. The logarithmic comparison is unchanged because $\log(c_K+(s-1)h(s))$ is analytic near $1$ when $\zeta_K(s)=c_K/(s-1)+h(s)$.
+\location{38}{551}
+
+\setcounter{section}{38}
+\section{I, \S1, proof of Theorem (1.1), two formulas, p.~2}\label{errata:item:39}
+\noindent\emph{Source restoration in both editions.}\par
+\original The retypesetting adds $N(p)$ to the first equality and replaces $x/p\pm i/p\notin\mathbb Z[i]$ by a pair of statements about $1/p$ and $i/p$.
+\replacement Restore $p^2=N(\alpha)\cdot N(\beta)$ and $x/p\pm i/p\notin\mathbb Z[i]$ in both books.
+\reason The imaginary coordinates of $(x\pm i)/p$ are $\pm1/p$, which shows directly that $p$ divides neither factor. Both restorations match the printed formulas.
+\location{39}{15}
+
+\setcounter{section}{39}
+\section{I, \S1, proof of Theorem (1.4), norm of a prime element, p.~4}\label{errata:item:40}
+\noindent\emph{Source restoration in both editions.}\par
+\original The retypesetting omits the first term $N(\pi)$ of the displayed equality.
+\replacement Restore $N(\pi)=\pi\cdot\bar\pi=p_1\cdots p_r$ in both books.
+\reason This restores the equality in the print scan and makes clear why the integer factorization is being used.
+\location{40}{17}
+
+\setcounter{section}{40}
+\section{V, \S5, introductory citation of the local cyclotomic isomorphism, p.~346}\label{errata:item:41}
+\noindent\emph{Source restoration in both editions.}\par
+\original The reference retypesetting points to chapter I. The print scan points to chapter II.
+\replacement Restore chapter II in both retypeset editions.
+\reason The identification of $G(\mathbb Q_p(\zeta)\mid\mathbb Q_p)$ with $(\mathbb Z/p^n\mathbb Z)^*$ is the local result in II (7.13).
+\location{41}{356}
+
+\setcounter{section}{41}
+\section{VI, \S4, Exercise 2, p.~385}\label{errata:item:42}
+\original The norm is applied to $C_{\mathbb Q}$ and identified with the ray class group.
+\replacement The norm is applied to $C_{\mathbb Q(\zeta)}$. Its image is the congruence subgroup $C_{\mathbb Q}^{\mathfrak m}$.
+\reason The norm is defined on the upper group. The ray class group itself is the quotient $C_{\mathbb Q}/C_{\mathbb Q}^{\mathfrak m}$. The identification is the cyclotomic reciprocity calculation in (1.10), using the positivity convention of the book.
+\location{42}{394}
+
+\setcounter{section}{42}
+\section{II, \S10, the Herbrand function for a quotient, p.~179}\label{errata:item:43}
+\original The index for the projection is stated to be $t=\eta_{L\mid K}(s)$.
+\replacement For this projection use $t=\eta_{L\mid L^{\prime}}(s)$. Keep the generic formula for $\eta_{L\mid K}$.
+\reason This is the index change in Proposition (10.7). The group used for the quotient-index change is $G(L\mid L^{\prime})$, not $G(L\mid K)$.
+\location{43}{191}
+
+\setcounter{section}{43}
+\section{I, \S2, Definition (2.1), monic equation, p.~6}\label{errata:item:44}
+\noindent\emph{Source restoration in both editions.}\par
+\original The retypesetting inserts $b$ in the displayed equation.
+\replacement Restore $x^n+a_1x^{n-1}+\cdots+a_n=0$, with $b$ satisfying that equation.
+\reason The change preserves the original distinction between the variable in the monic equation and its root $b$.
+\location{44}{19}
+
+
+\clearpage
+\clearpage
+\part{Chapter I audit}
+The review covers all fourteen sections of Chapter I, through the end of Function Fields. Verified changes are listed below. The pre-existing entries for Chapter I are kept in the preceding parts. The scan remains the authority for the original reading.
+\setcounter{section}{44}
+\section{I, \S1, proof of Proposition (1.5), p.~4}\label{errata:item:45}
+
+\original The converse treats $a=-2c$ and $b=c^2+d^2$ as integers without justifying that they are the coefficients of the monic quadratic in the hypothesis.
+\replacement If $d=0$, use the rational-root argument for a monic integer polynomial. If $d\ne0$, conjugate the root and use the two distinct roots to identify the coefficients. Then apply the congruence of squares modulo $4$.
+\reason A rational number whose square is an integer is an integer, by writing it in lowest terms. Thus in the nonreal case $2d\in\mathbb Z$ follows from $(2d)^2=4b-(2c)^2$, and divisibility by $4$ of the sum of squares forces both $2c$ and $2d$ to be even.
+\location{45}{17}
+
+\setcounter{section}{45}
+\section{I, \S3, Lemma (3.5), hypothesis, p.~19}\label{errata:item:46}
+
+\original The lemma starts with a prime ideal $\mathfrak p$.
+\replacement Require $\mathfrak p\ne0$.
+\reason The very first step chooses a nonzero element of $\mathfrak p$. In a field the zero prime also gives a counterexample to strictness for the unit ideal. The lemma is used with nonzero primes.
+\location{46}{32}
+
+\setcounter{section}{46}
+\section{I, \S3, product of comaximal ideals before (3.6), p.~20}\label{errata:item:47}
+
+\original The proof in an arbitrary ring infers divisibility by a product of pairwise comaximal ideals from divisibility by each one separately.
+\replacement Prove the two-ideal identity using $1=u+v$ and then apply induction.
+\reason For $x\in A\cap B$, $x=xu+xv\in AB$. The reverse inclusion is immediate. For the induction step choose $b_i\in\mathfrak a_i$ congruent to $1$ modulo $\mathfrak a_1$. Their product shows that $\mathfrak a_1$ and $\prod_{i>1}\mathfrak a_i$ are comaximal.
+\location{47}{33}
+
+\setcounter{section}{47}
+\section{I, \S5, proof of Proposition (5.2), Gram matrix, p.~31}\label{errata:item:48}
+
+\original The Gram matrix is written $A\overline A^{\,t}$ for $A=(\tau_\ell\alpha_i)_{\ell,i}$.
+\replacement Use $A^t\overline A$.
+\reason The $(i,k)$ entry is $\sum_\ell A_{\ell i}\overline{A_{\ell k}}$. The determinant remains $|\det A|^2$, so the stated covolume is unchanged.
+\location{48}{44}
+
+\setcounter{section}{48}
+\section{I, \S11, proof of Proposition (11.4), p.~68}\label{errata:item:49}
+
+\original The proof calls every prime ideal of the localization maximal.
+\replacement Every nonzero prime ideal of the localization is maximal.
+\reason In a nonfield domain the zero ideal is prime and not maximal. Nonzero primes disjoint from the multiplicative set retain maximality upon localization.
+\location{49}{81}
+
+\setcounter{section}{49}
+\section{I, \S11, proof of the converse in (11.5), p.~69}\label{errata:item:50}
+
+\original The proof infers that a nonzero prime $\mathfrak p$ is maximal from maximality in $\mathfrak o_{\mathfrak p}$.
+\replacement Localize at a maximal ideal $\mathfrak q$ containing $\mathfrak p$ and use the uniqueness of the nonzero prime of the DVR $\mathfrak o_{\mathfrak q}$.
+\reason Both extensions are prime and contract to their respective original primes. Since the extended $\mathfrak p$ is nonzero, it equals $\mathfrak q\mathfrak o_{\mathfrak q}$. Contraction gives $\mathfrak p=\mathfrak q$.
+\location{50}{82}
+
+\setcounter{section}{50}
+\section{I, \S12, proof of Proposition (12.6), Chinese remainder step, p.~76}\label{errata:item:51}
+
+\original The congruence $a\equiv c\pmod{\mathfrak p}$ is used to conclude that $a/c$ is a unit of $\mathfrak o_{\mathfrak p}$.
+\replacement Use $a-c\in c\mathfrak p\mathfrak o_{\mathfrak p}$, retaining $a\in ca_{\mathfrak p}^{-1}a_{\mathfrak q}\mathfrak o_{\mathfrak q}$ for $\mathfrak q\ne\mathfrak p$.
+\reason The printed congruence is insufficient, for example with $a=p^2$ and $c=p$ over $\mathbb Z$. After choosing $c$ to clear the finitely many denominators, the relevant local ideals are integral and only finitely many are proper. The strengthened congruence and the zero congruences at the other primes are compatible by (12.3). Now $a/c\in1+\mathfrak p\mathfrak o_{\mathfrak p}$.
+\location{51}{89}
+
+\setcounter{section}{51}
+\section{I, \S12, Exercise 1(4), parameter of the nodal curve, p.~84}\label{errata:item:52}
+
+\original The hint sets $t=X/Y$.
+\replacement Set $t=Y/X$ in the fraction field.
+\reason Under $X=t^2-1$ and $Y=t(t^2-1)$, $Y/X=t$. Conversely, the equation $Y^2=X^2(X+1)$ gives $(Y/X)^2=X+1$ in the fraction field.
+\location{52}{97}
+
+\setcounter{section}{52}
+\section{I, \S13, sections on an open set, pp.~86--87}\label{errata:item:53}
+
+\original The text identifies the regular functions on $U$ with fractions admitting a single denominator that is nonzero throughout $U$.
+\replacement For a nonempty open $U$ of the spectrum of an integral domain, use $\mathfrak o(U)=\bigcap_{\mathfrak p\in U}\mathfrak o_{\mathfrak p}$ inside the fraction field.
+\reason Each element of the intersection admits a representation on a neighbourhood of each point, and all such representations agree in the fraction field. The single-denominator formula can fail even for a Dedekind domain: choose a prime $\mathfrak p$ of infinite order in the class group and remove it. A nonunit denominator supported just at $\mathfrak p$ would make a positive power of $\mathfrak p$ principal, yet $\mathfrak p^{-1}$ is contained in the intersection and strictly contains $\mathfrak o$.
+\location{53}{99}
+
+\setcounter{section}{53}
+\section{I, \S13, a common neighbourhood of local fractions, p.~90}\label{errata:item:54}
+
+\original The assertion that there is no common neighbourhood is made whenever the Dedekind domain $\mathfrak o$ is not local.
+\replacement This argument requires infinitely many nonzero prime ideals. For a semilocal Dedekind domain, $\{(0),\mathfrak p\}$ is an open on which every element of $\mathfrak o_{\mathfrak p}$ is defined.
+\reason A nonempty open in a Dedekind spectrum with infinitely many closed points contains some other closed point $\mathfrak q$. Choose $g\equiv0\pmod{\mathfrak q}$ and $g\equiv1\pmod{\mathfrak p}$. Then $1/g$ is regular at $\mathfrak p$ but not $\mathfrak q$. In a semilocal spectrum the other closed points form a finite closed set and can all be removed.
+\location{54}{103}
+
+\setcounter{section}{54}
+\section{I, \S8, proof of Proposition (8.2), adjugate matrix, p.~47}\label{errata:item:55}
+
+\original The entries of the adjugate are described as minors with neither signs nor transpose specified.
+\replacement Describe the adjugate as the transpose of the cofactor matrix.
+\reason The identity $BA=\det(A)I$ uses signed complementary minors in transposed positions. The raw minors alone do not satisfy this identity.
+\location{55}{60}
+
+\setcounter{section}{55}
+\section{I, \S8, Exercises 10 and 11, p.~53}\label{errata:item:56}
+
+\original The right sides involve $(u/p)$ even when $u$ is divisible by $p$. The definition in the section covers only numerators prime to an odd $p$.
+\replacement In these two exercises take $p$ odd and put $(u/p)=0$ when $p\mid u$.
+\reason The zero numerator gives exactly one root. For the quadratic with $p\nmid a$, completing the square by $x\mapsto2ax+b$ is valid for odd $p$.
+\location{56}{66}
+
+\setcounter{section}{56}
+\section{I, \S10, proof of Proposition (10.2), exponent zero, p.~60}\label{errata:item:57}
+
+\original The preceding divisibility implication is stated for $t\ge1$ and then used with $t=s\varphi(\ell^\nu)$, which may be zero.
+\replacement Include $t=0$ in the implication used in this proof.
+\reason The case $t=0$ follows from $\mathbb Z[\zeta]\subseteq\mathfrak o$, independently of the argument for $t\ge1$.
+\location{57}{73}
+
+\setcounter{section}{57}
+\section{I, \S10, derivation of reciprocity from (10.5), p.~63}\label{errata:item:58}
+
+\original The text begins the reciprocity calculation for two odd primes without specifying that they are distinct.
+\replacement Require distinct odd primes $\ell,p$ in the reciprocity calculation.
+\reason The calculation uses the multiplicative order of $p$ modulo $\ell$, which is defined only for $p\ne\ell$. The preceding splitting equivalence itself needs no such change.
+\location{58}{76}
+
+\setcounter{section}{58}
+\section{I, \S12, localization of the normalization, p.~80}\label{errata:item:59}
+
+\original The printed multiplicative set is $\widetilde{\mathfrak o}\setminus\widetilde{\mathfrak p}$.
+\replacement Use $\mathfrak o\setminus\mathfrak p$ to obtain $\widetilde{\mathfrak o}_{\mathfrak p}$. This reading is already present in both retypeset editions.
+\reason Localizing the integral closure at the complement of a single prime upstairs keeps just that branch. Localizing at the complement of the base prime retains all primes above it, as required by the semilocal argument.
+\location{59}{93}
+
+\setcounter{section}{59}
+\section{I, \S3, hint to Exercise 5, range of powers, p.~23}\label{errata:item:60}
+
+\original The list of proper ideals of $\mathfrak o/\mathfrak p^n$ stops at $\mathfrak p^{n-1}/\mathfrak p^n$.
+\replacement Include $\mathfrak p^n/\mathfrak p^n=0$, so the range is $1\le\nu\le n$.
+\reason Ideals in the quotient correspond to ideals containing $\mathfrak p^n$. The whole ring corresponds to $\nu=0$, and the zero ideal corresponds to $\nu=n$.
+\location{60}{36}
+
+\setcounter{section}{60}
+\section{I, \S2, notation in the proof of (2.7), p.~10}\label{errata:item:61}
+
+\original The earlier corrected formula uses $M_s$ for the maximal separable subextension.
+\replacement Use $M^s$ in the formula and surrounding explanation, as in the printed definition.
+\reason The mathematical correction is unchanged. The superscript is the notation already used for this field in the same paragraph.
+\location{61}{23}
+
+\setcounter{section}{61}
+\section{I, \S12, proof of Proposition (12.3), denominator choice, p.~74}\label{errata:item:62}
+
+\original The printed proof says any $s_{\mathfrak p}\notin\mathfrak p$ has the required property.
+\replacement Choose an $s_{\mathfrak p}\notin\mathfrak p$ that clears the given denominator. Both retypesettings already use the existential wording.
+\reason The assertion is existential by the definition of localization. An arbitrary element outside the prime need not clear the denominator.
+\location{62}{87}
+
+\setcounter{section}{62}
+\section{I, \S4, Exercise 3, Minkowski linear forms, p.~28}\label{errata:item:63}
+
+\original The requested integer vector is allowed to be zero.
+\replacement Find a nonzero integer vector satisfying the displayed inequalities.
+\reason The intended application is to a centrally symmetric box pulled back by the invertible coefficient matrix. Its volume exceeds $2^n$ by the stated determinant inequality, so Minkowski supplies a nonzero lattice point.
+\location{63}{41}
+
+\setcounter{section}{63}
+\section{I, \S13, spectrum of $\mathbb C[x]$, p.~90}\label{errata:item:64}
+
+\original All points of $\operatorname{Spec}\mathbb C[x]$ are said to constitute the complex plane.
+\replacement The closed points constitute the complex plane.
+\reason Each maximal ideal is $(x-z)$ for $z\in\mathbb C$. The zero ideal is the additional generic point.
+\location{64}{103}
+
+\setcounter{section}{64}
+\section{I, \S3, signs of the two fractions introducing ideals, p.~16}\label{errata:item:65}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypesetting uses $+$ twice where the scan has $\pm$.
+\replacement Restore $\pm$ in both fractions.
+\reason The printed expressions treat both conjugate choices. The signs are restored with the standard TeX binary operator.
+\location{65}{29}
+
+\setcounter{section}{65}
+\section{I, \S3, definition by divisibility in the Kummer discussion, p.~17}\label{errata:item:66}
+
+\original The text calls the set of elements divisible by the ideal number its divisors.
+\replacement Read multiples in this sentence.
+\reason The displayed condition is that the ideal number divides the elements of the set, so those elements are multiples of it.
+\location{66}{30}
+
+\setcounter{section}{66}
+\section{I, \S2, two off-diagonal blocks in the proof of (2.11), p.~14}\label{errata:item:67}
+
+\original The upper right and lower left blocks use the transposed index pairs relative to $Q\sigma_\ell^{\prime}\omega_j^{\prime}$ in the preceding sentence.
+\replacement The upper right block is $E\sigma_1^{\prime}\omega_{n^{\prime}}^{\prime}$ and the lower left block is $E\sigma_{n^{\prime}}^{\prime}\omega_1^{\prime}$.
+\reason The upper right corresponds to row $1$, column $n^{\prime}$, and the lower left to row $n^{\prime}$, column $1$. The determinant conclusion is unaffected.
+\location{67}{27}
+
+\setcounter{section}{67}
+\section{I, \S3, Exercise 3, quadratic field, p.~23}\label{errata:item:68}
+
+\original The integer $d$ is only required to be squarefree.
+\replacement Require that the squarefree integer $d$ be different from $1$.
+\reason For $d=1$ the field is $\mathbb Q$. Then $(p)$ is prime although the congruence $x^2\equiv d\pmod p$ has a solution.
+\location{68}{36}
+
+\setcounter{section}{68}
+\section{I, \S3, hint to Exercise 4, p.~23}\label{errata:item:69}
+
+\original The hint prescribes local congruences only for the primes dividing $\mathfrak a$.
+\replacement Use all the nonzero prime ideals, including those with exponent zero.
+\reason The congruence modulo $\mathfrak p_i^{\nu_i+1}$ prescribes the exact valuation $\nu_i$. Conditions at the other primes are needed to ensure that their valuations are zero.
+\location{69}{36}
+
+\setcounter{section}{69}
+\section{I, \S5, Exercise 2, parameter of the convex body, p.~34}\label{errata:item:70}
+
+\original The set in the volume exercise is presented without a restriction on $t$.
+\replacement Take $t>0$.
+\reason The argument uses the positive dilation by $t$ of the body at $t=1$. For $t<0$ the set is empty.
+\location{70}{47}
+
+\setcounter{section}{70}
+\section{I, \S2, proof of Proposition (2.12), change of basis, p.~15}\label{errata:item:71}
+
+\original The matrix is described as passing from a basis of $\mathfrak a$ to a basis of $\mathfrak a^{\prime}$, where $\mathfrak a\subseteq\mathfrak a^{\prime}$.
+\replacement For bases $(\alpha_i)$ of $\mathfrak a$ and $(\alpha_j^{\prime})$ of $\mathfrak a^{\prime}$, write $\alpha_i=\sum_jt_{ij}\alpha_j^{\prime}$.
+\reason Then $|\det(t_{ij})|=(\mathfrak a^{\prime}:\mathfrak a)$ and the basis change in the discriminant gives its square. The convention for the direction of basis change is made explicit in \S4.
+\location{71}{28}
+
+
+\clearpage
+\part{Chapter II audit}
+This chapter review checks the constructions of valuations and completions, local exponentials, and the ramification arguments. Locations refer to the printed English edition.\par The corresponding retypeset pages now use native \(\notin\) and \(\cong\) wherever matching overlapping glyphs confirmed those relations. This pass restores 32 negated membership signs and 84 isomorphism signs in the corrected edition across Chapters I and II.
+\setcounter{section}{71}
+\section{II, \S2, extension of the exponential valuation, p.~111}\label{errata:item:72}
+
+\original The formula defining $v_p(x)$ identifies its limit with the eventual value of $v_p(x_n)$ also when $x=0$.
+\replacement Use $v_p(x)=\lim_n v_p(x_n)$ for all $x$, with eventual equality for $x\ne0$.
+\reason A null sequence such as $x_n=p^n$ has valuations tending to $\infty$. For a nonzero limit, the discrete set of possible positive $p$-adic absolute values implies eventual equality.
+\location{72}{123}
+
+\setcounter{section}{72}
+\section{II, \S2, proof of Proposition (2.3), p.~112}\label{errata:item:73}
+
+\original The proof again uses eventual equality $|x_n|_p=|x|_p$ without distinguishing $x=0$.
+\replacement Use $|x_n-x|_p\le1$ for large $n$, so that $|x_n|_p\le1$.
+\reason The ultrametric inequality with $|x|_p\le1$ proves the required bound for both zero and nonzero limits.
+\location{73}{124}
+
+\setcounter{section}{73}
+\section{II, \S3, proof of Proposition (3.3), p.~117}\label{errata:item:74}
+
+\original The ratio $\log|x|_1/\log|x|_2$ is used for every $x\ne0$, including $|x|_2=1$.
+\replacement Write $\log|x|_1=s\log|x|_2$, where $s=\log|y|_1/\log|y|_2$ for the chosen $y$.
+\reason The preceding common-exponent formula implies this identity even when both logarithms of the absolute values of $x$ vanish.
+\location{74}{129}
+
+\setcounter{section}{74}
+\section{II, \S3, proof of Proposition (3.7), Archimedean comparison, p.~119}\label{errata:item:75}
+
+\original The base-$n$ digit estimate bounds $\|n\|^i$ by $\|n\|^r$ before showing $\|n\|\ge1$.
+\replacement Use $N=\max(1,\|n\|)$ in the digit bound. Deduce $\|n\|>1$ before the symmetry argument.
+\reason After substituting $m^k$ and taking $k$-th roots, the bound is $\|m\|\le N^{\log m/\log n}$. Since some positive integer $m>1$ has $\|m\|>1$ for an Archimedean valuation, $N=\|n\|>1$ for every $n>1$.
+\location{75}{131}
+
+\setcounter{section}{75}
+\section{II, \S4, proof of Hensel\textquoteright{}s lemma (4.6), p.~129}\label{errata:item:76}
+
+\original The proof always chooses a coefficient of minimal value from the two error polynomials.
+\replacement If $f=g_0h_0$, the proof is finished. Otherwise choose a coefficient of maximal absolute value from the two error polynomials.
+\reason In the remaining case the chosen coefficient $\pi$ satisfies $0<|\pi|<1$. Its principal ideal contains all the coefficients of the two errors.
+\location{76}{141}
+
+\setcounter{section}{76}
+\section{II, \S5, Exercise 1, algebraic closure in the functional domains, p.~142}\label{errata:item:77}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The original uses the algebraic closure. The two retypeset editions omitted its bars and thereby restricted the domain to $\mathbb Q_p$.
+\replacement Restore the overlines on each appearance of the algebraic closure. The faithful edition keeps the printed codomain of $\log$ and the printed exponential domain. The corrected edition uses the codomain and threshold in entry~16.
+\reason The original scan shows bars on the relevant fields. The logarithm and exponential are defined compatibly in finite extensions and therefore on the indicated domain in the algebraic closure.
+\location{77}{154}
+
+\setcounter{section}{77}
+\section{II, \S5, Exercise 3, exponential and logarithmic identities, p.~142}\label{errata:item:78}
+
+\original The opening does not distinguish the domains of the exponential and logarithmic identities.
+\replacement Under the hypotheses of Exercise 2, require $v_{\mathfrak p}(x)>e/(p-1)$ for the exponential identity. The identity $\log((1+x)^z)=z\log(1+x)$ holds on all of $U^{(1)}$.
+\reason For $K=\mathbb Q_2$, $1+x=-1$ and $z=1$, the logarithm vanishes but $\exp(0)=1$. At the stated strict depth, the logarithm and exponential are mutually inverse. The logarithmic identity follows on all of $U^{(1)}$ by continuity from integer exponents.
+\location{78}{154}
+
+\setcounter{section}{78}
+\section{II, \S7, Proposition (7.13), positive exponent, p.~159}\label{errata:item:79}
+
+\original The statement does not specify $m\ge1$ for the order $p^m$ of $\zeta$.
+\replacement Assume $m\ge1$ in (7.13).
+\reason If $m=0$, $\zeta=1$ and $1-\zeta=0$ is not a prime element. Also the displayed degree formula uses the positive-exponent case for Euler\textquoteright{}s totient.
+\location{79}{171}
+
+\setcounter{section}{79}
+\section{II, \S7, maximal tamely ramified cyclotomic subfield, p.~159}\label{errata:item:80}
+
+\original The formula $V=T(\zeta_p)$ is stated for all $n=n^{\prime}p^m$ with $(n^{\prime},p)=1$.
+\replacement Use $T=\mathbb Q_p(\zeta_{n^{\prime}})$ and take $V=T$ for $m=0$, $V=T(\zeta_p)$ for $m\ge1$.
+\reason When $m=0$ the extension is already unramified. For example, with $p=3$ and $n=2$ one has $T=L=\mathbb Q_3$ and $\zeta_3\notin L$.
+\location{80}{171}
+
+\setcounter{section}{80}
+\section{II, \S10, Exercise 1, indices in the displayed ranges, p.~181}\label{errata:item:81}
+
+\original The displayed ranges are given for the ramification index parameter without restricting it to integers.
+\replacement Read the given ranges for integers $s\ge0$.
+\reason The section also defines $G_s$ for real $s$. The listed inequalities omit values between successive integral endpoints. Under the section\textquoteright{}s convention $G_s=G_{\lceil s\rceil}$, the integral ranges determine the omitted cases.
+\location{81}{193}
+
+\setcounter{section}{81}
+\section{II, \S4, Laurent series completion and cross-reference, p.~127}\label{errata:item:82}
+
+\original The field $k((x))$ is called the formal power series field and the valuation is referred to \S2.
+\replacement Read formal Laurent series field and refer to \S3.
+\reason The displayed expansion permits negative exponents. The corresponding prime-adic valuation on $k(t)$ is described in Exercise 3 of \S3.
+\location{82}{139}
+
+\setcounter{section}{82}
+\section{II, \S5, Exercise 2, binomial series convergence, p.~142}\label{errata:item:83}
+
+\original After using $1+x\in U^{(1)}$, the text says the binomial series converges even when $v_{\mathfrak p}(x)>e/(p-1)$.
+\replacement The binomial series converges for $v_{\mathfrak p}(x)>0$ when $z\in\mathbb Z_p$. The stricter bound is used for the exponential in Exercise 3.
+\reason The polynomial $z\mapsto\binom z\nu$ takes integer values for nonnegative integers. By continuity and density it takes values in $\mathbb Z_p$, so $\binom z\nu x^\nu\to0$ whenever $v_{\mathfrak p}(x)>0$.
+\location{83}{154}
+
+\setcounter{section}{83}
+\section{II, \S6, proof of Proposition (6.8), cross-reference, p.~151}\label{errata:item:84}
+
+\original Finite generation of the integral closure in a finite separable extension is attributed to Chapter I, (2.11).
+\replacement Use Chapter I, (2.9).
+\reason Proposition I (2.9) supplies the required finite generation over the integrally closed noetherian valuation ring. Proposition I (2.11) treats an integral-basis formula for a compositum.
+\location{84}{163}
+
+\clearpage
+\part{Chapter III audit}
+The review checks the local and archimedean terms in the divisor, discriminant and Riemann--Roch formulas, as well as the hypotheses of the metric and determinant constructions.\par The corresponding retypeset pages now use native \(\notin\) and \(\cong\) wherever matching overlapping glyphs confirmed those relations. This pass restores 2 negated membership signs and 34 isomorphism signs in the corrected edition.
+\setcounter{section}{84}
+\section{III, \S4, Definition (4.1), metric positivity, p.~226}\label{errata:item:85}
+
+\original The strict order on $K_{\mathbb R}$ is componentwise. The definition requires $\langle x,x\rangle_M>0$ for every nonzero $x$.
+\replacement For all $x$, require that $\langle x,x\rangle_M$ have nonnegative coordinates and vanish only when $x=0$.
+\reason Decomposing by the idempotents of $K_{\mathbb C}$ gives the usual positive definite metric on each $M_\sigma$. A vector supported in just one summand can have zero norm coordinates in the other summands.
+\location{85}{237}
+
+\setcounter{section}{85}
+\section{III, \S7, Theorem (7.7), scalar ring of the diagram, p.~254}\label{errata:item:86}
+
+\original The two right-hand vertices are the integral graded groups, although multiplication by the Todd class uses $1/2$.
+\replacement Tensor the two right-hand vertices over $\mathbb Z$ with $\mathbb Z[1/2]$ and extend the right-hand $i_*$ linearly.
+\reason The Todd class was defined after inverting $2$ in (7.6). The bottom arrow is the Chern character followed by localization. The integral identities in the proof still imply commutativity in the localized group.
+\location{86}{265}
+
+\setcounter{section}{86}
+\section{III, \S8, proof of Proposition (8.3), determinant sign, p.~258}\label{errata:item:87}
+
+\original The determinant of the matrix for an arbitrary lattice basis is equated to the positive index.
+\replacement Use $x^{\prime}=\det(A)x$ and $|\det(A)|=(F:E)=\#M$.
+\reason The index is the absolute determinant. For $F=\mathbb Z$ and $E=2\mathbb Z$ with basis $-2$, the determinant is $-2$ and the index is $2$. The norm computation then uses the absolute value as required.
+\location{87}{269}
+
+\setcounter{section}{87}
+\section{III, \S4, projectivity of a module, p.~228}\label{errata:item:88}
+
+\original The two rows in the characterization by exactness omit the terminal zero objects.
+\replacement Write a short exact sequence of modules and require the corresponding sequence under $\operatorname{Hom}_{\mathfrak o}(M,-)$ to be short exact.
+\reason This makes the lifting condition explicit. Exactness at the middle of the Hom sequence follows for every module from left exactness.
+\location{88}{239}
+
+\setcounter{section}{88}
+\section{III, \S7, paragraph after Definition (7.6), Todd class, p.~254}\label{errata:item:89}
+
+\original The text says that because of the factor $1/2$ the Todd class does not belong to the integral graded group itself.
+\replacement Say that the formula defines the Todd class canonically after extension of scalars to $\mathbb Z[1/2]$.
+\reason The formula in general requires a meaning for division by $2$. In particular situations the class can be integral. In the identity extension the Todd class is $1$.
+\location{89}{265}
+
+\setcounter{section}{89}
+\section{III, \S5, proof of Proposition (5.4), restricted isometry, p.~238}\label{errata:item:90}
+
+\original The argument for the sequence $0\to E\to E^{\prime\prime}\to M^{\prime}\to0$ names $(E^{\prime\prime}_{\mathbb C})^\perp$ and $M^{\prime\prime}_{\mathbb C}$.
+\replacement Restrict the isometry $f:E_{\mathbb C}^\perp\to M_{\mathbb C}$ to $E^{\prime\prime}_{\mathbb C}\cap E_{\mathbb C}^\perp$. Its image is $M^{\prime}_{\mathbb C}$.
+\reason The diagram identifies $E^{\prime\prime}_{\mathbb C}$ with the preimage of $M^{\prime}_{\mathbb C}$ under $f$. The intersection is the orthogonal complement of $E_{\mathbb C}$ inside $E^{\prime\prime}_{\mathbb C}$, as required by the quotient metric.
+\location{90}{249}
+
+\setcounter{section}{90}
+\section{III, \S2, proof of Theorem (2.13), adjoining $i$, p.~203}\label{errata:item:91}
+
+\original The proof says adjoining $i$ changes the discriminant by a constant factor.
+\replacement Use the bounded degree and finite set of possible ramified primes of $L(i)\mid\mathbb Q$. Restart the notation $K$ for the fields to be counted after that reduction.
+\reason Adjoining $i$ at most doubles the degree and introduces no finite ramification away from $2$. The preceding discriminant bound gives only finitely many discriminants for the enlarged fields. Each enlarged field has only finitely many subfields.
+\location{91}{214}
+
+\setcounter{section}{91}
+\section{III, \S2, proof of Theorem (2.13), primitive element, p.~203}\label{errata:item:92}
+
+\original The norm inequality is used to conclude $|\tau_0\alpha|>1$.
+\replacement Use $|\tau_0\alpha|\ge1$.
+\reason In degree two there need be no other complex pair and the norm may be $1$. The weak bound still separates $\tau_0\alpha$ from all other pairs and, since $|\operatorname{Re}(\tau_0\alpha)|<1$, forces nonzero imaginary part.
+\location{92}{214}
+
+\setcounter{section}{92}
+\section{III, \S2, proof of Theorem (2.13), finiteness argument, p.~204}\label{errata:item:93}
+
+\original The final count uses the number of lattice points in one bounded region while the lattice itself varies with the field.
+\replacement Count the monic integer minimal polynomials with the bounded coefficients just established.
+\reason The coefficient bounds depend only on the degree and discriminant. There are finitely many integer choices, and each root generates one of the fields in question.
+\location{93}{215}
+
+\setcounter{section}{93}
+\section{III, \S3, formulas before (3.9), empty section set, p.~218}\label{errata:item:94}
+
+\original The formula for $\ell(D)$ uses $\log\#H^0(D)$ even when $H^0(D)$ is empty.
+\replacement Retain $\ell(D)=\ell(\mathfrak o(D))$ with the earlier convention $\ell=0$ when $H^0(D)$ is empty.
+\reason The nonzero integral elements in the archimedean region can form the empty set. For example over $\mathbb Q$ the bound $|f|\le1/2$ leaves no nonzero integer.
+\location{94}{229}
+
+\setcounter{section}{94}
+\section{III, \S5, proof of Proposition (5.2), invariant metric, p.~235}\label{errata:item:95}
+
+\original The proof chooses a section and a Hermitian metric without requiring invariance under the involution.
+\replacement Choose an $F$-equivariant section and an $F$-invariant metric on $E_{\mathbb C}$.
+\reason Average a section with its conjugate by $F$ to obtain an equivariant section. Averaging a positive definite Hermitian metric with its conjugate by $F$ gives an invariant positive definite metric.
+\location{95}{246}
+
+\setcounter{section}{95}
+\section{III, \S5, proof of Proposition (5.3), section of $f$, p.~236}\label{errata:item:96}
+
+\original The section is called a section of $F$.
+\replacement It is a section of $f$.
+\reason The section satisfies $f\circ s=\mathrm{id}_{M_{\mathbb C}}$ for the map $f:F_{\mathbb C}\to M_{\mathbb C}$.
+\location{96}{247}
+
+\setcounter{section}{96}
+\section{III, \S2, proof of Theorem (2.6), zero terms, p.~200}\label{errata:item:97}
+
+\original The proof ascribes finite valuations in distinct residue classes to every derivative term.
+\replacement Apply this claim only to the terms with $(e-i)a_i\ne0$.
+\reason Zero terms have valuation $\infty$. Since the polynomial is separable, the derivative at the root has at least one nonzero term. The finite valuations are distinct modulo $e$, so the least one still gives the asserted valuation.
+\location{97}{211}
+
+\setcounter{section}{97}
+\section{III, \S3, sign of the order of vanishing, p.~209}\label{errata:item:98}
+
+\original The same integer $v_{\mathfrak p}(f)$ is said to be the order of the pole or zero.
+\replacement At a finite prime it is the order of vanishing, which is negative at a pole.
+\reason A zero has positive order of vanishing. A pole of order $m$ has valuation $-m$. The formula at an infinite prime remains as printed.
+\location{98}{220}
+
+\setcounter{section}{98}
+\section{III, \S3, proof of Lemma (3.8), uniform constant, p.~215}\label{errata:item:99}
+
+\original The bound with $c_1=c_0-n^{-1}\log\mathrm N(\mathfrak a_i)$ uses $f_{\mathfrak p}c_1\le nc_1$.
+\replacement Enlarge $c_0$ so that $c_0\ge n^{-1}\max_i\log\mathrm N(\mathfrak a_i)$.
+\reason This ensures $c_1\ge0$ for every $i$. The maximum is over the fixed finite set of representatives, so the resulting constant remains uniform.
+\location{99}{226}
+
+
+\clearpage
+\part{Chapter IV audit}
+This chapter review checks the abstract valuation and cohomology arguments for reciprocity, including distinctions between finite, profinite, and noncyclic value groups.\par The corresponding retypeset pages now use native \(\notin\) and \(\cong\) wherever matching overlapping glyphs confirmed those relations. This pass restores 3 negated membership signs and 42 isomorphism signs in the corrected edition.
+\setcounter{section}{99}
+\section{IV, \S5, proof of Proposition (5.7), norm of an element of value in $nZ$, p.~295}\label{errata:item:100}
+
+\original From $v_K(a)\in nZ$ the proof writes $a=u\pi_K^{dn}$ with $u\in U_K$.
+\replacement Choose $b\in A_K$ with $v_K(b)=v_K(a)/n$. Put $u=ab^{-n}$ and choose $\epsilon\in U_L$ with $N_{L\mid K}(\epsilon)=u$.
+\reason The group $Z=v_K(A_K)$ in (4.6) need not be cyclic. The required $b$ exists by surjectivity. Since $N_{L\mid K}(b)=b^n$ for $b\in A_K$, the proof gives $a=N_{L\mid K}(\epsilon b)$ without taking a power whose exponent lies outside the integers.
+\location{100}{306}
+
+\setcounter{section}{100}
+\section{IV, \S6, proof of Theorem (6.3), primary subgroups, p.~301}\label{errata:item:101}
+
+\original The first reduction says the image of $N_{M\mid K}$ is the $p$-Sylow subgroup of $A_K/N_{L\mid K}A_L$.
+\replacement It suffices for the image to contain the $p$-primary subgroup $S_p$ for every prime $p$.
+\reason The quotient has exponent dividing $[L:K]$ since $a^{[L:K]}=N_{L\mid K}(a)$ for $a\in A_K$. Thus it is the sum of its primary subgroups even before finiteness has been proved. The prime-to-$p$ power map argument shows the required containment.
+\location{101}{312}
+
+\setcounter{section}{101}
+\section{IV, \S2, Proposition (2.3), compact Hausdorff spaces, p.~266}\label{errata:item:102}
+
+\original The assertion is given for all nonempty compact spaces.
+\replacement Require nonempty compact Hausdorff spaces.
+\reason The proof needs the equalizer conditions to define closed subsets of the product. Without Hausdorffness, the descending tails $\{n,n+1,\ldots\}$ with cofinite topology are compact nonempty and their inclusion system has empty limit.
+\location{102}{277}
+
+\setcounter{section}{102}
+\section{IV, \S2, Proposition (2.7), exactness of inverse limits, p.~269}\label{errata:item:103}
+
+\original The statement assumes compact topological groups. The preceding text also says the result only holds for compact groups.
+\replacement Assume compact Hausdorff groups and state that this condition ensures exactness.
+\reason The proof uses closed fibres of the system maps. With the indiscrete topology, the constant inverse system of $\mathbb Z$ mapping stagewise onto $\mathbb Z/n\mathbb Z$ gives a map on limits $\mathbb Z\to\widehat{\mathbb Z}$ that is not surjective.
+\location{103}{280}
+
+\setcounter{section}{103}
+\section{IV, \S4, Exercise 4, action on microprimes, p.~290}\label{errata:item:104}
+
+\original The exercise calls the action of $G(L\mid K)$ transitive on all of $\operatorname{spec}(L)$.
+\replacement For finite Galois $L\mid K$, require transitivity on each fibre of $\operatorname{spec}(L)\to\operatorname{spec}(K)$.
+\reason An automorphism over $K$ preserves restriction to $K$. The intersections of the conjugates of a representative downstairs with the normal subgroup $G_L$ are permuted transitively by $G_K$. The finite hypothesis matches the subsequent assertion that the decomposition group is cyclic.
+\location{104}{301}
+
+\setcounter{section}{104}
+\section{IV, \S5, Exercise 2, domain of the valuation, p.~298}\label{errata:item:105}
+
+\original The valuation is defined on $A_k$, but condition (i) uses $v(A_K)$.
+\replacement Use $v(A_k)$ in condition (i).
+\reason The extension valuation on $A_K$ is defined later by the analogue of (4.7). Condition (i) concerns the initial valuation on the base fixed module.
+\location{105}{309}
+
+\setcounter{section}{105}
+\section{IV, \S5, Exercise 3, reciprocity homomorphism, p.~299}\label{errata:item:106}
+
+\original The exercise asks for a reciprocity isomorphism from the whole $G(L\mid K)$ under the hypotheses of \S5.
+\replacement Read reciprocity homomorphism in this exercise.
+\reason The target is abelian, and in \S5 the reciprocity map has only been shown to be a homomorphism. The isomorphism from the abelianization in (6.3) requires the class field axiom of \S6.
+\location{106}{310}
+
+\setcounter{section}{106}
+\section{IV, \S2, topology on a direct limit of groups, p.~267}\label{errata:item:107}
+
+\original The text leaves the topology implicit when it passes from limits of spaces to inductive limits of groups.
+\replacement Use the finest group topology making all canonical maps $G_i\to G$ continuous.
+\reason The resulting topology has the group universal property used in (2.5). The final topology of underlying spaces need not make multiplication jointly continuous.
+\location{107}{278}
+
+\setcounter{section}{107}
+\section{IV, \S5, (5.7), restoration of the printed exponents, p.~295}\label{errata:item:108}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypesetting reads $an$ and $a$ as exponents of $\pi_K$.
+\replacement Restore the printed exponents $dn$ and $d$ in the faithful edition. The corrected edition uses the revised argument.
+\reason The enlarged scan distinguishes the italic letters. The preceding entry gives the mathematical repair.
+\location{108}{306}
+
+\setcounter{section}{108}
+\section{IV, \S5, proof of (5.5), second substitution, p.~294}\label{errata:item:109}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypesetting adds a superscript $\tau_2$ to $\pi_4$ in the formula for $\pi_2$.
+\replacement Restore $\pi_2=u_2^{-1}\pi_4$. Retain $\pi_4^{\tau_2}=u_4\pi_4$ in the next substitution.
+\reason The printed second substitution compares the two prime elements directly. The action of $\tau_2$ occurs in the following substitution.
+\location{109}{305}
+
+\setcounter{section}{109}
+\section{IV, \S5, proof of (5.6), extensions and norm quotients, p.~295}\label{errata:item:110}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypeset line omits the four tildes over $L$. The printed final equality uses the norm from $L$ only in the preceding congruence.
+\replacement Restore $r_{\widetilde L\mid K}$ in both editions. In the corrected edition qualify the last relation by $\bmod N_{L\mid K}A_L$.
+\reason The inputs are lifts in $\operatorname{Frob}(\widetilde L\mid K)$. The norm argument proves that the factor from $\bar\tau$ is trivial after passing to $A_K/N_{L\mid K}A_L$.
+\location{110}{306}
+
+\setcounter{section}{110}
+\section{IV, \S6, kernel of a henselian valuation of a modulation, p.~309}\label{errata:item:111}
+
+\original The definition ends with the kernel of $A$.
+\replacement Use $U=\ker(v)$.
+\reason The preceding homomorphism is $v:A\to\widehat{\mathbb Z}$. The subsequent exercise uses the kernel of that map.
+\location{111}{320}
+
+\setcounter{section}{111}
+\section{IV, \S6, topological Milnor group at the end of the section, p.~310}\label{errata:item:112}
+
+\original The subgroup $\Lambda_2$ is given as the intersection of the neighbourhoods of $1$ in the additive $K_2$.
+\replacement Read the neighbourhoods of $0$.
+\reason The topological quotient is formed by the closure of the identity, which is $0$ in the additive convention used here.
+\location{112}{321}
+
+\setcounter{section}{112}
+\section{IV, \S1, proof of Proposition (1.1), indices of the product, p.~262}\label{errata:item:113}
+
+\original For the product indexed by finite Galois subextensions, the subbasis construction then allows all finite subextensions.
+\replacement Restrict $K_0\mid k$ to finite Galois subextensions in the sentence defining the subbasis.
+\reason The subbasis fixes one coordinate in the product. Only the finite Galois subextensions index its coordinates.
+\location{113}{273}
+
+\setcounter{section}{113}
+\section{IV, \S7, cosets in the induced-module decomposition, p.~313}\label{errata:item:114}
+
+\original The displayed products are indexed by representatives of the left cosets $G/g$.
+\replacement Let $R$ be a set of representatives for the right cosets $g\backslash G$ and index both products by $R$.
+\reason Under $(f^\sigma)(x)=f(\sigma x)$ the factor $B^\sigma$ is supported on $\sigma^{-1}g$. If $\sigma$ varies over right representatives, those supports are precisely the disjoint left cosets.
+\location{114}{324}
+
+\setcounter{section}{114}
+\section{IV, \S7, proof of Proposition (7.4), boundary value, p.~314}\label{errata:item:115}
+
+\original The printed norm product also lacks its summand $f(\varphi^i)$. The last paragraph fixes $h(1)=1$ and then treats its translated value at $\varphi^{-1}$ as if it had no subgroup action.
+\replacement For $0\le k<n$, set $h(\varphi^k)=\prod_{i=0}^k f(\varphi^i)$ on the given representatives and extend equivariantly.
+\reason Now $h(\varphi^{n-1})=\nu(f)=1$. Equivariance gives $h(\varphi^{-1})=1$, so the quotient $h(\varphi^k)/h(\varphi^{k-1})$ equals $f(\varphi^k)$ also for $k=0$. This is the boundary argument given in the accompanying note.
+\location{115}{325}
+
+
+\clearpage
+\part{Chapter V audit}
+This chapter review checks the Artin-symbol convention, explicit Hilbert-symbol formulas, the Lubin--Tate uniformizers, and the indices of the ramification groups. It includes the earlier exercise cited by the Dwork calculation.\par The corresponding retypeset pages now use native \(\notin\) and \(\cong\) wherever matching overlapping glyphs confirmed those relations. This pass restores 0 negated membership signs and 21 isomorphism signs in the corrected edition.
+\setcounter{section}{115}
+\section{V, \S2, Exercise 3, weighted Artin symbol, p.~332}\label{errata:item:116}
+
+\original The exercise puts $\sigma=\prod_i\sigma_i$ for a factorization $y^{\varphi-1}=\prod_i z_i^{\sigma_i-1}$.
+\replacement Use $\sigma=\prod_i\sigma_i^{v_{\widehat L}(z_i)}$. Retain the inverse $(x,L\mid K)=\sigma^{-1}$.
+\reason The printed formula already fails for $x=y=z_i=1$. Write $z_i$ as a unit times a power of a uniformizer $\pi$ of $L$. In the quotient of the units by the group generated by unit coboundaries, $g\mapsto[\pi^{g-1}]$ is a homomorphism. By (2.1), the unit coboundaries are in the image of $\varphi-1$ on the same subgroup and have norm one. Thus only the stated valuation weights contribute. The fixed field of the Frobenius lift $\sigma^{-1}\varphi$ gives the inverse in the book\textquoteright{}s reciprocity convention.
+\location{116}{342}
+
+\setcounter{section}{116}
+\section{IV, \S5, Exercise 1, sign used in the Dwork calculation, p.~298}\label{errata:item:117}
+
+\original For $y^{\varphi-1}=\pi^{\sigma-1}$ the cited earlier exercise gives the norm as $r_{L\mid K}(\sigma)$.
+\replacement With the equation held fixed, use $r_{L\mid K}(\sigma^{-1})$.
+\reason For the fixed field $\Sigma$ of $\sigma^{-1}\varphi$, a prime element $t\in A_\Sigma$ satisfies $t^\varphi=t^\sigma$. Its norm represents $r_{L\mid K}(\sigma^{-1})$. The quotient $t/\pi$ has the equation for $y$ modulo unit coboundaries. The norm comparison used in the reciprocity construction removes those coboundaries. This is the same orientation as in Exercise V.2.3.
+\location{117}{309}
+
+\setcounter{section}{117}
+\section{V, \S3, Proposition (3.8), Laurent series, p.~340}\label{errata:item:118}
+
+\original An arbitrary $b\in\Phi_\nu^*$ is represented by an integral power series in $\pi$.
+\replacement Use a Laurent series $f(X)\in\mathbb Z_p((X))$ with $f(\pi)=b$ and set $D\log b=f^{\prime}(\pi)/f(\pi)$.
+\reason A nonzero element can have negative valuation. Multiply a Laurent representation by a sufficiently large power of $X$ and apply (1) to the resulting integral element. By bilinearity, subtract the corresponding multiple of formula (3), which is formula (1) for $b=\pi$.
+\location{118}{350}
+
+\setcounter{section}{118}
+\section{V, \S3, trace congruence after (3.8), p.~340}\label{errata:item:119}
+
+\original The trace congruence is written for $i=p-1$ and $i\ne p-1$ without excluding $i=0$.
+\replacement State it for $\nu=1$ and integers $i\ge1$.
+\reason For $i=0$ the normalized trace is $S(\zeta)/p=-1/p$. For $i>0$, expanding $(1-\zeta)^i$ cancels the constant trace contribution. Modulo $p$, the coefficient with exponent $-1$ in $\mathbb F_p[X]/(X^p-1)$ is $1$ for $i=p-1$ and $0$ for other positive $i$, since $(1-X)^p=0$ in that quotient.
+\location{119}{350}
+
+\setcounter{section}{119}
+\section{V, \S3, Exercise 1, quadratic Hilbert symbol, p.~340}\label{errata:item:120}
+
+\original The exercise assumes $n=2$ but the display has the subscript $p$.
+\replacement Use the subscript $2$.
+\reason The quadratic norm condition in the equivalence is the case $n=2$ of the Hilbert symbol.
+\location{120}{350}
+
+\setcounter{section}{120}
+\section{V, \S5, proof of Theorem (5.5), Frobenius lift, p.~349}\label{errata:item:121}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original Both retypesettings omit the tilde from the field in $\operatorname{Frob}(\widetilde L_n\mid K)$.
+\replacement Restore $\widetilde L_n$ in both editions.
+\reason The scan prints a tilde. The Frobenius lift is defined on the maximal unramified extension of $L_n$, as in the preceding construction and in IV (4.4).
+\location{121}{359}
+
+\setcounter{section}{121}
+\section{V, \S5, proof of Theorem (5.5), two prime elements, p.~350}\label{errata:item:122}
+
+\original The proof temporarily uses $\bar\pi$ for the original prime element, sets $\pi=u\bar\pi$, and prints an unbarred $\pi$ in the last factorization. It invokes the exact norm computation for arbitrary series.
+\replacement Identify $\bar\pi$ explicitly with the original prime element, take monic polynomial representatives for both prime elements, and use $\bar\pi^{v_K(a)}$ in the final factorization.
+\reason The module isomorphisms of (4.6) allow monic polynomial representatives without changing the torsion fields or the unit action. For these representatives (5.4) gives $N_{L_n\mid K}(-\lambda_n)=\bar\pi$, so the barred factor lies in the norm group. The reference-based retypesetting already restored the bar in the final factor.
+\location{122}{360}
+
+\setcounter{section}{122}
+\section{V, \S6, proof of Theorem (6.2), index range, p.~354}\label{errata:item:123}
+
+\original The Lubin--Tate filtration formula is used without distinguishing the endpoint $n=0$.
+\replacement Use the displayed lower-filtration calculation for $1\le n\le m$. For $n=0$ consider inertia directly.
+\reason The displayed powers $q^{n-1}$ concern positive $n$. After the reduction to the totally ramified Lubin--Tate extension, the image of $U_K$ is all of $G=G^0$.
+\location{123}{364}
+
+\setcounter{section}{123}
+\section{V, \S6, proof of Theorem (6.2), ramification group order, p.~354}\label{errata:item:124}
+
+\original The formula for $\#G(L_m\mid L_n)$ subtracts the degrees of $L_m$ and $L_n$ over $K$.
+\replacement Use the quotient $\#G(L_m\mid L_j)=q^{m-j}$ for $1\le j\le m$.
+\reason Here $g_0=q^{m-1}(q-1)$. The interval $q^{j-1}\le i\le q^j-1$ has $q^{j-1}(q-1)$ integer indices, each with $g_i=q^{m-j}$. Thus each interval contributes $1$ to the normalized sum defining $\eta$, so $\eta(q^n-1)=n$. For $n\ge m$ both groups are trivial.
+\location{124}{364}
+
+\setcounter{section}{124}
+\section{V, \S6, proof of Proposition (6.3), the jump at $-1$, p.~355}\label{errata:item:125}
+
+\original The proof reduces to a totally ramified extension without restricting the index $t$.
+\replacement The possible jump at $-1$ is already an integer. Apply the reduction for $t\ge0$.
+\reason The upper group at $-1$ is the full Galois group, which can change under the unramified base extension. For upper indices greater than $-1$ the filtration is already inside inertia, and there are no jumps strictly between $-1$ and $0$.
+\location{125}{365}
+
+\setcounter{section}{125}
+\section{V, \S2, Proposition (2.2), coefficient subring, p.~329}\label{errata:item:126}
+
+\original The coefficient descent clause assumes a complete Frobenius-stable subring $\mathfrak o$.
+\replacement Also require $\mathfrak o\cap\pi\mathfrak o_{\widehat K}=\pi\mathfrak o$.
+\reason The coefficient induction divides by $\pi$. For $K=\mathbb Q_p$, $p>2$, take $\mathfrak o=\mathbb Z_p+p\mathfrak o_{\widehat K}$, $e=pX+X^p+pbX^2$ and $\bar e=pX+X^p$, with the residue of $b$ outside $\mathbb F_p$. With $L=X$, the coefficient $c$ of $X^2$ in $F$ must satisfy $c-pc^\varphi=-b$, so $c$ has residue outside $\mathbb F_p$. The added divisibility condition permits the induction in the subring.
+\location{126}{339}
+
+\setcounter{section}{126}
+\section{V, \S4, Exercise 1, characteristic of the additive formal group, p.~345}\label{errata:item:127}
+
+\original The exercise says the additive formal group has only linear endomorphisms.
+\replacement Assume the coefficient valuation ring has characteristic zero.
+\reason Over a characteristic-zero domain, the binomial expansion forces every nonlinear coefficient of an additive series to vanish. In characteristic $p$, $X^p$ is already a nonlinear additive series.
+\location{127}{355}
+
+\setcounter{section}{127}
+\section{V, \S4, Exercise 2, integral of the invariant differential, p.~345}\label{errata:item:128}
+
+\original For $\psi(X)=1+\sum_{n\ge1}a_nX^n$, the hint writes $\log_F(X)=X+\sum_{n\ge1}(a_n/n)X^n$.
+\replacement Integrate $\psi$ to obtain $\log_F(X)=X+\sum_{n\ge1}(a_n/(n+1))X^{n+1}$.
+\reason Differentiating associativity gives $F_1(F(X,Y),0)=F_1(X,Y)F_1(Y,0)$ for $F_1=\partial_Y F$. Thus $\psi(F(X,Y))F_1(X,Y)=\psi(Y)$ for $\psi(X)=1/F_1(X,0)$. The formal antiderivative with zero constant term gives the homomorphism.
+\location{128}{355}
+
+\setcounter{section}{128}
+\section{V, \S1, proof of Theorem (1.4), exponent of the power subgroup, p.~322}\label{errata:item:129}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypesetting has $K_1^*$ in a hypothesis about a power subgroup.
+\replacement Restore $K_1^{*n}$.
+\reason The original scan shows the superscript $n$ after the multiplicative-group star. The proof is showing that the $n$-th powers contain a group of norms.
+\location{129}{332}
+
+\setcounter{section}{129}
+\section{V, \S1, proof of (1.1), range of the unit filtration comparison, p.~318}\label{errata:item:130}
+
+\original The argument uses the additive comparison for $V^n/V^{n+1}$ also at the endpoint $n=N$.
+\replacement Use $n>N$ for the comparison and the ensuing vanishing statements in this proof.
+\reason The bound on products at depth $N$ implies that the cross term is in the next step for $n>N$. At $n=N$ the given bound only puts it in the current step. Taking a later step suffices for the proof.
+\location{130}{328}
+
+\setcounter{section}{130}
+\section{V, \S1, Exercise 7, characteristic of the cyclotomic tower, p.~326}\label{errata:item:131}
+
+\original The exercise asks for a $\mathbb Z_p$-extension by using $p$-power roots of unity for a local field of residue characteristic $p$.
+\replacement Require a $p$-adic number field $K$.
+\reason In characteristic $p$ the only $p$-power root of unity is $1$, so no such cyclotomic tower is obtained.
+\location{131}{336}
+
+
+\clearpage
+\part{Chapter VI audit}
+This chapter review checks the unit and idèle conventions, the equivariant lattice argument, signs at real places, and the localization criteria in the reciprocity exercises.\par The corresponding retypeset pages now use native \(\notin\) and \(\cong\) wherever matching overlapping glyphs confirmed those relations. This pass restores 13 negated membership signs and 58 isomorphism signs in the corrected edition.
+\setcounter{section}{131}
+\section{VI, \S1, Exercise 6, totally positive units, p.~367}\label{errata:item:132}
+
+\original The exercise takes a $\mathbb Z$-basis of all totally positive units.
+\replacement Choose units whose images form a $\mathbb Z$-basis modulo the torsion subgroup $\mu_+$.
+\reason Totally positive units may contain torsion, for instance when the field has no real places. If a principal idèle in the exercise comes from $\zeta\prod_i\varepsilon_i^{n_i}$, raising the finite components to the order of $\zeta$ and using Exercise 4 shows that the profinite exponents equal $n_i$. Thus $\zeta=1$. The archimedean logarithms determine the real exponents, and the remaining phase parameters are integers.
+\location{132}{376}
+
+\setcounter{section}{132}
+\section{VI, \S1, Exercise 6(ii), principal idèle, p.~367}\label{errata:item:133}
+
+\original The exercise calls $\alpha$ a principal ideal.
+\replacement Read principal idèle.
+\reason The displayed $\alpha$ is an element of the idèle group. The condition is that it lies in the diagonal image of $K^*$.
+\location{133}{376}
+
+\setcounter{section}{133}
+\section{VI, \S3, proof of Lemma (3.4), several orbits, p.~376}\label{errata:item:134}
+
+\original The proof defines $w_i$ by summing over permutations taking the first basis index to $i$.
+\replacement Approximate each $tv_i$ by $\gamma_i\in\Gamma$ and set $w_i=\sum_{\sigma\in G}\sigma\gamma_{\sigma^{-1}(i)}$.
+\reason The old sum is empty for a basis index outside the first orbit. Reindexing the new sum gives equivariance for any permutation action. For the sup-norm, $\|w_i-|G|tv_i\|\le |G|b$. A nontrivial linear dependence scaled to maximum coefficient $1$ would force $|G|t\le s|G|b$, contrary to $t>sb$.
+\location{134}{385}
+
+\setcounter{section}{134}
+\section{VI, \S4, Exercise 3, split quadratic case, p.~385}\label{errata:item:135}
+
+\original The norm hint only treats $a$ outside $K^{*2}$.
+\replacement Add the elementary solution when $a=c^2$ with $c\ne0$.
+\reason In the split case, $x=(b+1)/2$ and $y=(b-1)/(2c)$ give $x^2-ay^2=(x-cy)(x+cy)=b$. In the nonsplit case the stated quadratic norm argument applies.
+\location{135}{394}
+
+\setcounter{section}{135}
+\section{VI, \S4, Exercise 4, nondegenerate quadratic forms, p.~385}\label{errata:item:136}
+
+\original The problem states the claim over any field with more than five elements and imposes no nonzero-coefficient condition.
+\replacement Assume characteristic different from $2$ and $a_i\ne0$ for all $i$.
+\reason Over $\mathbb F_2(t)$ the form $x^2+y^2+tz^2$ has a nonzero zero but all zeros have $z=0$. If a coefficient can vanish, $x^2+0y^2$ is a counterexample even over $\mathbb Q$. Under the added conditions the two-coordinate step in the hint makes the zero coordinates nonzero one at a time.
+\location{136}{394}
+
+\setcounter{section}{136}
+\section{VI, \S5, Exercise 3, real signs in the $2$-primary case, p.~394}\label{errata:item:137}
+
+\original With the book\textquoteright{}s finite-prime ramification convention, $M_p$ can complexify real places if $p=2$. The displayed quotient uses only the finite local units.
+\replacement Write $P=\prod_{\mathfrak p\mid p}U_{\mathfrak p}^{(1)}$ and use $(P\times S_p)/((P\times S_p)\cap\overline E^{\,\mathrm{sgn}})$, where $S_2=\{\pm1\}^r$ records all real signs and $S_p=1$ for odd $p$.
+\reason The kernel of passage to the ordinary ideal class group also contains the archimedean sign factors. The pro-$p$ part retains these factors only at $p=2$. Take the closure $\overline E^{\,\mathrm{sgn}}$ of the units in the local units times the real signs. In Exercise VI.5.4, $\overline E$ still denotes the closure in the finite local units alone. For $\mathbb Q$ the full $2$-power cyclotomic group is $\mathbb Z_2\times C_2$, whereas the unsigned quotient gives only $\mathbb Z_2$.
+\location{137}{403}
+
+\setcounter{section}{137}
+\section{VI, \S6, Exercise 6, localization kernels, pp.~404--405}\label{errata:item:138}
+
+\original The character restriction is asserted to be surjective exactly when localization of Kummer classes outside $S$ is injective.
+\replacement It is surjective exactly when the kernel of localization outside $S$ equals the kernel of localization at all places.
+\reason By the exact sequence in Exercise 4(iii), the obstruction is the image in the groups at $S$ of global Kummer classes trivial outside $S$. Such an image vanishes exactly when those classes are trivial at every place. The everywhere-local kernel itself can be nonzero: $16$ over $\mathbb Q(\sqrt7)$ is an eighth power in all completions but not in the field.
+\location{138}{413}
+
+\setcounter{section}{138}
+\section{VI, \S6, Exercise 7, Grunwald condition, p.~405}\label{errata:item:139}
+
+\original The exercise refers to the last sufficient condition of Exercise 6 and does not identify $n$ with the least common multiple of the given local degrees until the conclusion.
+\replacement Put $n=\operatorname{lcm}_{\mathfrak p\in S}[L_{\mathfrak p}:K_{\mathfrak p}]$ and assume the character restriction of Exercise 6 is surjective for this $n$.
+\reason Local characters defining the given extensions may be regarded as taking values in $\mathbb Z/n\mathbb Z$. Any global lift has order dividing $n$ and divisible by every prescribed local degree, so its order is exactly $n$.
+\location{139}{414}
+
+\setcounter{section}{139}
+\section{VI, \S7, Exercise 5, field to which the class-number hint applies, p.~414}\label{errata:item:140}
+
+\original The statement and first sentence of the hint use $K$, the degree-$120$ splitting field. The residue argument then uses $\mathcal O_k$ for $k=\mathbb Q(\alpha)$.
+\replacement Use $k$ in the statement and throughout the hint.
+\reason The degree-five field $k$ has two complex pairs and discriminant $2869$. Its Minkowski bound is $(4/\pi)^2(5!/5^5)\sqrt{2869}<4$. There are no prime ideals of norm $2$ or $3$ since $X^5-X+1$ has no root modulo either prime. This proves the claim for $k$. The printed argument supplies no corresponding class-number calculation for the splitting field.
+\location{140}{423}
+
+\setcounter{section}{140}
+\section{VI, \S6, Exercise 6, dyadic decomposition group, p.~405}\label{errata:item:141}
+
+\original The sufficient condition asks for one omitted dyadic place which is nonsplit in $K(\mu_{2^\nu})\mid K$.
+\replacement A sufficient condition is one omitted dyadic place with full decomposition group. The exact kernel criterion remains applicable without this condition.
+\reason For example, let $n=8$ and $K$ be generated by a root of $X^3+33X^2+33X+33$, which is Eisenstein at $3$. At $2$ it has completions $\mathbb Q_2$ and $\mathbb Q_2(i)$: Hensel gives a root congruent to $-1$ modulo $16$, and the quadratic factor has discriminant $-4$ times a $2$-adic square. With $S$ the first place, $16$ is an eighth power outside $S$ but not at that place. The omitted second place is still nonsplit in $K(\mu_8)\mid K$. For the stronger condition, apply Chebotarev to the roots of $X^{\ell^a}-b$ prime-power by prime-power. A class locally trivial outside $S$ has a root in the corresponding cyclotomic extension, since a nontrivial translation in the root action would have no fixed root. A cyclic cyclotomic group or a full decomposition group outside $S$ then forces a globally fixed root.
+\location{141}{414}
+
+\setcounter{section}{141}
+\section{VI, \S2, change of field in the idèle construction, p.~371}\label{errata:item:142}
+
+\original The construction is stated for an isomorphism of fields $L\to\sigma L$.
+\replacement Specify a $K$-isomorphism.
+\reason The map on the tensor product over $K$ needs $K$-linearity. This condition is satisfied by the Galois automorphisms being used.
+\location{142}{380}
+
+\setcounter{section}{142}
+\section{VI, \S3, proof of (3.8), passage to the normal closure, p.~379}\label{errata:item:143}
+
+\original The proof infers a trivial decomposition group from the double-coset count without using the normal-closure hypothesis explicitly.
+\replacement Complete splitting in $L$ gives the trivial action on $H\backslash G$. The kernel of the action is the core of $H$, which is trivial by normal closure.
+\reason Every orbit consists of one point when the prime splits completely. The intersection of the conjugates of $H$ fixes the compositum of the conjugates of $L$, which is $M$.
+\location{143}{388}
+
+\setcounter{section}{143}
+\section{VI, \S7, proof of (7.1), normalized idèle representative, p.~407}\label{errata:item:144}
+
+\original The formula for the ideal class modulo $\mathfrak m$ is stated for an arbitrary representative $\alpha$.
+\replacement Choose $\alpha\in I_K^{(\mathfrak m)}$ as in (1.9) before applying the ideal formula.
+\reason At a finite prime dividing the modulus, an arbitrary idèle can have nonzero valuation. The normalized representative gives an ideal prime to the modulus.
+\location{144}{416}
+
+\setcounter{section}{144}
+\section{VI, \S7, Exercise 1, index of ideal groups at one modulus, p.~413}\label{errata:item:145}
+
+\original The ramification index is written $(H_{\mathfrak p}:H^{\mathfrak f})$ even though $H_{\mathfrak p}$ has conductor prime to $\mathfrak p$.
+\replacement Use $e=(H_{\mathfrak p}\cap J_K^{\mathfrak f}:H^{\mathfrak f})$.
+\reason The comparison must be made in the common ideal group $J_K^{\mathfrak f}$. The intersection is the preimage of inertia under the Artin map. Without it, the powers of $\mathfrak p^f\in H_{\mathfrak p}$ already give infinitely many cosets.
+\location{145}{422}
+
+\setcounter{section}{145}
+\section{VI, \S8, initial range of the reciprocity law, p.~414}\label{errata:item:146}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypesetting prints $n>2$.
+\replacement Restore $n\ge2$.
+\reason The enlarged original shows the lower horizontal stroke of the inequality. The range includes the quadratic special case used later in the section.
+\location{146}{423}
+
+
+\clearpage
+\part{Chapter VII audit}
+This chapter review checks analytic continuation, cone zeta functions, Artin induction and conductors, and the density arguments. The final page and link checks extend through the bibliography, index, and series catalogue.\par The corresponding retypeset pages now use native \(\notin\) and \(\cong\) wherever matching overlapping glyphs confirmed those relations. This pass restores 4 negated membership signs and 15 isomorphism signs in the corrected edition.
+\setcounter{section}{146}
+\section{VII, \S1, Lemma (1.9), orientation and lifted path, p.~428}\label{errata:item:147}
+
+\original The path is drawn and described clockwise, but its lift is required to end at argument $2\pi$ after starting at argument $0$.
+\replacement Use the counterclockwise circle and the lift $t\mapsto(\varepsilon e^{it},t)$ for $0\le t\le2\pi$. Reverse the corresponding arrows in the diagram.
+\reason An increase of argument from $0$ to $2\pi$ is counterclockwise. This keeps the monodromy factor $e^{2\pi ins}$ in the outward ray and preserves the displayed evaluation.
+\location{147}{436}
+
+\setcounter{section}{147}
+\section{VII, \S1, proof of Lemma (1.9), circular integral, p.~429}\label{errata:item:148}
+
+\original The circular integral is parametrized with $e^{-it}$ and multiplier $-i$.
+\replacement Use $e^{it}$ and multiplier $i$ consistently in the circular term and its limiting estimate.
+\reason The derivative of $\varepsilon e^{it}$ is $i\varepsilon e^{it}$. The circular contribution is bounded by a constant times $\varepsilon^{\operatorname{Re}(ns)-m}$ and still tends to zero. The ray contribution and the factor $e^{2\pi ins}-1$ are unchanged.
+\location{148}{437}
+
+\setcounter{section}{148}
+\section{VII, \S1, proof of Theorem (1.8), substitution and argument, p.~430}\label{errata:item:149}
+
+\original The substituted contour is described as clockwise although it is the rotation of a counterclockwise contour.
+\replacement Use the positive circular orientation on both contours. Start the incoming branch of $-C_\varepsilon$ at argument $-\pi$.
+\reason The inverse of the map $(x,\alpha)\mapsto(-x,\alpha-\pi)$ adds $\pi$ to the lifted argument. The lift therefore matches Lemma (1.9), preserving $-e^{-i\pi s}$ in the change of variables and $-2i\sin(\pi s)$ in the Mellin formula.
+\location{149}{438}
+
+\setcounter{section}{149}
+\section{VII, \S1, higher regulator and positive odd zeta values, p.~431}\label{errata:item:150}
+
+\original The regulator for $\zeta(2k-1)$ is taken from $K_{4k-1}(\mathbb Z)$, which has rank zero.
+\replacement Use $K_{4k-3}(\mathbb Z)$ and index the regulator by $2k-1$. For the positive zeta value, rescale the cohomological Borel regulator by $\pi^{2k-1}$.
+\reason For odd $n=2k-1>1$, $K_{2n-1}(\mathbb Z)$ has rank one. With the rational cohomology normalization, Borel\textquoteright{}s theorem identifies the regulator class with $\zeta(n)/\pi^n$ modulo $\mathbb Q^*$. Multiplication by $\pi^n$ gives the comparison used here. See \href{https://www.numdam.org/item/ASNSP_1977_4_4_4_613_0/}{Borel, Theorem 6.2} and its \href{https://www.numdam.org/item/ASNSP_1980_4_7_2_373_0/}{erratum}.
+\location{150}{439}
+
+\setcounter{section}{150}
+\section{VII, \S10, additive expansion of Artin $L$-series, p.~519}\label{errata:item:151}
+
+\original The text says that a general Artin $L$-series has no additive expression analogous to the Dedekind zeta series.
+\replacement An ideal Dirichlet series exists. Its coefficients need not count ideals without weights.
+\reason For the local Frobenius operator $A$ on inertia invariants, $\det(1-tA)^{-1}=\sum_{r\ge0}\operatorname{tr}(\operatorname{Sym}^r A)t^r$. Multiplying the local series gives the ideal series and its absolute convergence for $\operatorname{Re}(s)>1$.
+\location{151}{527}
+
+\setcounter{section}{151}
+\section{VII, \S12, finite Euler factor in the closing remark, p.~541}\label{errata:item:152}
+
+\original The local factor at $\mathfrak p$ is written with $\mathrm N(\mathfrak P)^{-s}$.
+\replacement Use $\mathrm N(\mathfrak p)^{-s}$ for the prime of the base field.
+\reason This is the convention of (10.1). The arithmetic Frobenius acts on the residue field above $\mathfrak p$ by raising to $\mathrm N(\mathfrak p)$, independently of the residue degree.
+\location{152}{549}
+
+\setcounter{section}{152}
+\section{VII, \S13, proof of Theorem (13.2), character group, p.~544}\label{errata:item:153}
+
+\original The theorem uses $J^{\mathfrak m}/H^{\mathfrak m}$ but the two character sums in the proof run over classes modulo $P^{\mathfrak m}$.
+\replacement Use classes of $J^{\mathfrak m}/H^{\mathfrak m}$ and their characters throughout the proof.
+\reason Inflate each character along $J^{\mathfrak m}/P^{\mathfrak m}\twoheadrightarrow J^{\mathfrak m}/H^{\mathfrak m}$ to apply Lemma (13.3). Orthogonality then contributes exactly $h_{\mathfrak m}=[J^{\mathfrak m}:H^{\mathfrak m}]$ for the requested class.
+\location{153}{552}
+
+\setcounter{section}{153}
+\section{VII, \S9, proof of Lemma (9.1), disjoint boundary decomposition, p.~505}\label{errata:item:154}
+
+\original The proof decomposes the faces separately and asserts the resulting pieces are disjoint across the different faces.
+\replacement Partition the boundary minus zero by the first index $i$ for which $L_i(x)=0$. Apply the induction hypothesis to each part with its strict inequalities retained.
+\reason The parts $B_i=\{x\in P\setminus\{0\}:L_i(x)=0,\ L_j(x)>0\ (j<i)\}$ are disjoint. They are described by rational equalities and strict or weak inequalities in the lower-dimensional rational hyperplanes. Their simplicial decompositions can therefore be joined directly. When no inequalities are imposed, the nonzero coordinate sign patterns give the required cones.
+\location{154}{513}
+
+\setcounter{section}{154}
+\section{VII, \S9, retypesetting fragment after Theorem (9.3), p.~507}\label{errata:item:155}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypesetting adds a disconnected paragraph beginning with the words on their intersections after the theorem.
+\replacement Remove the imported fragment in both editions.
+\reason The original page contains no such paragraph. The boundary refinement belongs within the proof of Lemma (9.1), which has been repaired in the corrected text.
+\location{155}{515}
+
+\setcounter{section}{155}
+\section{VII, \S9, proof of Lemma (9.4), ray congruences, p.~509}\label{errata:item:156}
+
+\original The proof replaces the local ray conditions by the global inclusions $a-1\in\mathfrak m$ and $(a-1)\mathfrak a\subseteq\mathfrak m\mathfrak a$.
+\replacement Use $a-1\in\mathfrak m\mathfrak o_{\mathfrak p}$ at the finite primes $\mathfrak p\mid\mathfrak m$, with total positivity for the stated infinite conditions.
+\reason The integral ideal $\mathfrak a$ is prime to the modulus. In the forward direction its localization at each prime of the modulus is the unit ideal. In the reverse direction integrality of $a\mathfrak a$ and $\mathfrak a$ gives integrality of $(a-1)\mathfrak a$ everywhere. The ray congruences supply the stronger divisibility only at the primes of the modulus. Ratios of two congruent local units are again congruent to $1$.
+\location{156}{517}
+
+\setcounter{section}{156}
+\section{VII, \S9, integral preceding (9.5), regions of integration, p.~513}\label{errata:item:157}
+
+\original The regions are stated as a partition of $\mathbb R^n$ with no explicit bound on the maximal coordinate.
+\replacement Partition the nonnegative orthant into regions in which $t_i$ is a maximal coordinate. Ignore the intersections of measure zero in the integral.
+\reason The integrals being decomposed are on the nonnegative orthant. Explicit membership in the orthant handles $n=1$, when there are no other coordinate inequalities.
+\location{157}{521}
+
+\setcounter{section}{157}
+\section{VII, \S9, change of coordinates in the cone zeta sum, p.~515}\label{errata:item:158}
+
+\original The left-hand argument is a point of the cone, but the displayed sum drops the shift and uses the same symbol in the ambient and cone coordinates.
+\replacement For $x=\sum_j\xi_jv_{ij}$, use $\zeta(C_i,x,s)=\zeta(A_i,\xi,s)$ and shift the lattice sum by $\xi$.
+\reason The points in the translated lattice sum are $x+\sum_j z_jv_{ij}$, so each linear form is evaluated at $z+\xi$ in the basis of the cone. The argument of each generalized Bernoulli coefficient in the next theorem is understood in these same coordinates.
+\location{158}{523}
+
+\setcounter{section}{158}
+\section{VII, \S9, rationality of the Bernoulli coefficients, p.~516}\label{errata:item:159}
+
+\original The denominator puts $-1$ inside the exponential, and the text omits the factor $(k!)^{-n}$ in identifying the Taylor coefficient.
+\replacement Use denominators $\exp(uL_j(t))-1$. The coefficient of $u^{n(k-1)+r}\prod_{\ell\ne i}t_\ell^{k-1}$ is $B_k(A,x)^{(i)}/(k!)^n$.
+\reason These are the generating function and normalization used in (9.6). The corrected power series is regular after multiplication by $u^r$ at the point of expansion. Restoring the rational factorial factor preserves the argument by Galois invariance.
+\location{159}{524}
+
+\setcounter{section}{159}
+\section{VII, \S10, proof of Proposition (10.4), cyclic block determinant, p.~524}\label{errata:item:160}
+
+\original The penultimate row of the displayed block matrix for $1-t\varphi$ lacks its diagonal identity block.
+\replacement Place $E$ in each diagonal block. In row coordinates put $-tE$ above the diagonal and $-tA$ in the bottom-left block.
+\reason Adding $t$ times each block column to the next successively leaves the last diagonal block $E-t^fA$. For $f=1$ the identity is immediate. The preceding Mackey restriction and passage to inertia invariants are unchanged.
+\location{160}{532}
+
+\setcounter{section}{160}
+\section{VII, \S11, proof of (11.1), derivative of the minimal polynomial, p.~529}\label{errata:item:161}
+
+\original The product for $g^{\prime}(x)$ has factors $\sigma x-x$.
+\replacement Use $g^{\prime}(x)=\prod_{\sigma\ne1}(x-\sigma x)$.
+\reason In the monic polynomial $g(X)=\prod_\sigma(X-\sigma x)$, differentiating the identity factor $X-x$ gives the stated product. A global sign is immaterial for the generated different ideal.
+\location{161}{537}
+
+\setcounter{section}{161}
+\section{VII, \S11, proof of Proposition (11.6), trivial character, p.~532}\label{errata:item:162}
+
+\original The proof uses the largest integer $j$ for which $G_j$ is not contained in the kernel of $\chi$.
+\replacement Handle $\chi=1$ first, since both conductor ideals are the unit ideal. Then use the largest $j$ for $\chi\ne1$.
+\reason For a nontrivial unramified character the largest index is $-1$, which already gives exponent $0$ in (11.3). For the trivial character there is no such index at all.
+\location{162}{540}
+
+\setcounter{section}{162}
+\section{VII, \S11, proof of (11.7), local exponent under induction, p.~534}\label{errata:item:163}
+
+\original The sum over $\tau$ is printed without parentheses around the two local contributions.
+\replacement Sum the discriminant and normed conductor terms together for each $\tau$.
+\reason The norm of $\mathfrak P^{\prime}_\tau$ contributes the residue degree $f_{\mathfrak P^{\prime}_\tau}$, and each prime contributes its own discriminant exponent $\nu_{\mathfrak P^{\prime}_\tau}$. Both depend on $\tau$.
+\location{163}{542}
+
+\setcounter{section}{163}
+\section{VII, \S12, local factors in the idèle group, p.~538}\label{errata:item:164}
+
+\original The group of all idèles is denoted by the ordinary product of the multiplicative completions.
+\replacement Use the restricted product $I=\prod_{\mathfrak p}^{\prime}K_{\mathfrak p}^*$ with respect to the finite local unit groups.
+\reason An idèle is a local unit at all but finitely many finite places. The ordinary product notation for the fixed congruence subgroup remains appropriate.
+\location{164}{546}
+
+\setcounter{section}{164}
+\section{VII, \S12, proof of Lemma (12.4), finite congruences and signs, p.~539}\label{errata:item:165}
+
+\original The notation $a\equiv1\pmod{\mathfrak f}$ appears next to a prescribed negative sign at a real place.
+\replacement Specify that the congruence in this argument is imposed only at finite places. State the prescribed real signs separately.
+\reason Approximation permits the finite conditions and the real signs to be imposed independently. The resulting idèle $\alpha a$ satisfies the congruences at the places in the modulus, including its sign conditions.
+\location{165}{547}
+
+\setcounter{section}{165}
+\section{VII, \S12, Brauer exponents in the functional equation, p.~541}\label{errata:item:166}
+
+\original The printed products for the dual completed $L$-functions and for $W(\chi)$ omit the exponents $n_i$.
+\replacement Use the exponents $n_i$ from the Brauer decomposition in both products. This reading is already in the two retypesettings.
+\reason The equality for the original completed $L$-function takes the $n_i$-th powers. The same powers apply to the dual factors and the root numbers after the functional equations are substituted.
+\location{166}{549}
+
+\setcounter{section}{166}
+\section{VII, \S12, order at zero and the trivial constituent, p.~541}\label{errata:item:167}
+
+\original The asserted order at $s=0$ is $n^+$ whenever $\chi$ differs from the principal character.
+\replacement At $s=0$ use order $n^+-\langle\chi,1\rangle$. At negative even and odd integers the orders are $n^+$ and $n^-$, respectively.
+\reason Brauer induction and the nonvanishing at $1$ of nontrivial Hecke factors give completed order $-\langle\chi,1\rangle$ at $1$. Frobenius reciprocity identifies that multiplicity with the contributions of the trivial induced constituents. The functional equation transports the order to $0$, where removing the gamma factors adds $n^+$.
+\location{167}{549}
+
+\setcounter{section}{167}
+\section{VII, \S3, Proposition (3.1)(ii), linear change of variables, p.~446}\label{errata:item:168}
+
+\original The transformation $A$ is only called linear, although the formula uses $A^{-1}$ and divides by $|\det A|$.
+\replacement Assume $A$ is invertible.
+\reason The change of variables is valid for an invertible transformation. For a singular $A$, even the composition of a Schwartz function with $A$ need not be Schwartz.
+\location{168}{454}
+
+\setcounter{section}{168}
+\section{VII, \S2, regulator cross-reference, p.~443}\label{errata:item:169}
+
+\original The reference to \S1 gives the positive even points $2k$ for the higher regulator comparison.
+\replacement Read the positive odd points $2k-1$ in this cross-reference.
+\reason The preceding section gives Euler\textquoteright{}s Bernoulli formula at positive even integers and identifies the higher regulator comparison at positive odd integers.
+\location{169}{451}
+
+\setcounter{section}{169}
+\section{VII, \S9, negative special values over a field with complex places, p.~514}\label{errata:item:170}
+
+\original The text exempts the trivial character at $s=0$ from vanishing for every field with a complex place.
+\replacement The only exception in that case is the primitive trivial character over an imaginary quadratic field at $s=0$.
+\reason For a primitive trivial character the order at zero is $r_1+r_2-1$. If $r_2>0$, it can be zero only for $r_1=0$, $r_2=1$. Removing any finite Euler factors raises the order at zero.
+\location{170}{522}
+
+\setcounter{section}{170}
+\section{VII, \S6, independence of the ideal representative, p.~472}\label{errata:item:171}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original A prime is added to $\chi$ in the subexpression $\chi((aa_1^{-1}))$.
+\replacement Restore the unprimed character.
+\reason The larger supplied scan shows no prime on that occurrence, and the proof is still establishing the definition of the primed expression.
+\location{171}{480}
+
+\setcounter{section}{171}
+\section{VII, \S6, trace duality in the Gauss sum, p.~473}\label{errata:item:172}
+
+\original The codifferent is identified with $\{a:\operatorname{Tr}(a)\in\mathbb Z\}$.
+\replacement Use $\mathfrak d^{-1}=\{a:\operatorname{Tr}(a\mathfrak o)\subseteq\mathbb Z\}$.
+\reason The codifferent is the trace dual of the entire ring of integers. Integrality of the trace against $1$ is only one of its conditions.
+\location{172}{481}
+
+\setcounter{section}{172}
+\section{VII, \S6, trace character in the finite sum, p.~475}\label{errata:item:173}
+
+\original The proof identifies $zy\notin\mathfrak d^{-1}$ with $\operatorname{Tr}(zy)\notin\mathbb Z$.
+\replacement Choose $z_0\in\mathfrak a$ with $z_0y\notin\mathfrak d^{-1}$, then $u\in\mathfrak o$ with $\operatorname{Tr}(uz_0y)\notin\mathbb Z$. Set $z=uz_0$.
+\reason The definition of the codifferent gives the multiplier $u$. Since $\mathfrak a$ is an ideal, $z$ still belongs to $\mathfrak a$ and gives the required nontrivial character.
+\location{173}{483}
+
+\setcounter{section}{173}
+\section{VII, \S8, logarithmic expansion of the Euler product, p.~494}\label{errata:item:174}
+
+\original The logarithmic sum uses the denominator $n\mathrm N(\mathfrak p)^s$.
+\replacement Use $n\mathrm N(\mathfrak p)^{ns}$.
+\reason The $n$-th term in the logarithmic expansion is $(\chi(\mathfrak p)\mathrm N(\mathfrak p)^{-s})^n/n$.
+\location{174}{502}
+
+\setcounter{section}{174}
+\section{VII, \S8, exponent in the constant-term integral, p.~499}\label{errata:item:175}
+\noindent\emph{Source restoration or notation repair in both editions.}\par
+\original The retypesetting gives $x^{p-iq}$ under the norm in the display for $f(\infty)$.
+\replacement Restore the original exponent $(p-iq)/2$.
+\reason The parenthesized numerator and the denominator $2$ are both visible in the enlarged print. The adjacent imported note questioning this formula arose from the dropped denominator.
+\location{175}{507}
+
+\setcounter{section}{175}
+\section{III, \S2, genus in the Shafarevich finiteness statement, p.~207}\label{errata:item:176}
+
+\original The text states the Shafarevich finiteness assertion for arbitrary genus $g$.
+\replacement Require $g\ge2$ for smooth proper geometrically connected curves, and count up to $K$-isomorphism.
+\reason Faltings\textquoteright{}s curve finiteness statement has this genus hypothesis. The corresponding genus-one finiteness statement for elliptic curves includes the elliptic-curve structure. See \href{https://math.uchicago.edu/~drinfeld/Deligne%27s_conjecture_Manin_conf/Faltings_argument/Faltings.pdf}{Faltings, Corollary 1}.
+\location{176}{218}
+
+\setcounter{section}{176}
+\section{VII, \S1, Euler product truncation, p.~420}\label{errata:item:177}
+
+\original The missing terms are written as integers divisible by none of the primes at most $N$.
+\replacement The missing terms are integers divisible by at least one prime greater than $N$.
+\reason The truncated product expands over integers all of whose prime factors are at most $N$. The omitted terms all have index greater than $N$, so the original tail bound and limiting argument follow.
+\location{177}{428}
+
+\setcounter{section}{177}
+\section{VII, \S1, prime-counting zero sum, p.~432}\label{errata:item:178}
+
+\original The formal expression $R(x)-\sum_\rho R(x^\rho)$ is asserted to be a convergent series for $\pi(x)$.
+\replacement Keep the smooth approximation $R(x)$ and identify the displayed zero sum as formal, with divergence in the ordinary ordering.
+\reason For fixed $x>1$, the partial sums of $R(x^\rho)$ over nontrivial zeros ordered by increasing height are unbounded. The explicit formula for the midpoint prime count keeps the inner sum of logarithmic-integral terms inside the Möbius summation. See \href{https://arxiv.org/abs/2609.02713v2}{Grobner, v2, Introduction and Theorem A}.
+\location{178}{440}
+
+\setcounter{section}{178}
+\section{VII, \S6--8, imported notes attached to restored formulas, p.~499}\label{errata:item:179}
+
+\original The reference-based retypesettings insert notes marked 6R, 7R, 11R and 12R. The last note attributes the missing factor $1/2$ to the printed page.
+\replacement Remove these inserted notes and their callouts from both editions. Keep the corresponding checks in this errata document.
+\reason The first three points concern the original trace and Euler-product arguments. The original scan already has the denominator $2$ in the fourth formula.
+\location{179}{507}
+
+\part{Fidelity recheck of Chapter I}
+\setcounter{section}{179}
+\section{I, \S12, proof of (12.3), contraction notation, p.~74}\label{errata:item:180}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The retypesetting drops the bar on the contracted ideal $\bar{\mathfrak a}_{\mathfrak p}=\mathfrak o\cap\mathfrak a\mathfrak o_{\mathfrak p}$.
+\replacement Restore the bar wherever this contraction is used in the proof.
+\reason The print uses the bar to distinguish the contracted ideal from its extension in the localization.
+\location{180}{87}
+
+\setcounter{section}{180}
+\section{I, \S12, proof of (12.11), nonzero primes, p.~80}\label{errata:item:181}
+
+\original The normalization is said to have only the finitely many prime ideals above $\mathfrak p\mathfrak o_{\mathfrak p}$.
+\replacement Say that its nonzero prime ideals are exactly those primes.
+\reason The normalization is a domain and still has the zero prime. Integrality and dimension one identify the nonzero primes with those over the maximal ideal of the base localization.
+\location{181}{93}
+
+\setcounter{section}{181}
+\section{I, \S9, decomposition group in the unramified case, p.~58}\label{errata:item:182}
+
+\original After discussing separability of the residue extension and the condition $I_{\mathfrak P}=1$, the prose introduces the group isomorphism with the phrase In this case.
+\replacement Say explicitly that the isomorphism holds when $\mathfrak p$ is unramified in $L$.
+\reason The canonical residue map has the inertia group as its kernel. Separability of the residue field extension alone does not force that kernel to vanish.
+\location{182}{71}
+
+\setcounter{section}{182}
+\section{I, \S10, proof of (10.5), complete splitting, p.~63}\label{errata:item:183}
+
+\original The last step mentions only the inertia degree of the prime in the quadratic subfield.
+\replacement Use both the ramification index and the inertia degree, each equal to one.
+\reason The prime splits completely in the decomposition field. Both indices therefore stay equal to one in its quadratic subfield.
+\location{183}{76}
+
+\setcounter{section}{183}
+\section{I, \S14, projective-line gluing figure, p.~97}\label{errata:item:184}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The redrawn connector between the two-chart picture and the resulting projective line has a plain arrow.
+\replacement Recover the tail of the original mapping arrow.
+\reason The print distinguishes this connector from the arrow labelled $\varphi$ over the overlap.
+\location{184}{110}
+
+\setcounter{section}{184}
+\section{I, \S8, residue-class notation, p.~50}\label{errata:item:185}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The retypesetting omits the bar on $\bar x$ and the superscript in $\mathbb F_p^*$.
+\replacement Restore $\bar x^2=\bar a$ and $\bar a\in\mathbb F_p^*$.
+\reason The paragraph distinguishes the original integer from its residue class and assumes the class is nonzero.
+\location{185}{63}
+
+\setcounter{section}{185}
+\section{I, \S2, paragraph after (2.11), nonzero submodule, p.~14}\label{errata:item:186}
+
+\original The paragraph applies the fixed-rank basis assertion to every finitely generated submodule.
+\replacement Require the submodule to be nonzero, as in (2.10).
+\reason The zero module has rank zero. Every nonzero submodule under consideration contains a rank-$[K:\mathbb Q]$ principal fractional ideal.
+\location{186}{27}
+
+\setcounter{section}{186}
+\section{I, \S5, proof of (5.1), complex coordinates, p.~31}\label{errata:item:187}
+
+\original The proof writes $z_\tau=x_\tau+iy_\tau$ for every embedding while $x_{\bar\sigma}$ denotes the imaginary part of $z_\sigma$.
+\replacement Use the decomposition only for the chosen representatives $\sigma$ of the complex pairs.
+\reason This keeps $x_{\bar\sigma}=\operatorname{Im}(z_\sigma)$, as in the statement. The real embeddings have real coordinates and need no imaginary component.
+\location{187}{44}
+
+\setcounter{section}{187}
+\section{I, \S13, finite normalization in the regularity criterion, p.~92}\label{errata:item:188}
+
+\original The regularity criterion asserts the converse from $r=e_1=f_1=1$ without a finiteness hypothesis on normalization.
+\replacement Use the equivalence where the normalization is finite after localization at $\mathfrak p$.
+\reason Let $A=\mathfrak o_{\mathfrak p}$ and $B$ be its normalization. When $r=e_1=f_1=1$, one has $B=A+\mathfrak p B$. If $B$ is finite, Nakayama applied to $B/A$ gives $A=B$, a discrete valuation ring. The original general one-dimensional setting does not ensure finiteness of normalization.
+\location{188}{105}
+
+\setcounter{section}{188}
+\section{I, \S13, normalization diagram, point on the upper branch, p.~92}\label{errata:item:189}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The filled point on the right of the upper curve is missing.
+\replacement Restore the filled point at the lower tip of the curl on the upper curve.
+\reason The print marks the point on each curve separately. The lower right point was already present.
+\location{189}{105}
+
+\setcounter{section}{189}
+\section{I, \S12, support of fractional ideals, p.~75}\label{errata:item:190}
+
+\original The proof claims that a fractional ideal $\mathfrak a$ is contained in only finitely many maximal ideals to justify the finite support of its localizations.
+\replacement Choose nonzero $a,c\in\mathfrak o$ such that $a\mathfrak o\subseteq\mathfrak a\subseteq c^{-1}\mathfrak o$. Only primes containing $ac$ can be exceptions.
+\reason If $\mathfrak p$ does not contain $ac$, both bounds localize to $\mathfrak o_{\mathfrak p}$. A fractional ideal may instead contain the entire base ring, so the printed containment argument does not suffice.
+\location{190}{88}
+
+\setcounter{section}{190}
+\section{I, \S3, beginning of the proof of (3.1), p.~17}\label{errata:item:191}
+
+\original The proof refers to (2.10) to deduce that every ideal $\mathfrak a$ is a finitely generated $\mathbb Z$-module.
+\replacement Apply (2.10) to $\mathfrak o_K$, then use that every subgroup of a finitely generated abelian group is finitely generated.
+\reason This supplies the intermediate step without assuming that $\mathfrak a$ is already finitely generated over $\mathfrak o_K$.
+\location{191}{30}
+
+\part{Fidelity recheck of Chapter II}
+\setcounter{section}{191}
+\section{II, \S5, terminology for local fields of positive characteristic, p.~136}\label{errata:item:192}
+
+\original The text calls the fields $\mathbb F_q((t))$ power series fields.
+\replacement Use Laurent series fields.
+\reason Negative powers of $t$ are permitted. The formal power series ring is the valuation ring $\mathbb F_q[[t]]$.
+\location{192}{148}
+
+\setcounter{section}{192}
+\section{II, \S7, proof of (7.7), degree and value-group index, p.~156}\label{errata:item:193}
+
+\original The proof reduces to an irreducible binomial using a maximal power divisor $d$, then uses $d$ for a second divisor.
+\replacement Define $d=[K(\alpha):K]$ and work directly with this degree.
+\reason In the proof, $\mu_m\subseteq K$ and $\kappa$ is separably closed. Then $G(K(\alpha)\mid K)\cong\mu_d$, and the order $n$ of the class of $w(\alpha)$ divides $d$. Writing $d=hn$ and choosing $v(b)=w(\alpha^n)$, Hensel\textquoteright{}s lemma gives an $h$th root $c$ of the unit $\alpha^d/b^h$. Thus $\alpha^n/(bc)\in\mu_h\subseteq K$, so $d\mid n$.
+\location{193}{168}
+
+\setcounter{section}{193}
+\section{II, \S10, proof of (10.7), the identity element, p.~180}\label{errata:item:194}
+
+\original The proof introduces the maximal ramification value $m$ for every lift of $\sigma^{\prime}$ and later uses $H_{m-1}$.
+\replacement Treat $\sigma^{\prime}=1$ directly before choosing a lift of maximal finite value.
+\reason In the identity coset the identity lift has infinite ramification value and the subsequent finite-index argument is unnecessary.
+\location{194}{192}
+
+\setcounter{section}{216}
+\section{II, \S7, generators of the value-group quotient, p.~155}\label{errata:item:217}
+
+\original The forward proof of (7.7) takes representatives of the value-group quotient without specifying their cyclic independence, then uses their orders to bound the degree.
+\replacement Lift generators of the cyclic direct factors of $w(L^*)/v(K^*)$.
+\reason The invariant factor decomposition gives $\prod_i m_i=e$. The radical generators already constructed in the proof satisfy $\alpha_i^{m_i}\in K$, so $[L:K]\le\prod_i m_i=e$. Equivalently, the induction in the text uses that after adjoining $\alpha_1$, the remaining cyclic factors still have orders $m_2,\ldots,m_r$.
+\location{217}{167}
+
+\part{Fidelity recheck of Chapter IV}
+\setcounter{section}{194}
+\section{IV, \S4, subgroup index in (4.2), p.~286}\label{errata:item:195}
+
+\original The formula uses $[L:K]$ for every extension in the abstract Galois theory.
+\replacement Write the subgroup index $[G_K:G_L]$ and identify it with field degree in the finite case. Use the same convention for the inertia degree in the paragraph after (4.3).
+\reason The index factors through $I_KG_L$ even for infinite extensions. For actual infinite Galois extensions the ordinary vector-space degree can differ from the index. For $\overline{\mathbb F}_p\mid\mathbb F_p$ the former is countable and the latter has the cardinality of $\widehat{\mathbb Z}$.
+\location{195}{297}
+
+\setcounter{section}{198}
+\section{IV, \S5, exercise range, p.~298}\label{errata:item:199}
+
+\original Exercise 3 refers to Exercises 1--5 of \S4.
+\replacement Refer to Exercises 1--4 of \S4.
+\reason The section contains four exercises in both the original contents of the chapter and the retypesetting.
+\location{199}{309}
+
+\setcounter{section}{199}
+\section{IV, \S6, proof of (6.2), normalized value groups, p.~300}\label{errata:item:200}
+
+\original The proof writes $a=\varepsilon\pi_K^m$ for some $m\in\mathbb Z$.
+\replacement Choose $b\in A_K$ with $v_K(b)=v_L(a)$ and replace $a$ by $a/b$ in the calculation.
+\reason In an unramified extension with $e=1$, the normalized value groups coincide. It suffices that $a/b\in U_L$, since $b$ is fixed by $G(L\mid K)$. The proof therefore works when the abstract value group is larger than $\mathbb Z$.
+\location{200}{311}
+
+\setcounter{section}{200}
+\section{IV, \S7, formula for $f_6$, p.~311}\label{errata:item:201}
+
+\original The displayed domain class is $c\bmod I_G A$.
+\replacement Use $c\bmod I_G C$.
+\reason The class is in $H^{-1}(G,C)$, represented by $c\in C$. The denominator is the augmentation subgroup of $C$.
+\location{201}{322}
+
+\part{Fidelity recheck of Chapter V}
+\setcounter{section}{195}
+\section{V, \S5, Proposition (5.4), monic Lubin--Tate polynomial, p.~348}\label{errata:item:196}
+
+\original The norm formula is stated for every polynomial $e(X)\in\mathcal E_\pi$.
+\replacement Specify a monic polynomial in (5.4) and choose monic representatives in (5.5).
+\reason A leading unit $u\ne1$ congruent to $1$ modulo $\pi$ is allowed in $\mathcal E_\pi$. Even in degree $q$, the quotient polynomial in the proof then has leading coefficient $u^{q^{n-1}}$, so its constant term gives $N_{L_n\mid K}(-\lambda_n)=\pi/u^{q^{n-1}}$. The example $e(X)=\pi X+X^q$ supplies a monic representative.
+\location{196}{358}
+
+\setcounter{section}{196}
+\section{V, \S6, Proposition (6.1), integer indices, p.~353}\label{errata:item:197}
+
+\original The group ranges are written using adjacent integer endpoints without specifying the range of $i$ and $k$.
+\replacement State the display for integer $i$ and $1\le k\le n$.
+\reason The book permits real lower indices elsewhere. With the stated integer ranges those groups follow by $G_i=G_{\lceil i\rceil}$. Also $L_k$ must be a level of the tower contained in $L_n$.
+\location{197}{363}
+
+\setcounter{section}{201}
+\section{V, \S1, Exercise 8, principal units at $2$, p.~326}\label{errata:item:202}
+
+\original The exercise asks for a topological generator of the principal units of $\mathbb Q_p$.
+\replacement Use a suitable generator of $1+p\mathbb Z_p$ for odd $p$ and of $1+4\mathbb Z_2$ for $p=2$.
+\reason The principal units at $2$ are $\{\pm1\}\times(1+4\mathbb Z_2)$, which is not procyclic. The logarithm kills the sign and the otherwise unchanged formula uses a generator of the torsion-free factor.
+\location{202}{336}
+
+\part{Fidelity recheck of Chapter VI}
+\setcounter{section}{197}
+\section{VI, \S7, diagram in the proof of (7.1), p.~407}\label{errata:item:198}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The redrawn left vertical arrow has an extra glyph on its right.
+\replacement Remove the added glyph. Keep $(\ )$ on the left as the map label.
+\reason The printed square has only the parentheses for this map. Its vertices and arrow direction are unchanged.
+\location{198}{416}
+
+\part{Fidelity recheck of Chapter III}
+\setcounter{section}{202}
+\section{III, \S1, the degree in the compactness diagram, p.~192}\label{errata:item:203}
+
+\original The original labels the right vertical arrow $\log$.
+\replacement Use $-\log$ in the corrected edition and keep $\log$ in the faithful edition.
+\reason The product formula calculation just above this diagram gives $\deg(\operatorname{div}(a))=-\log N(a)$. The corrected sign makes the square commute.
+\location{203}{203}
+
+\setcounter{section}{203}
+\section{III, \S7, labels in the projection-formula diagram, p.~248}\label{errata:item:204}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The retypesetting omits the multiplication dots on the arrows.
+\replacement Recover the two dots over the arrows into the right-hand column.
+\reason The printed diagram denotes multiplication in the Grothendieck group. The surrounding paragraph calls these the multiplication maps.
+\location{204}{259}
+
+\part{Fidelity recheck of Chapter VII}
+\setcounter{section}{204}
+\section{VII, \S1, proportions of the prime-counting plot, p.~433}\label{errata:item:205}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The nominally identical $\pi(x)$ plot was redrawn in a nearly square frame.
+\replacement Use the wider frame of the printed graph with the original limits, labels and axes.
+\reason The new TikZ curve is sampled from $\pi(x)$ with unit and value conventions matching the original. Its x-axis and y-axis have the approximate aspect ratio of the scan, and all labels remain native TeX.
+\location{205}{441}
+
+\setcounter{section}{205}
+\section{VII, \S7, the constant term of a partial theta series, p.~489}\label{errata:item:206}
+
+\original The summand at zero is $1$ for every partial series when $\mathfrak m=1$ and $p=0$. The special-case proof omits the class-character weights.
+\replacement Use $\chi(\mathfrak K)$ for the zero summand of the series for the class $\mathfrak K$. Retain the class-character weights and the factor $\chi([\mathfrak d])$ in the special-case proof of (7.7).
+\reason In this case the character factors through $J/P$. If $\Theta_{\mathfrak K}$ denotes the unweighted partial theta series, the amended series is $\chi(\mathfrak K)\Theta_{\mathfrak K}$. The dual class satisfies $\mathfrak K\mathfrak K^{\prime}=[\mathfrak d]$, and $\tau(\chi)=\chi([\mathfrak d])$. For example, for the nontrivial class character of $\mathbb Q(\sqrt{-5})$, the printed constant would give an extra $2$ in the nonprincipal class. Subtracting the constant in the definition of the Mellin transform leaves the partial $L$-function unchanged.
+\location{206}{497}
+
+\setcounter{section}{206}
+\section{VII, \S7, real phases in (7.7) and (7.8), p.~490}\label{errata:item:207}
+
+\original The transformation treats the real coordinates of an ideal number as real numbers. The factor in (7.7) therefore omits a phase, and (7.8) uses the untwisted conjugate character.
+\replacement Use $\eta_p(\mathfrak K)W(\chi,\bar p)$ in (7.7), where $\eta_p(\mathfrak K)=\prod_{\rho\ {\rm real}}(a_\rho/|a_\rho|)^{2p_\rho}$ for $a$ in $\mathfrak K$. In (7.8) use $\eta_p([\mathfrak m\mathfrak d])W(\chi,\bar p)$ and the character $\bar\chi\eta_p^{-1}$.
+\reason Changing $a$ by a factor in $K^*$ changes each real coordinate by a nonzero real factor, so the phase depends only on the ideal class. Pairing complex coordinates and retaining the real factors gives $N(|md/a^2|^p)N(a^p)/N((md/a)^{\bar p})=\eta_p(\mathfrak K)N((|md|/md)^{\bar p})$. In the earlier polynomial step, apply the identity $N(({}^*u)^p)=N(u^{\bar p})$ to $u=g/(md/a)\in\mathbf R$. For the sum over classes, write $\eta_p(\mathfrak K)=\eta_p([\mathfrak m\mathfrak d])/\eta_p(\mathfrak K^{\prime})$.
+\location{207}{498}
+
+\setcounter{section}{207}
+\section{VII, \S8, the root factor in (8.4)--(8.6), p.~501}\label{errata:item:208}
+
+\original The printed factor uses the phase from the theta formula alone. The proof identifies the dual integral without dividing by its normalization $c(\bar\chi)$ and equates its finite character with $\overline{\chi_f}$.
+\replacement Use $W(\chi)=\lambda(md)\tau(\chi_f)/(i^{\operatorname{Tr}(p)}\sqrt{\mathfrak N(\mathfrak m)})$, where $\lambda(a)=N(a^p|a|^{-p+iq})$ on ideal numbers. Weight the exceptional constant $a_0$ by $\chi_f(\mathfrak K)$.
+\reason The extension of the dual infinite character is $\lambda_{\bar p,-q}=\eta_p\bar\lambda$, so its finite character is $\overline{\chi_f}\eta_p^{-1}$. The theta transformation therefore contributes $\eta_p([\mathfrak m\mathfrak d])W(\chi_f,\bar p)$, and the Mellin comparison contributes $c(\chi)/c(\bar\chi)=N(|md|^{iq})$. Their product is the stated factor, of absolute value $1$. For an expression independent of the ideal-number choices, take $y\in\mathfrak m^{-1}\mathfrak d^{-1}$ such that $(y)\mathfrak m\mathfrak d$ is integral and prime to $\mathfrak m$. Then $W(\chi)=\chi((y)\mathfrak m\mathfrak d)\tau_{\mathfrak m}(\chi_f,y)/(i^{\operatorname{Tr}(p)}\chi_\infty(y)\sqrt{\mathfrak N(\mathfrak m)})$. For example, with $\chi=\mathrm N^{it}$ the missing factor is $|d_K|^{it}$ because $\Lambda(\chi,s)=|d_K|^{it/2}Z_K(s-it)$.
+\location{208}{509}
+
+\setcounter{section}{208}
+\section{VII, \S\S7--8, imported notes on the theta and Hecke formulas, p.~490}\label{errata:item:209}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The reference-based retypesettings add notes 9R, 10R, and 13R at the exceptional constant, the real phases, and the root factor.
+\replacement Remove the added notes and callouts from both editions. Record the verified alterations in the errata and apply them in the corrected edition.
+\reason The three notes do not appear in the original. Their mathematical content is addressed in the entries for the partial theta constant, the real phases, and the root factor.
+\location{209}{498}
+
+\setcounter{section}{209}
+\section{VII, \S3, the count at $\mu=0$, p.~451}\label{errata:item:210}
+
+\original The expression $(2\mu+1)^n-(2\mu-1)^n$ is used for the count $P(\mu)$ starting at $\mu=0$.
+\replacement Use the difference for $\mu\ge1$, with $P(0)=1$.
+\reason For positive $\mu$, subtract two concentric integer boxes. For $\mu=0$, the only integer vector of maximum absolute coordinate zero is the origin. The finitely many exceptional terms have no effect on convergence.
+\location{210}{459}
+
+\setcounter{section}{210}
+\section{VII, \S6, exactness in Proposition (6.13), p.~483}\label{errata:item:211}
+
+\original The proof concludes $\mathfrak a=(ax^{-1})$ and uses that ideal as the first component of the kernel triple.
+\replacement Use $\mathfrak a=(ax^{-1})^{-1}$ and use the same inverse in the first component of the triple.
+\reason In $\gamma\widehat a\,a_\infty b^{-1}=\xi x$ the finite component outside the modulus gives $v_{\mathfrak p}(\gamma)=v_{\mathfrak p}(x/a)$. The fixed modulus supplies the same relation at its finite primes, where both sides are zero. With $u=ax^{-1}$ the amended triple is $((u)^{-1}, u\bmod\mathfrak m,u\bmod\mathfrak o^{\mathfrak m})=\delta(u)$.
+\location{211}{491}
+
+\part{Fidelity recheck of Chapter Front matter, bibliography, and final cross-references}
+\setcounter{section}{211}
+\section{Preface, the range of Chapter V, p.~xii}\label{errata:item:212}
+
+\original The preface refers to Sections 4--7 of Chapter V.
+\replacement Read Sections 4--6. Remove the separate editorial fragment that had been left on the next page.
+\reason The subjects listed in the preface are exactly Sections 4, 5, and 6. Chapter V ends with Section 6 in the English contents and in the \href{https://d-nb.info/911137882/04}{German first-edition contents}.
+\location{212}{9}
+
+\setcounter{section}{212}
+\section{Publishing information and Preface, typographic readings, p.~iv and xii}\label{errata:item:213}
+\noindent\emph{Original reading recovered in both editions.}\par
+\original The retypesetting reads an apostrophe in the CIP catalogue number as a zero, and numbers the preface poem footnote 2.
+\replacement Restore an apostrophe in \mbox{512\textquotesingle.74} and the star on the preface footnote and its callout.
+\reason The catalogue number on the copyright page and the footnote on original scan page 9 both have visible glyphs matching these readings.
+\location{213}{2}
+
+\setcounter{section}{213}
+\section{Bibliography, entries [26] and [29], p.~552}\label{errata:item:214}
+
+\original Entry [26] spells a volume editor Kleimann. The retypesetting flattens the subscript in the volume number of entry [29].
+\replacement Use Kleiman in the corrected edition, and restore $\mathrm I_2$ in both editions.
+\reason The \href{https://www.ams.org/books/pspum/055.1/pspum055.1-endmatter.pdf}{AMS volume} gives Kleiman. The subscript in entry [29] is visible in the supplied scan.
+\location{214}{559}
+
+\setcounter{section}{214}
+\section{II, \S9, positive residue characteristic in the ramification assertions, p.~174}\label{errata:item:215}
+
+\original The $p$-Sylow statement is given for arbitrary nonarchimedean valuations. The later assertions use $p$-groups and tame extensions.
+\replacement Apply the positive-residue-characteristic convention to (9.12), (9.14) and (9.15).
+\reason For residue characteristic zero the finite ramification group $R_w$ is trivial. If an element $\sigma\in R_w$ has prime order $\ell$, choose $y=\sigma(x)-x\ne0$. Then $\sum_{j=0}^{\ell-1}\sigma^j(y)/y=0$ but each summand has residue $1$, impossible in characteristic zero. For an infinite extension, pass to finite Galois subextensions.
+\location{215}{186}
+
+\setcounter{section}{215}
+\section{VII, \S7, unit modulus in Lemma (7.2), p.~487}\label{errata:item:216}
+
+\original The description $a+a(a)^{-1}\mathfrak m$ of the residue class permits the zero ideal number when $\mathfrak m=(1)$.
+\replacement Exclude zero in the formula and in the converse.
+\reason The residue relation is on the semigroup of nonzero ideal numbers prime to the modulus. With a proper modulus the zero exclusion follows already from $(a)+\mathfrak m=\mathfrak o$.
+\location{216}{495}
+
+\part{Scope of the source and layout checks}
+The whole-book passes check the extracted text, page bounds, TeX fonts, internal destinations, and the links from this list to both editions. Selected passages and figures have also been compared visually with the original scan. The texts of the entries give the original readings and the reasons for the changes. Automated alignment cannot identify every mathematical glyph in the scan. A fully independent, formula-by-formula check of all unlisted passages remains open.
+
+\medskip
+\noindent See also the \href{https://mathoverflow.net/questions/48759/has-anyone-found-an-error-in-an-early-version-of-neukirch}{reader discussion of the book}.
+\end{document}
